@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Casia Lab - Going the distance to enable prosperity through innovation.</title>
+    <meta name="title" content="Casia Lab - Going the distance to enable prosperity through innovation.">
+    <meta name="description" content="Going the distance to enable prosperity through innovation, we are dedicated to catalyzing personal and corporate growth, empowerment, business leadership, and beyond.">
+    <meta name="robots" content="index, follow">
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/app.js" defer></script>
+    <script type="text/javascript" src="js/html5lightbox/html5lightbox.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="fonts/fontawesome/css/fontawesome-all.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="js/slick/slick.css" rel="stylesheet">
+    <link href="js/slick/slick-theme.css" rel="stylesheet">
+    <link href="js/aos/dist/aos.css" rel="stylesheet">
+    <script src="js/aos/dist/aos.js"></script>
+    <style>
+        body { overflow-x: hidden !important; }
+    </style>
+</head>
+<body>
+    <div id="app">
+
+        <!-- Topbar -->
+        <div class="container text-start pt-3">
+            <a href="index.html" class="logo-box" style="color: black">
+                <img src="images/logo.png" class="logo" alt="logo" />
+                <h3 class="pb-0 mb-0">Casia Lab</h3>
+                <span>Enabling prosperity through innovation</span>
+            </a>
+            <ul class="kam-nav">
+                <li><a href="index.html" class="kam-nav-active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="expertise.html">Expertise</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Hero -->
+        <div class="hero hero-white d-flex justify-content-center align-items-center flex-column">
+            <div class="container">
+                <div class="row justify-content-center text-start">
+                    <div class="col-md-12">
+                        <h1 class="hero-title my-4" data-aos="fade-right" data-aos-duration="1000">Transforming enterprise potential into market leadership through emerging technology.</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="container">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center w-100 py-3">
+                    <p>&copy; 2025, Casia Growth Lab</p>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <p>Office 205, Building 5, SHAMS, UAE</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        $(function() {
+            AOS.init();
+            window.addEventListener('load', AOS.refresh);
+            $('.carousel').carousel();
+        })
+    </script>
+    <script>
+        $(function() {
+            let faqOpen = false;
+            $('.faq-question').click(function() {
+                let expandIcon = '<img src="images/plus-icon.svg" alt="expand">';
+                let collapseIcon = '<img src="images/minus-icon.svg" alt="collapse">';
+                if(!$(this).parent().hasClass('faq-open')) {
+                    $(this).parent().addClass('faq-open');
+                    $(this).find('.faq-icon').html(collapseIcon);
+                } else {
+                    $(this).parent().removeClass('faq-open');
+                    $(this).find('.faq-icon').html(expandIcon);
+                }
+                $(this).closest('.faq').find('.faq-answer').slideToggle('fast');
+            });
+
+            function toggleFeature() {
+                $('.feature-title').click(function() {
+                    $(this).closest('.feature').find('.feature-content').slideToggle();
+                });
+            }
+            toggleFeature();
+
+            let open = false;
+            $('.plan-details .more-details').click(function() {
+                $(this).closest('.plan-details').find('.plan-more-details').slideToggle();
+                open = !open;
+                let btnText = open ? '<i class="fas fa-arrow-up"></i> &nbsp; Less Details': '<i class="fas fa-arrow-down"></i> &nbsp; More Details';
+                $(this).html(btnText);
+            });
+
+            $('.btn-switch-plan').click(function() {
+                let cycle = $(this).data('cycle');
+                if(cycle == 'yearly') {
+                    $(this).closest('.plan').find('.monthly-price').hide();
+                    $(this).closest('.plan').find('.yearly-price').show();
+                } else {
+                    $(this).closest('.plan').find('.monthly-price').show();
+                    $(this).closest('.plan').find('.yearly-price').hide();
+                }
+                $(this).closest('.plan').find('.btn-switch-plan').removeClass('active');
+                $(this).addClass('active');
+            });
+        });
+    </script>
+</body>
+</html>
