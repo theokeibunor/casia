@@ -61,33 +61,6 @@
         to   { opacity: 1; transform: none; }
     }
 
-    /* Hero headline rotator — typewriter effect.
-       Three "ghost" phrases reserve the cell height (so the layout never jumps),
-       while a single visible span has its text typed in / erased by site.js. */
-    .hero-rotator {
-        display: grid;
-        align-items: start;
-    }
-    .hero-rotator .hero-line {
-        grid-area: 1 / 1;
-        pointer-events: none;
-    }
-    .hero-rotator .ghost { visibility: hidden; }
-    .hero-rotator .typing { visibility: visible; }
-    .hero-rotator .typing::after {
-        content: '|';
-        display: inline-block;
-        margin-left: 0.05em;
-        font-weight: 400;
-        color: currentColor;
-        opacity: 0.55;
-        animation: heroCaret 1s steps(1) infinite;
-    }
-    @keyframes heroCaret {
-        0%, 49.99%   { opacity: 0.55; }
-        50%, 100%    { opacity: 0; }
-    }
-
     /* Scroll reveal — only active once site.js confirms it's running, so a
        failed/cached JS load doesn't leave content invisible. */
     .js-ready [data-reveal] {
@@ -111,5 +84,4 @@
         transform: none !important;
         transition: none !important;
     }
-    .hero-rotator .typing::after { animation: none !important; opacity: 0 !important; }
 }

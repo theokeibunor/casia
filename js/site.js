@@ -53,72 +53,11 @@ document.documentElement.classList.add('js-ready');
         }, 6000);
     }
 
-    function startHeroRotator() {
-        var rotator = document.querySelector('[data-hero-rotator]');
-        if (!rotator) return;
-        var typer = rotator.querySelector('[data-typer]');
-        var ghosts = rotator.querySelectorAll('.ghost');
-        if (!typer || !ghosts.length) return;
-        var phrases = Array.prototype.map.call(ghosts, function (g) {
-            return (g.textContent || '').trim();
-        }).filter(Boolean);
-        if (!phrases.length) return;
-
-        var prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        if (prefersReduced) {
-            typer.textContent = phrases[0];
-            return;
-        }
-
-        var TYPE_MS  = 55;     // per-character typing speed
-        var ERASE_MS = 28;     // per-character erase speed (a touch quicker)
-        var HOLD_MS  = 1700;   // pause once a phrase is fully typed
-        var GAP_MS   = 280;    // pause after erase, before next phrase
-        var idx = 0;
-
-        function type(text, done) {
-            var i = 0;
-            var t = setInterval(function () {
-                i++;
-                typer.textContent = text.substring(0, i);
-                if (i >= text.length) {
-                    clearInterval(t);
-                    done();
-                }
-            }, TYPE_MS);
-        }
-        function erase(done) {
-            var text = typer.textContent;
-            var i = text.length;
-            if (!i) return done();
-            var t = setInterval(function () {
-                i--;
-                typer.textContent = text.substring(0, i);
-                if (i <= 0) {
-                    clearInterval(t);
-                    done();
-                }
-            }, ERASE_MS);
-        }
-        function step() {
-            type(phrases[idx], function () {
-                setTimeout(function () {
-                    erase(function () {
-                        idx = (idx + 1) % phrases.length;
-                        setTimeout(step, GAP_MS);
-                    });
-                }, HOLD_MS);
-            });
-        }
-        step();
-    }
-
     ready(function () {
         if (window.lucide && typeof window.lucide.createIcons === "function") {
             window.lucide.createIcons();
         }
 
-        startHeroRotator();
         initSolutionTabs();
 
         var toggle = document.getElementById("navToggle");
