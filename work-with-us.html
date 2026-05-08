@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Careers | Casia Lab</title>
+<meta name="description" content="We don't always have open roles, but we're always interested in strong people who want to build for African small businesses. Send us your profile.">
+<link rel="icon" href="images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="css/tailwind.css?v=19" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-white text-gray-900 font-sans flex flex-col">
+
+<!-- Navbar -->
+<nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-20">
+        <a href="index.html" class="text-2xl font-black tracking-tight text-black hover:opacity-80 transition-opacity">Casia Lab.</a>
+        <div class="hidden md:flex items-center gap-8 h-full">
+            <a href="index.html" class="h-full flex items-center text-sm font-semibold border-b-2 border-transparent text-gray-500 hover:text-black transition-colors">Home</a>
+            <a href="index.html#solutions" class="h-full flex items-center text-sm font-semibold border-b-2 border-transparent text-gray-500 hover:text-black transition-colors">Solutions</a>
+            <a href="about.html" class="h-full flex items-center text-sm font-semibold border-b-2 border-transparent text-gray-500 hover:text-black transition-colors">About Us</a>
+            <a href="partner.html" class="h-full flex items-center text-sm font-semibold border-b-2 border-transparent text-gray-500 hover:text-black transition-colors">Partnerships</a>
+        </div>
+        <div class="hidden md:block">
+            <a href="contact.html" class="inline-flex items-center justify-center px-6 py-2.5 rounded-lg font-medium bg-black text-white hover:bg-gray-800 hover:shadow-lg transition-all">Contact us</a>
+        </div>
+        <button id="navToggle" class="md:hidden p-2 text-gray-600" aria-controls="mobileNav" aria-expanded="false" aria-label="Open menu">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+    </div>
+    <div id="mobileNav" class="hidden md:hidden absolute top-20 left-0 w-full bg-white border-b border-gray-200 shadow-xl py-4 px-6 flex flex-col gap-4">
+        <a href="index.html" class="text-left text-lg py-3 font-semibold text-gray-500">Home</a>
+        <a href="index.html#solutions" class="text-left text-lg py-3 font-semibold text-gray-500">Solutions</a>
+        <a href="about.html" class="text-left text-lg py-3 font-semibold text-gray-500">About Us</a>
+        <a href="partner.html" class="text-left text-lg py-3 font-semibold text-gray-500">Partnerships</a>
+        <a href="contact.html" class="inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium bg-black text-white mt-4">Contact us</a>
+    </div>
+</nav>
+
+<main class="flex-grow animate-in fade-in duration-500">
+
+    <div class="max-w-7xl mx-auto px-6 py-16">
+
+        <!-- Hero -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20" data-reveal>
+            <div>
+                <span class="text-emerald-700 font-bold tracking-widest uppercase text-xs mb-4 block">Careers</span>
+                <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">Build for the businesses that move Africa.</h1>
+                <p class="text-xl text-gray-600 max-w-xl mb-10 leading-relaxed">We're a small team building practical tools for the people running shops, pharmacies, hotels, restaurants and growing businesses across Nigeria. If that work matters to you, we'd like to hear from you — even if there's no role open today.</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#careers-form" class="inline-flex items-center justify-center px-6 py-2.5 rounded-lg font-medium bg-black text-white hover:bg-gray-800 hover:shadow-lg transition-all">Send your profile</a>
+                    <a href="about.html" class="inline-flex items-center justify-center px-6 py-2.5 rounded-lg font-medium border-2 border-gray-200 text-gray-900 hover:border-black transition-all">About Casia Lab</a>
+                </div>
+            </div>
+            <div class="relative h-[480px] bg-gray-100 rounded-3xl overflow-hidden shadow-lg border border-gray-200">
+                <!-- IMAGE-REVIEW: Black/African team collaborating in a Lagos office -->
+                <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=2000" alt="Team at work" class="w-full h-full object-cover">
+            </div>
+        </section>
+
+        <!-- Roles we look for -->
+        <section class="mb-24" data-reveal>
+            <div class="mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 mb-4">The kinds of people we work with.</h2>
+                <p class="text-lg text-gray-600 max-w-2xl">We rarely have a long jobs page. We do have a steady need for people who can build, sell, support, and scale our products with care.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-white p-6 border border-gray-200 rounded-2xl hover:border-black transition-all flex items-center gap-4"><i data-lucide="layout" class="text-emerald-600 w-5 h-5 shrink-0"></i><p class="text-gray-800 font-medium text-sm leading-snug">Product designers</p></div>
+                <div class="bg-white p-6 border border-gray-200 rounded-2xl hover:border-black transition-all flex items-center gap-4"><i data-lucide="code" class="text-emerald-600 w-5 h-5 shrink-0"></i><p class="text-gray-800 font-medium text-sm leading-snug">Software engineers</p></div>
+                <div class="bg-white p-6 border border-gray-200 rounded-2xl hover:border-black transition-all flex items-center gap-4"><i data-lucide="trending-up" class="text-emerald-600 w-5 h-5 shrink-0"></i><p class="text-gray-800 font-medium text-sm leading-snug">Growth &amp; content marketers</p></div>
+                <div class="bg-white p-6 border border-gray-200 rounded-2xl hover:border-black transition-all flex items-center gap-4"><i data-lucide="handshake" class="text-emerald-600 w-5 h-5 shrink-0"></i><p class="text-gray-800 font-medium text-sm leading-snug">Sales &amp; partner managers</p></div>
+                <div class="bg-white p-6 border border-gray-200 rounded-2xl hover:border-black transition-all flex items-center gap-4"><i data-lucide="life-buoy" class="text-emerald-600 w-5 h-5 shrink-0"></i><p class="text-gray-800 font-medium text-sm leading-snug">Customer success operators</p></div>
+                <div class="bg-white p-6 border border-gray-200 rounded-2xl hover:border-black transition-all flex items-center gap-4"><i data-lucide="briefcase" class="text-emerald-600 w-5 h-5 shrink-0"></i><p class="text-gray-800 font-medium text-sm leading-snug">Product managers</p></div>
+                <div class="bg-white p-6 border border-gray-200 rounded-2xl hover:border-black transition-all flex items-center gap-4"><i data-lucide="search" class="text-emerald-600 w-5 h-5 shrink-0"></i><p class="text-gray-800 font-medium text-sm leading-snug">User researchers</p></div>
+                <div class="bg-white p-6 border border-gray-200 rounded-2xl hover:border-black transition-all flex items-center gap-4"><i data-lucide="settings" class="text-emerald-600 w-5 h-5 shrink-0"></i><p class="text-gray-800 font-medium text-sm leading-snug">Operations &amp; sector specialists</p></div>
+            </div>
+        </section>
+
+        <!-- How we work -->
+        <section class="mb-24 grid grid-cols-1 md:grid-cols-12 gap-6" data-reveal>
+            <div class="md:col-span-7 bg-gray-50 border border-gray-200 rounded-3xl p-10">
+                <h3 class="text-2xl font-bold text-gray-900 mb-3">How we work.</h3>
+                <p class="text-gray-600 mb-6">We're early. The work is real, the structure is light, and most days you'll have to figure something out yourself.</p>
+                <ul class="space-y-3 text-gray-800">
+                    <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="text-emerald-600 w-5 h-5 shrink-0 mt-0.5"></i><span>Think clearly and write things down.</span></li>
+                    <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="text-emerald-600 w-5 h-5 shrink-0 mt-0.5"></i><span>Move fast without being sloppy.</span></li>
+                    <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="text-emerald-600 w-5 h-5 shrink-0 mt-0.5"></i><span>Talk to users — actual shop owners, not just dashboards.</span></li>
+                    <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="text-emerald-600 w-5 h-5 shrink-0 mt-0.5"></i><span>Take ownership of a problem end to end.</span></li>
+                    <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="text-emerald-600 w-5 h-5 shrink-0 mt-0.5"></i><span>Improve the systems you find as you go.</span></li>
+                </ul>
+            </div>
+            <div class="md:col-span-5 bg-black text-white rounded-3xl p-10 flex flex-col justify-between">
+                <div>
+                    <h3 class="text-2xl font-bold mb-3">No open role today?</h3>
+                    <p class="text-gray-300 leading-relaxed mb-6">Send your profile anyway. We keep applications on file and reach out when the work matches the person.</p>
+                </div>
+                <a href="#careers-form" class="inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium bg-white text-black hover:bg-gray-100 transition-all">Send your profile <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i></a>
+            </div>
+        </section>
+
+        <!-- Form -->
+        <section id="careers-form" data-form-card class="bg-white p-10 md:p-16 rounded-3xl border border-gray-200 shadow-xl max-w-4xl mx-auto mb-16 scroll-mt-24" data-reveal>
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Tell us about yourself.</h2>
+                <p class="text-gray-600 text-lg">A short note + a link to your work goes a long way.</p>
+            </div>
+
+            <!-- FORM-DELIVERY: change the email below to route submissions elsewhere. -->
+            <form data-form action="https://formsubmit.co/ajax/corporate@casialab.com" method="POST" class="space-y-8">
+                    <input type="hidden" name="_subject" value="Casia Lab — New careers profile">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;height:0;width:0;opacity:0" aria-hidden="true">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="space-y-2">
+                        <label class="text-sm font-semibold text-gray-700">Full name</label>
+                        <input required type="text" name="name" placeholder="Tunde Bakare" class="w-full bg-gray-50 border border-gray-200 rounded-lg p-3 focus:border-black focus:ring-1 focus:ring-black outline-none transition-all">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-semibold text-gray-700">Email</label>
+                        <input required type="email" name="email" placeholder="tunde@example.com" class="w-full bg-gray-50 border border-gray-200 rounded-lg p-3 focus:border-black focus:ring-1 focus:ring-black outline-none transition-all">
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="space-y-2">
+                        <label class="text-sm font-semibold text-gray-700">Phone / WhatsApp</label>
+                        <input type="tel" name="phone" placeholder="+234 …" class="w-full bg-gray-50 border border-gray-200 rounded-lg p-3 focus:border-black focus:ring-1 focus:ring-black outline-none transition-all">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-semibold text-gray-700">Country</label>
+                        <input type="text" name="country" placeholder="e.g. Nigeria" class="w-full bg-gray-50 border border-gray-200 rounded-lg p-3 focus:border-black focus:ring-1 focus:ring-black outline-none transition-all">
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <label class="text-sm font-semibold text-gray-700">Area of interest</label>
+                    <select name="area_of_interest" class="w-full bg-gray-50 border border-gray-200 rounded-lg p-3 focus:border-black focus:ring-1 focus:ring-black outline-none transition-all">
+                        <option>Product</option>
+                        <option>Engineering</option>
+                        <option>Design</option>
+                        <option>Sales</option>
+                        <option>Marketing</option>
+                        <option>Customer Success</option>
+                        <option>Operations</option>
+                        <option>Research</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="space-y-2">
+                    <label class="text-sm font-semibold text-gray-700">Link to your work</label>
+                    <input type="url" name="profile_url" placeholder="LinkedIn, portfolio, GitHub, or website" class="w-full bg-gray-50 border border-gray-200 rounded-lg p-3 focus:border-black focus:ring-1 focus:ring-black outline-none transition-all">
+                </div>
+                <div class="space-y-2">
+                    <label class="text-sm font-semibold text-gray-700">Tell us how you can contribute</label>
+                    <textarea required name="message" rows="5" placeholder="What kinds of problems do you want to work on? What have you built or run before?" class="w-full bg-gray-50 border border-gray-200 rounded-lg p-3 focus:border-black focus:ring-1 focus:ring-black outline-none transition-all"></textarea>
+                </div>
+                <button type="submit" class="w-full inline-flex items-center justify-center px-6 py-4 rounded-lg font-medium bg-black text-white hover:bg-gray-800 hover:shadow-lg transition-all text-lg">Send my profile</button>
+            </form>
+
+            <div data-form-success class="hidden text-center py-12">
+                <div class="w-20 h-20 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6"><i data-lucide="check-circle-2" class="w-10 h-10"></i></div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">Thank you</h3>
+                <p class="text-gray-600 mb-8">Your profile is on file. We'll reach out when there's a real fit.</p>
+                <button type="button" data-form-reset class="inline-flex items-center justify-center px-6 py-2.5 rounded-lg font-medium bg-black text-white hover:bg-gray-800 hover:shadow-lg transition-all">Send another</button>
+            </div>
+        </section>
+
+    </div>
+
+</main>
+
+<div class="w-full h-4 border-y border-black/5 pattern-adinkra" aria-hidden="true"></div>
+
+<!-- Footer -->
+<footer class="w-full bg-gray-950 text-white pt-24 pb-12 mt-12 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 mb-20">
+            <div class="col-span-2 space-y-6">
+                <div class="text-3xl font-black tracking-tight text-white mb-2">Casia Lab.</div>
+                <p class="text-gray-400 max-w-sm leading-relaxed text-lg">Practical tools that help African small businesses operate with more control.</p>
+            </div>
+            <div class="space-y-6">
+                <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest">Solutions</h4>
+                <div class="flex flex-col gap-4">
+                    <a href="https://ceazr.com" target="_blank" rel="noopener" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Inventory · Ceazr</a>
+                    <a href="https://yakobooks.com" target="_blank" rel="noopener" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Accounting · Yako</a>
+                    <a href="https://paytton.com" target="_blank" rel="noopener" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Procurement · Paytton</a>
+                    <a href="https://admeistr.com" target="_blank" rel="noopener" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Media · Admeistr</a>
+                </div>
+            </div>
+            <div class="space-y-6">
+                <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest">Company</h4>
+                <div class="flex flex-col gap-4">
+                    <a href="about.html" class="text-left text-gray-300 hover:text-white transition-colors font-medium">About Us</a>
+                    <a href="partner.html" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Partner with us</a>
+                    <a href="resellers.html" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Resell our tools</a>
+                    <a href="work-with-us.html" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Work with Us</a>
+                    <a href="contact.html" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Contact Us</a>
+                </div>
+            </div>
+            <div class="space-y-6">
+                <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest">Ecosystem</h4>
+                <div class="flex flex-col gap-4">
+                    <a href="https://log10media.com" target="_blank" rel="noopener" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Log10 Media</a>
+                    <a href="https://casiaconsulting.com" target="_blank" rel="noopener" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Casia Consulting</a>
+                    <a href="about.html#ecosystem" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Veins</a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-gray-500 text-sm font-medium">© 2026 Casia Lab. All rights reserved.</p>
+            <div class="flex gap-8">
+                <a href="privacy.html" class="text-sm text-gray-500 hover:text-white transition-colors font-medium">Privacy Policy</a>
+                <a href="terms.html" class="text-sm text-gray-500 hover:text-white transition-colors font-medium">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="js/site.js?v=19"></script>
+
+</body>
+</html>

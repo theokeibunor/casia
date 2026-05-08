@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html { -webkit-text-size-adjust: 100%; overflow-x: hidden; }
+    body {
+        font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+        font-feature-settings: "ss01", "cv11";
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+    }
+    ::selection {
+        background-color: rgb(167 243 208); /* emerald-200 */
+        color: rgb(6 78 59);                 /* emerald-900 */
+    }
+}
+
+@layer utilities {
+    /* Shared full-bleed behaviour for African pattern strips: ignore parent
+       width constraints (max-w-7xl etc.) and always span the viewport. */
+    .pattern-kente,
+    .pattern-mudcloth,
+    .pattern-adinkra {
+        background-repeat: repeat-x;
+        background-position: 0 center;
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+        width: 100vw;
+        max-width: 100vw;
+        box-sizing: border-box;
+    }
+
+    /* Kente cloth (Akan, Ghana) — 16px tile. */
+    .pattern-kente {
+        background-color: #F5E6C8;
+        background-image: url("data:image/svg+xml,%3Csvg width='160' height='16' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='160' height='16' fill='%23F5E6C8'/%3E%3Crect width='160' height='2' fill='%23D4A017'/%3E%3Crect y='2' width='160' height='1' fill='%230A0A0A'/%3E%3Crect y='3' width='160' height='4' fill='%230F4C3A'/%3E%3Crect y='7' width='160' height='1' fill='%230A0A0A'/%3E%3Crect y='12' width='160' height='1' fill='%230A0A0A'/%3E%3Crect y='13' width='160' height='2' fill='%230D3F30'/%3E%3Crect y='15' width='160' height='1' fill='%23D4A017'/%3E%3Cg fill='%23D4A017'%3E%3Crect x='6' y='4' width='4' height='2'/%3E%3Crect x='22' y='4' width='4' height='2'/%3E%3Crect x='38' y='4' width='4' height='2'/%3E%3Crect x='54' y='4' width='4' height='2'/%3E%3Crect x='70' y='4' width='4' height='2'/%3E%3Crect x='86' y='4' width='4' height='2'/%3E%3Crect x='102' y='4' width='4' height='2'/%3E%3Crect x='118' y='4' width='4' height='2'/%3E%3Crect x='134' y='4' width='4' height='2'/%3E%3Crect x='150' y='4' width='4' height='2'/%3E%3C/g%3E%3Cg fill='%23A91B0D'%3E%3Cpolygon points='12,8 16,10 12,12 8,10'/%3E%3Cpolygon points='44,8 48,10 44,12 40,10'/%3E%3Cpolygon points='76,8 80,10 76,12 72,10'/%3E%3Cpolygon points='108,8 112,10 108,12 104,10'/%3E%3Cpolygon points='140,8 144,10 140,12 136,10'/%3E%3C/g%3E%3Cg fill='%230F4C3A'%3E%3Cpolygon points='28,8 32,10 28,12 24,10'/%3E%3Cpolygon points='60,8 64,10 60,12 56,10'/%3E%3Cpolygon points='92,8 96,10 92,12 88,10'/%3E%3Cpolygon points='124,8 128,10 124,12 120,10'/%3E%3Cpolygon points='156,8 160,10 156,12 152,10'/%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    /* Mudcloth / Bògòlanfini (Mali) — 16px tile. */
+    .pattern-mudcloth {
+        background-color: #1E3A5F;
+        background-image: url("data:image/svg+xml,%3Csvg width='100' height='16' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='100' height='16' fill='%231E3A5F'/%3E%3Cg fill='none' stroke='%23F5E6C8' stroke-width='1.1' stroke-linecap='round'%3E%3Cpath d='M8 3v10 M14 3v10 M8 6h6 M8 9h6 M8 12h6'/%3E%3Cpath d='M32 2v12 M32 5l3-2 M32 5l-3-2 M32 9l3-2 M32 9l-3-2 M32 13l3-2 M32 13l-3-2'/%3E%3Cpath d='M50 4l6 6 M56 4l-6 6'/%3E%3C/g%3E%3Cg fill='%23F5E6C8'%3E%3Ccircle cx='72' cy='5' r='1'/%3E%3Ccircle cx='78' cy='5' r='1'/%3E%3Ccircle cx='84' cy='5' r='1'/%3E%3Ccircle cx='72' cy='9' r='1'/%3E%3Ccircle cx='78' cy='9' r='1'/%3E%3Ccircle cx='84' cy='9' r='1'/%3E%3Ccircle cx='72' cy='13' r='1'/%3E%3Ccircle cx='78' cy='13' r='1'/%3E%3Ccircle cx='84' cy='13' r='1'/%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    /* Adinkra / Adinkrahene (Akan) — 16px tile. */
+    .pattern-adinkra {
+        background-color: #92400E;
+        background-image: url("data:image/svg+xml,%3Csvg width='40' height='16' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='40' height='16' fill='%2392400E'/%3E%3Cg stroke='%23F5E6C8' stroke-width='1' fill='none'%3E%3Ccircle cx='20' cy='8' r='6'/%3E%3Ccircle cx='20' cy='8' r='4'/%3E%3Ccircle cx='20' cy='8' r='2'/%3E%3C/g%3E%3Ccircle cx='20' cy='8' r='0.8' fill='%23F5E6C8'/%3E%3C/svg%3E");
+    }
+
+    /* Solutions tabs (homepage) */
+    .tab-btn.is-active {
+        color: #111827;        /* gray-900 */
+        border-bottom-color: #111827;
+    }
+    .tab-panel { animation: tabFade 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+    @keyframes tabFade {
+        from { opacity: 0; transform: translateY(8px); }
+        to   { opacity: 1; transform: none; }
+    }
+
+    /* Hero headline rotator — typewriter effect.
+       Three "ghost" phrases reserve the cell height (so the layout never jumps),
+       while a single visible span has its text typed in / erased by site.js. */
+    .hero-rotator {
+        display: grid;
+        align-items: start;
+    }
+    .hero-rotator .hero-line {
+        grid-area: 1 / 1;
+        pointer-events: none;
+    }
+    .hero-rotator .ghost { visibility: hidden; }
+    .hero-rotator .typing { visibility: visible; }
+    .hero-rotator .typing::after {
+        content: '|';
+        display: inline-block;
+        margin-left: 0.05em;
+        font-weight: 400;
+        color: currentColor;
+        opacity: 0.55;
+        animation: heroCaret 1s steps(1) infinite;
+    }
+    @keyframes heroCaret {
+        0%, 49.99%   { opacity: 0.55; }
+        50%, 100%    { opacity: 0; }
+    }
+
+    /* Scroll reveal — only active once site.js confirms it's running, so a
+       failed/cached JS load doesn't leave content invisible. */
+    .js-ready [data-reveal] {
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+            opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+            transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+        will-change: opacity, transform;
+    }
+    .js-ready [data-reveal].is-revealed {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .animate-bounce-slow { animation: none !important; }
+    .js-ready [data-reveal] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+    .hero-rotator .typing::after { animation: none !important; opacity: 0 !important; }
+}

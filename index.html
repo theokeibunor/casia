@@ -1,126 +1,422 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Casia Lab - Going the distance to enable prosperity through innovation.</title>
-    <meta name="title" content="Casia Lab - Going the distance to enable prosperity through innovation.">
-    <meta name="description" content="Going the distance to enable prosperity through innovation, we are dedicated to catalyzing personal and corporate growth, empowerment, business leadership, and beyond.">
-    <meta name="robots" content="index, follow">
-
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/app.js" defer></script>
-    <script type="text/javascript" src="js/html5lightbox/html5lightbox.js"></script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-    <link href="fonts/fontawesome/css/fontawesome-all.css" rel="stylesheet">
-    <link href="css/app.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
-    <link href="js/slick/slick.css" rel="stylesheet">
-    <link href="js/slick/slick-theme.css" rel="stylesheet">
-    <link href="js/aos/dist/aos.css" rel="stylesheet">
-    <script src="js/aos/dist/aos.js"></script>
-    <style>
-        body { overflow-x: hidden !important; }
-    </style>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Casia Lab — Practical tools for African MSMEs</title>
+<meta name="description" content="Casia Lab builds practical tools that help African small businesses manage stock, money, purchases, documents, and daily records.">
+<link rel="icon" href="images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="css/tailwind.css?v=19" rel="stylesheet">
 </head>
-<body>
-    <div id="app">
+<body class="min-h-screen bg-white text-gray-900 font-sans flex flex-col">
 
-        <!-- Topbar -->
-        <div class="container text-start pt-3">
-            <a href="index.html" class="logo-box" style="color: black">
-                <img src="images/logo.png" class="logo" alt="logo" />
-                <h3 class="pb-0 mb-0">Casia Lab</h3>
-                <span>Enabling prosperity through innovation</span>
-            </a>
-            <ul class="kam-nav">
-                <li><a href="index.html" class="kam-nav-active">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="expertise.html">Expertise</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
+<!-- Navbar -->
+<nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-20">
+        <a href="index.html" class="text-2xl font-black tracking-tight text-black hover:opacity-80 transition-opacity">Casia Lab.</a>
+        <div class="hidden md:flex items-center gap-8 h-full">
+            <a href="index.html" class="h-full flex items-center text-sm font-semibold border-b-2 border-black text-black">Home</a>
+            <a href="index.html#solutions" class="h-full flex items-center text-sm font-semibold border-b-2 border-transparent text-gray-500 hover:text-black transition-colors">Solutions</a>
+            <a href="about.html" class="h-full flex items-center text-sm font-semibold border-b-2 border-transparent text-gray-500 hover:text-black transition-colors">About Us</a>
+            <a href="partner.html" class="h-full flex items-center text-sm font-semibold border-b-2 border-transparent text-gray-500 hover:text-black transition-colors">Partnerships</a>
         </div>
+        <div class="hidden md:block">
+            <a href="contact.html" class="inline-flex items-center justify-center px-6 py-2.5 rounded-lg font-medium bg-black text-white hover:bg-gray-800 hover:shadow-lg transition-all">Contact us</a>
+        </div>
+        <button id="navToggle" class="md:hidden p-2 text-gray-600" aria-controls="mobileNav" aria-expanded="false" aria-label="Open menu">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+    </div>
+    <div id="mobileNav" class="hidden md:hidden absolute top-20 left-0 w-full bg-white border-b border-gray-200 shadow-xl py-4 px-6 flex flex-col gap-4">
+        <a href="index.html" class="text-left text-lg py-3 font-semibold text-black">Home</a>
+        <a href="index.html#solutions" class="text-left text-lg py-3 font-semibold text-gray-500">Solutions</a>
+        <a href="about.html" class="text-left text-lg py-3 font-semibold text-gray-500">About Us</a>
+        <a href="partner.html" class="text-left text-lg py-3 font-semibold text-gray-500">Partnerships</a>
+        <a href="contact.html" class="inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium bg-black text-white mt-4">Contact us</a>
+    </div>
+</nav>
 
-        <!-- Hero -->
-        <div class="hero hero-white d-flex justify-content-center align-items-center flex-column">
-            <div class="container">
-                <div class="row justify-content-center text-start">
-                    <div class="col-md-12">
-                        <h1 class="hero-title my-4" data-aos="fade-right" data-aos-duration="1000">Transforming enterprise potential into market leadership through technology.</h1>
+<main class="flex-grow animate-in fade-in duration-500">
+
+    <!-- Hero -->
+    <section class="relative pt-24 pb-20 overflow-hidden bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="z-10">
+                <h1 data-hero-rotator class="hero-rotator text-5xl md:text-6xl font-bold tracking-tight text-black mb-6 leading-[1.05] max-w-xl" aria-live="polite">
+                    <span class="hero-line ghost" aria-hidden="true">Run your business with less guesswork.</span>
+                    <span class="hero-line ghost" aria-hidden="true">You work hard. Let your tools work harder.</span>
+                    <span class="hero-line ghost" aria-hidden="true">Gain Clarity. Enforce Control.</span>
+                    <span class="hero-line typing" data-typer></span>
+                </h1>
+                <p class="text-base md:text-lg text-gray-600 mb-8 max-w-lg leading-relaxed animate-in fade-in slide-in-from-bottom-4 duration-700 fill-mode-both [animation-delay:300ms]">Built for the way real shops, pharmacies, restaurants, hotels and small teams actually run — between the till, the WhatsApp groups, the supplier debts, and the back-of-the-counter notebook.</p>
+                <div class="flex flex-wrap gap-4 animate-in fade-in slide-in-from-bottom-4 duration-700 fill-mode-both [animation-delay:480ms]">
+                    <a href="index.html#solutions" class="inline-flex items-center justify-center px-6 py-2.5 rounded-lg font-medium bg-black text-white hover:bg-gray-800 hover:shadow-lg hover:-translate-y-0.5 transition-all">Find the right tool</a>
+                    <a href="index.html#solutions" class="inline-flex items-center justify-center px-6 py-2.5 rounded-lg font-medium border-2 border-gray-200 text-gray-900 hover:border-black hover:-translate-y-0.5 transition-all">See all products</a>
+                </div>
+            </div>
+            <div class="relative animate-in fade-in slide-in-from-right-6 duration-1000 fill-mode-both [animation-delay:200ms]">
+                <div class="bg-white p-2 rounded-2xl border border-gray-200 shadow-xl rotate-2 transform hover:rotate-0 transition-transform duration-500">
+                    <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&q=80&w=2000" alt="Business control dashboard" class="rounded-xl w-full h-[400px] object-cover">
+                </div>
+                <div class="absolute -bottom-8 -left-8 bg-emerald-100 p-6 rounded-2xl border border-emerald-200 shadow-lg hidden md:block max-w-[220px] animate-bounce-slow">
+                    <i data-lucide="gauge" class="text-emerald-700 w-8 h-8 mb-3"></i>
+                    <p class="text-sm font-semibold text-emerald-900">The day-to-day of your business, finally clear.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="w-full h-4 border-y border-black/5 pattern-kente" aria-hidden="true"></div>
+
+    <!-- Problem -->
+    <section class="py-20 bg-white" data-reveal>
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-12 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 mb-4">Too much of your business is still in your head.</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Most of what your business needs to know lives in your head — and in two notebooks, three WhatsApp groups, and a dusty receipt drawer. By the end of the month, the picture is fuzzy.</p>
+            </div>
+            <div class="bg-gray-50 p-10 rounded-3xl border border-gray-100 max-w-4xl mx-auto">
+                <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">You may not know:</h3>
+                <div class="grid md:grid-cols-2 gap-x-12 gap-y-6">
+                    <div class="flex items-center gap-4"><div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center shrink-0"><i data-lucide="x" class="w-5 h-5 text-red-600"></i></div><span class="text-lg text-gray-700 font-medium">What's on the shelf without leaving the counter to count</span></div>
+                    <div class="flex items-center gap-4"><div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center shrink-0"><i data-lucide="x" class="w-5 h-5 text-red-600"></i></div><span class="text-lg text-gray-700 font-medium">Which goods have been sitting too long, eating your cash</span></div>
+                    <div class="flex items-center gap-4"><div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center shrink-0"><i data-lucide="x" class="w-5 h-5 text-red-600"></i></div><span class="text-lg text-gray-700 font-medium">Whether the cash in the till matches what was sold yesterday</span></div>
+                    <div class="flex items-center gap-4"><div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center shrink-0"><i data-lucide="x" class="w-5 h-5 text-red-600"></i></div><span class="text-lg text-gray-700 font-medium">Which supplier you owe — and how long they've been waiting</span></div>
+                    <div class="flex items-center gap-4"><div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center shrink-0"><i data-lucide="x" class="w-5 h-5 text-red-600"></i></div><span class="text-lg text-gray-700 font-medium">Where last month's receipts went after the rush hours</span></div>
+                    <div class="flex items-center gap-4"><div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center shrink-0"><i data-lucide="x" class="w-5 h-5 text-red-600"></i></div><span class="text-lg text-gray-700 font-medium">What this business actually clears after fuel, transport, and small-small expenses</span></div>
+                    <div class="flex items-center gap-4"><div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center shrink-0"><i data-lucide="x" class="w-5 h-5 text-red-600"></i></div><span class="text-lg text-gray-700 font-medium">Whether the business is making money — or just moving cash around</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="w-full h-4 border-y border-black/5 pattern-adinkra" aria-hidden="true"></div>
+
+    <!-- Solutions: interactive tabs -->
+    <section id="solutions" class="py-20 bg-gray-50 scroll-mt-24" data-reveal>
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-10">
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 mb-4">What do you need to fix first?</h2>
+                <p class="text-lg text-gray-600 max-w-2xl">Pick the area causing the most stress. Each one has a focused tool.</p>
+            </div>
+
+            <div data-tabs role="tablist" aria-label="Casia Lab products" class="flex flex-wrap gap-1 sm:gap-2 border-b border-gray-200 mb-10">
+                <button type="button" role="tab" data-tab="ceazr" aria-selected="true" class="tab-btn is-active inline-flex items-center gap-2 px-4 sm:px-6 py-4 -mb-px font-semibold text-sm sm:text-base text-gray-500 border-b-2 border-transparent transition-colors hover:text-gray-900">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Ceazr
+                    <span class="hidden sm:inline text-gray-400 font-normal">— Inventory</span>
+                </button>
+                <button type="button" role="tab" data-tab="yako" aria-selected="false" class="tab-btn inline-flex items-center gap-2 px-4 sm:px-6 py-4 -mb-px font-semibold text-sm sm:text-base text-gray-500 border-b-2 border-transparent transition-colors hover:text-gray-900">
+                    <span class="w-2 h-2 rounded-full bg-blue-500"></span> Yako
+                    <span class="hidden sm:inline text-gray-400 font-normal">— Accounting</span>
+                </button>
+                <button type="button" role="tab" data-tab="paytton" aria-selected="false" class="tab-btn inline-flex items-center gap-2 px-4 sm:px-6 py-4 -mb-px font-semibold text-sm sm:text-base text-gray-500 border-b-2 border-transparent transition-colors hover:text-gray-900">
+                    <span class="w-2 h-2 rounded-full bg-amber-500"></span> Paytton
+                    <span class="hidden sm:inline text-gray-400 font-normal">— Procurement</span>
+                </button>
+                <button type="button" role="tab" data-tab="admeistr" aria-selected="false" class="tab-btn inline-flex items-center gap-2 px-4 sm:px-6 py-4 -mb-px font-semibold text-sm sm:text-base text-gray-500 border-b-2 border-transparent transition-colors hover:text-gray-900">
+                    <span class="w-2 h-2 rounded-full bg-rose-500"></span> Admeistr
+                    <span class="hidden sm:inline text-gray-400 font-normal">— Media &amp; brand reporting</span>
+                </button>
+                <span class="hidden sm:inline-block w-px self-stretch bg-gray-200 my-3" aria-hidden="true"></span>
+                <button type="button" role="tab" data-tab="tell-us" aria-selected="false" class="tab-btn inline-flex items-center gap-2 px-4 sm:px-6 py-4 -mb-px font-semibold text-sm sm:text-base text-gray-500 border-b-2 border-transparent transition-colors hover:text-gray-900">
+                    <span class="w-2 h-2 rounded-full bg-violet-500"></span> Tell us
+                    <span class="hidden sm:inline text-gray-400 font-normal">— Request a tool</span>
+                </button>
+            </div>
+
+            <!-- Panels -->
+            <div data-tab-panel="ceazr" role="tabpanel" class="tab-panel grid md:grid-cols-2 gap-10 items-center bg-white border border-gray-200 rounded-3xl p-8 md:p-12">
+                <div>
+                    <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-4 inline-block">"I need to control my stock"</span>
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Stop guessing your stock levels.</h3>
+                    <p class="text-gray-600 text-lg mb-6 leading-relaxed">See what you have, what's running low, what moved, and what's about to stock out — across one shop, several branches, or a warehouse.</p>
+                    <ul class="grid sm:grid-cols-2 gap-3 mb-8">
+                        <li class="flex items-start gap-2 text-sm text-gray-800"><i data-lucide="check-circle-2" class="text-emerald-500 w-4 h-4 shrink-0 mt-0.5"></i>Track stock levels</li>
+                        <li class="flex items-start gap-2 text-sm text-gray-800"><i data-lucide="check-circle-2" class="text-emerald-500 w-4 h-4 shrink-0 mt-0.5"></i>Set reorder levels</li>
+                        <li class="flex items-start gap-2 text-sm text-gray-800"><i data-lucide="check-circle-2" class="text-emerald-500 w-4 h-4 shrink-0 mt-0.5"></i>Manage multiple locations</li>
+                        <li class="flex items-start gap-2 text-sm text-gray-800"><i data-lucide="check-circle-2" class="text-emerald-500 w-4 h-4 shrink-0 mt-0.5"></i>Reduce stockouts</li>
+                    </ul>
+                    <p class="text-xs uppercase tracking-wider text-gray-500 font-semibold mb-2">Best for</p>
+                    <p class="text-sm text-gray-700 mb-8">Retailers · Pharmacies · Restaurants · Hotels · Distributors · Warehouses · Small manufacturers</p>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="https://ceazr.com" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-medium bg-black text-white hover:bg-gray-800 hover:shadow-lg transition-all">Visit ceazr.com <i data-lucide="external-link" class="w-4 h-4"></i></a>
+                        <a href="https://ceazr.com" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-medium border-2 border-gray-200 text-gray-900 hover:border-black transition-all">Learn more</a>
+                    </div>
+                </div>
+                <div class="relative h-72 md:h-96 rounded-2xl overflow-hidden bg-gray-100 border border-gray-200">
+                    <!-- IMAGE-REVIEW: Black shop owner / pharmacist with shelf inventory -->
+                    <img src="https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&q=80&w=1400" alt="Inventory management" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div data-tab-panel="yako" role="tabpanel" class="tab-panel hidden grid md:grid-cols-2 gap-10 items-center bg-white border border-gray-200 rounded-3xl p-8 md:p-12">
+                <div>
+                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-4 inline-block">"I need a proper accounting ledger"</span>
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Know where your money is going.</h3>
+                    <p class="text-gray-600 text-lg mb-6 leading-relaxed">A practical ledger built for non-accountants. Organize income, expenses, receipts, and obligations — and produce records your accountant can actually work with.</p>
+                    <ul class="grid sm:grid-cols-2 gap-3 mb-8">
+                        <li class="flex items-start gap-2 text-sm text-gray-800"><i data-lucide="check-circle-2" class="text-blue-500 w-4 h-4 shrink-0 mt-0.5"></i>Record income &amp; expenses</li>
+                        <li class="flex items-start gap-2 text-sm text-gray-800"><i data-lucide="check-circle-2" class="text-blue-500 w-4 h-4 shrink-0 mt-0.5"></i>Track cashflow</li>
+                        <li class="flex items-start gap-2 text-sm text-gray-800"><i data-lucide="check-circle-2" class="text-blue-500 w-4 h-4 shrink-0 mt-0.5"></i>Keep cleaner records</li>
+                        <li class="flex items-start gap-2 text-sm text-gray-800"><i data-lucide="check-circle-2" class="text-blue-500 w-4 h-4 shrink-0 mt-0.5"></i>Work better with accountants</li>
+                    </ul>
+                    <p class="text-xs uppercase tracking-wider text-gray-500 font-semibold mb-2">Best for</p>
+                    <p class="text-sm text-gray-700 mb-8">Owner-managed businesses · Traders · Service businesses · Accountants serving SMEs · Businesses preparing for tax, reporting or financing</p>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="https://yakobooks.com" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-medium bg-black text-white hover:bg-gray-800 hover:shadow-lg transition-all">Visit yakobooks.com <i data-lucide="external-link" class="w-4 h-4"></i></a>
+                        <a href="https://yakobooks.com" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-medium border-2 border-gray-200 text-gray-900 hover:border-black transition-all">Learn more</a>
+                    </div>
+                </div>
+                <div class="relative h-72 md:h-96 rounded-2xl overflow-hidden bg-gray-100 border border-gray-200">
+                    <!-- IMAGE-REVIEW: Black/African business owner with ledger or laptop -->
+                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&q=80&w=1400" alt="Business accounting" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div data-tab-panel="paytton" role="tabpanel" class="tab-panel hidden grid md:grid-cols-2 gap-10 items-center bg-black text-white rounded-3xl p-8 md:p-12 relative overflow-hidden">
+                <div class="relative z-10">
+                    <span class="bg-amber-400/20 text-amber-300 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-4 inline-block">"I need to control purchasing"</span>
+                    <h3 class="text-3xl md:text-4xl font-bold mb-4">Control what your team buys.</h3>
+                    <p class="text-gray-300 text-lg mb-6 leading-relaxed">Manage purchase requests, supplier quotes, approvals, purchase orders, invoices, and goods received — before spending gets out of hand.</p>
+                    <ul class="grid sm:grid-cols-2 gap-3 mb-8">
+                        <li class="flex items-start gap-2 text-sm text-gray-300"><i data-lucide="check-square" class="text-amber-400 w-4 h-4 shrink-0 mt-0.5"></i>Manage purchase requests</li>
+                        <li class="flex items-start gap-2 text-sm text-gray-300"><i data-lucide="check-square" class="text-amber-400 w-4 h-4 shrink-0 mt-0.5"></i>Compare supplier quotes</li>
+                        <li class="flex items-start gap-2 text-sm text-gray-300"><i data-lucide="check-square" class="text-amber-400 w-4 h-4 shrink-0 mt-0.5"></i>Issue purchase orders</li>
+                        <li class="flex items-start gap-2 text-sm text-gray-300"><i data-lucide="check-square" class="text-amber-400 w-4 h-4 shrink-0 mt-0.5"></i>Record goods received</li>
+                    </ul>
+                    <p class="text-xs uppercase tracking-wider text-gray-500 font-semibold mb-2">Best for</p>
+                    <p class="text-sm text-gray-400 mb-8">Hotels · Schools · Clinics · Manufacturers · Distributors · Multi-branch businesses</p>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="https://paytton.com" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-medium bg-amber-400 text-black hover:bg-amber-300 transition-all">Visit paytton.com <i data-lucide="external-link" class="w-4 h-4"></i></a>
+                        <a href="https://paytton.com" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-medium border-2 border-white/30 text-white hover:border-white/70 transition-all">Learn more</a>
+                    </div>
+                </div>
+                <div class="relative h-72 md:h-96 rounded-2xl overflow-hidden border border-white/10 z-10">
+                    <!-- IMAGE-REVIEW: Black/African manager reviewing purchase orders / supplier paperwork -->
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=1400" alt="Procurement workflow" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-amber-500/15 rounded-full blur-3xl pointer-events-none"></div>
+            </div>
+
+            <div data-tab-panel="admeistr" role="tabpanel" class="tab-panel hidden grid md:grid-cols-2 gap-10 items-center bg-white border border-gray-200 rounded-3xl p-8 md:p-12">
+                <div>
+                    <span class="bg-rose-100 text-rose-800 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-4 inline-block">"I need to track my paid media"</span>
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">See what your media spend is actually doing.</h3>
+                    <p class="text-gray-600 text-lg mb-6 leading-relaxed">Built for the small African marketing agencies running campaigns for local brands. Pull paid-media performance and brand metrics into clean, comparable, client-ready reports — without the spreadsheet weekend.</p>
+                    <ul class="grid sm:grid-cols-2 gap-3 mb-8">
+                        <li class="flex items-start gap-2 text-sm text-gray-800"><i data-lucide="check-circle-2" class="text-rose-500 w-4 h-4 shrink-0 mt-0.5"></i>Track spend across channels</li>
+                        <li class="flex items-start gap-2 text-sm text-gray-800"><i data-lucide="check-circle-2" class="text-rose-500 w-4 h-4 shrink-0 mt-0.5"></i>Compare campaign performance</li>
+                        <li class="flex items-start gap-2 text-sm text-gray-800"><i data-lucide="check-circle-2" class="text-rose-500 w-4 h-4 shrink-0 mt-0.5"></i>Standardise client reports</li>
+                        <li class="flex items-start gap-2 text-sm text-gray-800"><i data-lucide="check-circle-2" class="text-rose-500 w-4 h-4 shrink-0 mt-0.5"></i>Roll up multiple brands in one view</li>
+                        <li class="flex items-start gap-2 text-sm text-gray-800"><i data-lucide="check-circle-2" class="text-rose-500 w-4 h-4 shrink-0 mt-0.5"></i>Monitor brand health metrics</li>
+                        <li class="flex items-start gap-2 text-sm text-gray-800"><i data-lucide="check-circle-2" class="text-rose-500 w-4 h-4 shrink-0 mt-0.5"></i>Cut report-prep time</li>
+                    </ul>
+                    <p class="text-xs uppercase tracking-wider text-gray-500 font-semibold mb-2">Best for</p>
+                    <p class="text-sm text-gray-700 mb-8">Small marketing &amp; advertising agencies · In-house brand teams · Independent media buyers · Multi-brand operators</p>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="https://admeistr.com" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-medium bg-black text-white hover:bg-gray-800 hover:shadow-lg transition-all">Visit admeistr.com <i data-lucide="external-link" class="w-4 h-4"></i></a>
+                        <a href="contact.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-medium border-2 border-gray-200 text-gray-900 hover:border-black transition-all">Talk to us</a>
+                    </div>
+                </div>
+                <div class="relative h-72 md:h-96 rounded-2xl overflow-hidden bg-gray-100 border border-gray-200">
+                    <!-- IMAGE-REVIEW: Paid-media / analytics dashboard or agency team reviewing reports -->
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1400" alt="Paid media reporting dashboard" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div data-tab-panel="tell-us" role="tabpanel" data-form-card class="tab-panel hidden grid md:grid-cols-2 gap-10 items-start bg-white border border-gray-200 rounded-3xl p-8 md:p-12">
+                <div>
+                    <span class="bg-violet-100 text-violet-800 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-4 inline-block">"My problem isn't on this list"</span>
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Tell us what you actually need.</h3>
+                    <p class="text-gray-600 text-lg mb-6 leading-relaxed">We build from real operating problems, not guesses. If there's a daily task that wastes hours, swallows money, or just lives in your head — we'd like to hear it.</p>
+                    <ul class="space-y-3 text-sm text-gray-700">
+                        <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="text-violet-500 w-4 h-4 shrink-0 mt-0.5"></i>Every message is read by a real person on the team.</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="text-violet-500 w-4 h-4 shrink-0 mt-0.5"></i>If we already have a tool that fits, we'll point you to it.</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="text-violet-500 w-4 h-4 shrink-0 mt-0.5"></i>If it shapes what we build next, we'll circle back.</li>
+                    </ul>
+                </div>
+                <div>
+                    <!-- FORM-DELIVERY: change the email below to route submissions elsewhere. -->
+                    <form data-form action="https://formsubmit.co/ajax/corporate@casialab.com" method="POST" class="space-y-4">
+                        <input type="hidden" name="_subject" value="Casia Lab — Product request (Tell us)">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;height:0;width:0;opacity:0" aria-hidden="true">
+                        <div class="space-y-2">
+                            <label class="text-sm font-semibold text-gray-700">Your email</label>
+                            <input required type="email" name="email" placeholder="you@business.com" class="w-full bg-gray-50 border border-gray-200 rounded-lg p-3 focus:border-black focus:ring-1 focus:ring-black outline-none transition-all">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-sm font-semibold text-gray-700">What do you do? <span class="text-gray-400 font-normal">(optional)</span></label>
+                            <input type="text" name="business" placeholder="e.g. Pharmacy in Yaba, Lagos" class="w-full bg-gray-50 border border-gray-200 rounded-lg p-3 focus:border-black focus:ring-1 focus:ring-black outline-none transition-all">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-sm font-semibold text-gray-700">What's the problem you'd like a tool for?</label>
+                            <textarea required name="message" rows="5" placeholder="In your own words — the daily task, the part that's painful, what you do today instead." class="w-full bg-gray-50 border border-gray-200 rounded-lg p-3 focus:border-black focus:ring-1 focus:ring-black outline-none transition-all"></textarea>
+                        </div>
+                        <button type="submit" class="w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium bg-black text-white hover:bg-gray-800 hover:shadow-lg transition-all">Send it</button>
+                    </form>
+                    <div data-form-success class="hidden text-center py-8 px-4 rounded-2xl bg-violet-50 border border-violet-100">
+                        <div class="w-14 h-14 bg-violet-100 text-violet-600 rounded-full flex items-center justify-center mx-auto mb-4"><i data-lucide="check-circle-2" class="w-7 h-7"></i></div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-1">Got it.</h4>
+                        <p class="text-gray-600 mb-6 text-sm">Thanks — we'll read it and reply if we can help.</p>
+                        <button type="button" data-form-reset class="inline-flex items-center justify-center px-5 py-2 rounded-lg font-medium bg-black text-white hover:bg-gray-800 hover:shadow-lg transition-all text-sm">Send another</button>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- Footer -->
-        <div class="footer">
-            <div class="container">
-                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center w-100 py-3">
-                    <p>&copy; 2026, Casia Growth Lab</p>
-                    <a href="privacy.html">Privacy Policy</a>
-                    <p>Office 205, Building 5, SHAMS, UAE</p>
+
+    <div class="w-full h-4 border-y border-black/5 pattern-mudcloth" aria-hidden="true"></div>
+
+    <!-- Why Casia Lab -->
+    <section class="py-20 bg-white" data-reveal>
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-4xl font-bold text-gray-900 mb-6 tracking-tight">Built for how the work actually happens.</h2>
+                <p class="text-lg text-gray-600 mb-10 leading-relaxed">Most software assumes a back office, a finance team, and clean processes. That's not where most African small businesses live. Our tools are built for the messy middle — the move from notebooks and memory to records you can actually trust, one day at a time.</p>
+                <div class="space-y-4">
+                    <div class="flex gap-4 items-start"><i data-lucide="check-circle-2" class="text-emerald-600 w-6 h-6 shrink-0 mt-0.5"></i><p class="text-gray-800 font-medium text-lg">Easy to start, even on a single phone</p></div>
+                    <div class="flex gap-4 items-start"><i data-lucide="check-circle-2" class="text-emerald-600 w-6 h-6 shrink-0 mt-0.5"></i><p class="text-gray-800 font-medium text-lg">Built around the tasks you do every single day</p></div>
+                    <div class="flex gap-4 items-start"><i data-lucide="check-circle-2" class="text-emerald-600 w-6 h-6 shrink-0 mt-0.5"></i><p class="text-gray-800 font-medium text-lg">Designed for power cuts, bad data, and cash-heavy days</p></div>
+                    <div class="flex gap-4 items-start"><i data-lucide="check-circle-2" class="text-emerald-600 w-6 h-6 shrink-0 mt-0.5"></i><p class="text-gray-800 font-medium text-lg">Works with how you already operate, then nudges it forward</p></div>
+                    <div class="flex gap-4 items-start"><i data-lucide="check-circle-2" class="text-emerald-600 w-6 h-6 shrink-0 mt-0.5"></i><p class="text-gray-800 font-medium text-lg">Lets you see what's happening before it becomes a problem</p></div>
+                </div>
+            </div>
+            <div class="bg-gray-100 rounded-3xl overflow-hidden h-[500px] border border-gray-200">
+                <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?auto=format&fit=crop&q=80&w=1200" alt="Casia Lab mission" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
+            </div>
+        </div>
+    </section>
+
+    <div class="w-full h-4 border-y border-black/5 pattern-kente" aria-hidden="true"></div>
+
+    <!-- Resources & Insights -->
+    <section class="py-20 bg-gray-50 border-t border-gray-200" data-reveal>
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 mb-4">Resources &amp; Insights</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl">Short reads on getting from notebook chaos to records you can run a business on.</p>
+                </div>
+                <a href="#" class="inline-flex items-center justify-center px-6 py-2.5 rounded-lg font-medium border-2 border-gray-200 text-gray-900 hover:border-black transition-all">View all resources</a>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <a href="#" class="bg-white rounded-3xl overflow-hidden border border-gray-200 hover:shadow-xl transition-all duration-300 group cursor-pointer flex flex-col">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1565514020179-026b92b84bb6?auto=format&fit=crop&q=80&w=600" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <span class="text-emerald-600 font-bold text-xs uppercase tracking-wider mb-3 block">Inventory</span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">From Paper to Cloud: Migrating your stock records</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mt-auto">A step-by-step guide to digitizing your warehouse without disrupting daily sales.</p>
+                    </div>
+                </a>
+                <a href="#" data-reveal data-reveal-delay="120" class="bg-white rounded-3xl overflow-hidden border border-gray-200 hover:shadow-xl transition-all duration-300 group cursor-pointer flex flex-col">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&q=80&w=600" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <span class="text-blue-600 font-bold text-xs uppercase tracking-wider mb-3 block">Finance</span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Stop Cash Leaks: 5 signs your ledger is failing you</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mt-auto">How to identify and plug the invisible holes in your daily retail cashflow.</p>
+                    </div>
+                </a>
+                <a href="#" data-reveal data-reveal-delay="240" class="bg-white rounded-3xl overflow-hidden border border-gray-200 hover:shadow-xl transition-all duration-300 group cursor-pointer flex flex-col">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=600" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <span class="text-amber-600 font-bold text-xs uppercase tracking-wider mb-3 block">Procurement</span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Structuring Approvals for Growing Teams</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mt-auto">Building a purchase order workflow that prevents unauthorized spending.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission -->
+    <section class="py-24 bg-emerald-900 text-white text-center relative overflow-hidden" data-reveal>
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-emerald-400 via-transparent to-transparent"></div>
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <i data-lucide="network" class="w-12 h-12 mx-auto mb-8 text-emerald-300"></i>
+            <h2 class="text-4xl font-bold mb-6 text-white">We build tools for better business control.</h2>
+            <p class="text-2xl font-light mb-16 text-emerald-50 leading-relaxed opacity-90">When you can actually see the business, you make better calls. Better calls compound — into less waste, steadier growth, and a stronger livelihood for everyone the business touches.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-12 items-center border-t border-emerald-800 pt-12">
+                <div class="text-center">
+                    <div class="text-5xl font-bold mb-2 text-white">500+</div>
+                    <div class="text-xs text-emerald-300 uppercase tracking-widest font-semibold">Active Businesses</div>
+                </div>
+                <div class="h-12 w-px bg-emerald-800 hidden md:block"></div>
+                <div class="text-center">
+                    <div class="text-5xl font-bold mb-2 text-white">4</div>
+                    <div class="text-xs text-emerald-300 uppercase tracking-widest font-semibold">Integrated Tools</div>
+                </div>
+                <div class="h-12 w-px bg-emerald-800 hidden md:block"></div>
+                <div class="text-center">
+                    <div class="text-5xl font-bold mb-2 text-white">1</div>
+                    <div class="text-xs text-emerald-300 uppercase tracking-widest font-semibold">Ecosystem</div>
                 </div>
             </div>
         </div>
+    </section>
 
+</main>
+
+<div class="w-full h-4 border-y border-black/5 pattern-adinkra" aria-hidden="true"></div>
+
+<!-- Footer -->
+<footer class="w-full bg-gray-950 text-white pt-24 pb-12 mt-12 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 mb-20">
+            <div class="col-span-2 space-y-6">
+                <div class="text-3xl font-black tracking-tight text-white mb-2">Casia Lab.</div>
+                <p class="text-gray-400 max-w-sm leading-relaxed text-lg">Practical tools for the daily work of running a small business in Africa.</p>
+            </div>
+            <div class="space-y-6">
+                <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest">Solutions</h4>
+                <div class="flex flex-col gap-4">
+                    <a href="https://ceazr.com" target="_blank" rel="noopener" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Inventory · Ceazr</a>
+                    <a href="https://yakobooks.com" target="_blank" rel="noopener" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Accounting · Yako</a>
+                    <a href="https://paytton.com" target="_blank" rel="noopener" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Procurement · Paytton</a>
+                    <a href="https://admeistr.com" target="_blank" rel="noopener" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Media · Admeistr</a>
+                </div>
+            </div>
+            <div class="space-y-6">
+                <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest">Company</h4>
+                <div class="flex flex-col gap-4">
+                    <a href="about.html" class="text-left text-gray-300 hover:text-white transition-colors font-medium">About Us</a>
+                    <a href="partner.html" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Partner with us</a>
+                    <a href="resellers.html" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Resell our tools</a>
+                    <a href="work-with-us.html" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Work with Us</a>
+                    <a href="contact.html" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Contact Us</a>
+                </div>
+            </div>
+            <div class="space-y-6">
+                <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest">Ecosystem</h4>
+                <div class="flex flex-col gap-4">
+                    <a href="https://log10media.com" target="_blank" rel="noopener" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Log10 Media</a>
+                    <a href="https://casiaconsulting.com" target="_blank" rel="noopener" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Casia Consulting</a>
+                    <a href="about.html#ecosystem" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Veins</a>                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-gray-500 text-sm font-medium">© 2026 Casia Lab. All rights reserved.</p>
+            <div class="flex gap-8">
+                <a href="privacy.html" class="text-sm text-gray-500 hover:text-white transition-colors font-medium">Privacy Policy</a>
+                <a href="terms.html" class="text-sm text-gray-500 hover:text-white transition-colors font-medium">Terms of Service</a>
+            </div>
+        </div>
     </div>
+</footer>
 
-    <script src="js/slick/slick.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script>
-        $(function() {
-            AOS.init();
-            window.addEventListener('load', AOS.refresh);
-            $('.carousel').carousel();
-        })
-    </script>
-    <script>
-        $(function() {
-            let faqOpen = false;
-            $('.faq-question').click(function() {
-                let expandIcon = '<img src="images/plus-icon.svg" alt="expand">';
-                let collapseIcon = '<img src="images/minus-icon.svg" alt="collapse">';
-                if(!$(this).parent().hasClass('faq-open')) {
-                    $(this).parent().addClass('faq-open');
-                    $(this).find('.faq-icon').html(collapseIcon);
-                } else {
-                    $(this).parent().removeClass('faq-open');
-                    $(this).find('.faq-icon').html(expandIcon);
-                }
-                $(this).closest('.faq').find('.faq-answer').slideToggle('fast');
-            });
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="js/site.js?v=19"></script>
 
-            function toggleFeature() {
-                $('.feature-title').click(function() {
-                    $(this).closest('.feature').find('.feature-content').slideToggle();
-                });
-            }
-            toggleFeature();
-
-            let open = false;
-            $('.plan-details .more-details').click(function() {
-                $(this).closest('.plan-details').find('.plan-more-details').slideToggle();
-                open = !open;
-                let btnText = open ? '<i class="fas fa-arrow-up"></i> &nbsp; Less Details': '<i class="fas fa-arrow-down"></i> &nbsp; More Details';
-                $(this).html(btnText);
-            });
-
-            $('.btn-switch-plan').click(function() {
-                let cycle = $(this).data('cycle');
-                if(cycle == 'yearly') {
-                    $(this).closest('.plan').find('.monthly-price').hide();
-                    $(this).closest('.plan').find('.yearly-price').show();
-                } else {
-                    $(this).closest('.plan').find('.monthly-price').show();
-                    $(this).closest('.plan').find('.yearly-price').hide();
-                }
-                $(this).closest('.plan').find('.btn-switch-plan').removeClass('active');
-                $(this).addClass('active');
-            });
-        });
-    </script>
 </body>
 </html>

@@ -1,74 +1,213 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Contact Us - Casia Lab</title>
-    <meta name="description" content="Contact Casia Growth Lab.">
-    <meta name="robots" content="index, follow">
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/app.js" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-    <link href="fonts/fontawesome/css/fontawesome-all.css" rel="stylesheet">
-    <link href="css/app.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
-    <link href="js/slick/slick.css" rel="stylesheet">
-    <link href="js/slick/slick-theme.css" rel="stylesheet">
-    <link href="js/aos/dist/aos.css" rel="stylesheet">
-    <script src="js/aos/dist/aos.js"></script>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Contact | Casia Lab</title>
+<meta name="description" content="Get in touch with Casia Lab — for product, partnership, reseller, support, or media inquiries.">
+<link rel="icon" href="images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="css/tailwind.css?v=19" rel="stylesheet">
 </head>
-<body>
-    <div id="app">
+<body class="min-h-screen bg-white text-gray-900 font-sans flex flex-col">
 
-        <div class="container text-start pt-3">
-            <a href="index.html" class="logo-box" style="color: black">
-                <img src="images/logo.png" class="logo" alt="logo" />
-                <h3 class="pb-0 mb-0">Casia Lab</h3>
-                <span>Enabling prosperity through innovation</span>
-            </a>
-            <ul class="kam-nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="expertise.html">Expertise</a></li>
-                <li><a href="contact.html" class="kam-nav-active">Contact Us</a></li>
-            </ul>
+<!-- Navbar -->
+<nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-20">
+        <a href="index.html" class="text-2xl font-black tracking-tight text-black hover:opacity-80 transition-opacity">Casia Lab.</a>
+        <div class="hidden md:flex items-center gap-8 h-full">
+            <a href="index.html" class="h-full flex items-center text-sm font-semibold border-b-2 border-transparent text-gray-500 hover:text-black transition-colors">Home</a>
+            <a href="index.html#solutions" class="h-full flex items-center text-sm font-semibold border-b-2 border-transparent text-gray-500 hover:text-black transition-colors">Solutions</a>
+            <a href="about.html" class="h-full flex items-center text-sm font-semibold border-b-2 border-transparent text-gray-500 hover:text-black transition-colors">About Us</a>
+            <a href="partner.html" class="h-full flex items-center text-sm font-semibold border-b-2 border-transparent text-gray-500 hover:text-black transition-colors">Partnerships</a>
         </div>
+        <div class="hidden md:block">
+            <a href="#contact-form" class="inline-flex items-center justify-center px-6 py-2.5 rounded-lg font-medium bg-black text-white hover:bg-gray-800 hover:shadow-lg transition-all">Send a message</a>
+        </div>
+        <button id="navToggle" class="md:hidden p-2 text-gray-600" aria-controls="mobileNav" aria-expanded="false" aria-label="Open menu">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+    </div>
+    <div id="mobileNav" class="hidden md:hidden absolute top-20 left-0 w-full bg-white border-b border-gray-200 shadow-xl py-4 px-6 flex flex-col gap-4">
+        <a href="index.html" class="text-left text-lg py-3 font-semibold text-gray-500">Home</a>
+        <a href="index.html#solutions" class="text-left text-lg py-3 font-semibold text-gray-500">Solutions</a>
+        <a href="about.html" class="text-left text-lg py-3 font-semibold text-gray-500">About Us</a>
+        <a href="partner.html" class="text-left text-lg py-3 font-semibold text-gray-500">Partnerships</a>
+        <a href="#contact-form" class="inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium bg-black text-white mt-4">Send a message</a>
+    </div>
+</nav>
 
-        <div class="hero hero-white d-flex justify-content-center align-items-center flex-column">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="row justify-content-center about-section">
-                        <div class="col-md-12 px-0" data-aos="fade-right" data-aos-duration="1000">
-                            <h4 class="my-3">Get in Touch</h4>
-                            <p>We'd love to hear from you. Send us an email and we'll get back to you as soon as possible.</p>
-                            <p class="my-4"><a href="mailto:projects@casialab.com" class="btn btn-secondary btn-lg">projects@casialab.com</a></p>
-                            <p>Office 205, Building 5, SHAMS, UAE</p>
-                        </div>
+<main class="flex-grow animate-in fade-in duration-500">
+
+    <div class="max-w-7xl mx-auto px-6 py-16">
+
+        <!-- Hero -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-16">
+            <div>
+                <span class="text-emerald-700 font-bold tracking-widest uppercase text-xs mb-4 block">Get in touch</span>
+                <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">Contact Casia Lab.</h1>
+                <p class="text-xl text-gray-600 max-w-xl mb-10 leading-relaxed">Have a question about our products, partnerships, reseller program, or company? Send us a message and the right person on our team will respond.</p>
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <div class="bg-gray-50 p-6 rounded-2xl border border-gray-200">
+                        <i data-lucide="mail" class="w-6 h-6 text-emerald-600 mb-3"></i>
+                        <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-1">Email</h3>
+                        <a href="mailto:hello@casialab.com" class="text-lg font-semibold text-gray-900 hover:text-emerald-700 transition-colors">hello@casialab.com</a>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-2xl border border-gray-200">
+                        <i data-lucide="map-pin" class="w-6 h-6 text-emerald-600 mb-3"></i>
+                        <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-1">Location</h3>
+                        <p class="text-lg font-semibold text-gray-900">Lagos, Nigeria</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-2xl border border-gray-200 sm:col-span-2">
+                        <i data-lucide="building-2" class="w-6 h-6 text-emerald-600 mb-3"></i>
+                        <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-1">Company</h3>
+                        <p class="text-lg font-semibold text-gray-900">Casia Growth Lab Limited</p>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="footer">
-            <div class="container">
-                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center w-100 py-3">
-                    <p>&copy; 2026, Casia Growth Lab</p>
-                    <a href="privacy.html">Privacy Policy</a>
-                    <p>Office 205, Building 5, SHAMS, UAE</p>
+            <!-- Form -->
+            <div id="contact-form" data-form-card class="bg-white p-8 md:p-10 rounded-3xl border border-gray-200 shadow-xl scroll-mt-24">
+                <h2 class="text-2xl font-bold text-gray-900 mb-2">Send us a message</h2>
+                <p class="text-gray-600 mb-8">We'll route it to the right team and respond within 2 business days.</p>
+
+                <!-- FORM-DELIVERY: change the email below to route submissions elsewhere. -->
+                <form data-form action="https://formsubmit.co/ajax/corporate@casialab.com" method="POST" class="space-y-6">
+                    <input type="hidden" name="_subject" value="Casia Lab — New contact form">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;height:0;width:0;opacity:0" aria-hidden="true">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="text-sm font-semibold text-gray-700">Full Name</label>
+                            <input required type="text" name="name" placeholder="Jane Doe" class="w-full bg-gray-50 border border-gray-200 rounded-lg p-3 focus:border-black focus:ring-1 focus:ring-black outline-none transition-all">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-sm font-semibold text-gray-700">Email</label>
+                            <input required type="email" name="email" placeholder="jane@business.com" class="w-full bg-gray-50 border border-gray-200 rounded-lg p-3 focus:border-black focus:ring-1 focus:ring-black outline-none transition-all">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="text-sm font-semibold text-gray-700">Phone / WhatsApp</label>
+                            <input type="tel" name="phone" placeholder="+234 …" class="w-full bg-gray-50 border border-gray-200 rounded-lg p-3 focus:border-black focus:ring-1 focus:ring-black outline-none transition-all">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-sm font-semibold text-gray-700">Country</label>
+                            <input type="text" name="country" placeholder="e.g. Nigeria" class="w-full bg-gray-50 border border-gray-200 rounded-lg p-3 focus:border-black focus:ring-1 focus:ring-black outline-none transition-all">
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-semibold text-gray-700">Business / Organization</label>
+                        <input type="text" name="business" placeholder="ACME Trading Co." class="w-full bg-gray-50 border border-gray-200 rounded-lg p-3 focus:border-black focus:ring-1 focus:ring-black outline-none transition-all">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-semibold text-gray-700">Reason for contacting us</label>
+                        <select name="reason" class="w-full bg-gray-50 border border-gray-200 rounded-lg p-3 focus:border-black focus:ring-1 focus:ring-black outline-none transition-all">
+                            <option>I want to use a product</option>
+                            <option>I want to partner</option>
+                            <option>I want to become a reseller</option>
+                            <option>I want to work with Casia Lab</option>
+                            <option>I need support</option>
+                            <option>Media / press</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-semibold text-gray-700">Message</label>
+                        <textarea required name="message" rows="5" placeholder="Tell us a bit about what you need." class="w-full bg-gray-50 border border-gray-200 rounded-lg p-3 focus:border-black focus:ring-1 focus:ring-black outline-none transition-all"></textarea>
+                    </div>
+                    <button type="submit" class="w-full inline-flex items-center justify-center px-6 py-4 rounded-lg font-medium bg-black text-white hover:bg-gray-800 hover:shadow-lg transition-all text-lg">Send message</button>
+                </form>
+
+                <div data-form-success class="hidden text-center py-12">
+                    <div class="w-20 h-20 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6"><i data-lucide="check-circle-2" class="w-10 h-10"></i></div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Message sent</h3>
+                    <p class="text-gray-600 mb-8">We'll be in touch within 2 business days.</p>
+                    <button type="button" data-form-reset class="inline-flex items-center justify-center px-6 py-2.5 rounded-lg font-medium bg-black text-white hover:bg-gray-800 hover:shadow-lg transition-all">Send another</button>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <div class="w-full h-4 border-y border-black/5 pattern-kente mb-12" aria-hidden="true"></div>
+
+        <!-- Other paths -->
+        <section data-reveal class="grid md:grid-cols-3 gap-6 mb-16">
+            <a href="partner.html" class="bg-gray-50 p-8 rounded-3xl border border-gray-200 hover:border-black transition-all group">
+                <i data-lucide="handshake" class="w-8 h-8 text-emerald-600 mb-4"></i>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Partner With Us</h3>
+                <p class="text-gray-600 mb-4">For chambers, associations, NGOs, lenders, and trade groups.</p>
+                <span class="inline-flex items-center gap-2 text-sm font-bold text-emerald-700 group-hover:text-emerald-900">Explore partnerships <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
+            </a>
+            <a href="index.html#solutions" class="bg-gray-50 p-8 rounded-3xl border border-gray-200 hover:border-black transition-all group">
+                <i data-lucide="package" class="w-8 h-8 text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Use a Product</h3>
+                <p class="text-gray-600 mb-4">Visit Ceazr, Yako, or Paytton directly to get started.</p>
+                <span class="inline-flex items-center gap-2 text-sm font-bold text-blue-700 group-hover:text-blue-900">See solutions <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
+            </a>
+            <a href="mailto:hello@casialab.com?subject=Press%20enquiry" class="bg-gray-50 p-8 rounded-3xl border border-gray-200 hover:border-black transition-all group">
+                <i data-lucide="newspaper" class="w-8 h-8 text-amber-600 mb-4"></i>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Media &amp; Press</h3>
+                <p class="text-gray-600 mb-4">For interviews, statements, and press materials.</p>
+                <span class="inline-flex items-center gap-2 text-sm font-bold text-amber-700 group-hover:text-amber-900">Email press <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
+            </a>
+        </section>
 
     </div>
 
-    <script src="js/slick/slick.min.js"></script>
-    <script>
-        $(function() {
-            AOS.init();
-            window.addEventListener('load', AOS.refresh);
-        });
-    </script>
+</main>
+
+<div class="w-full h-4 border-y border-black/5 pattern-adinkra" aria-hidden="true"></div>
+
+<!-- Footer -->
+<footer class="w-full bg-gray-950 text-white pt-24 pb-12 mt-12 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 mb-20">
+            <div class="col-span-2 space-y-6">
+                <div class="text-3xl font-black tracking-tight text-white mb-2">Casia Lab.</div>
+                <p class="text-gray-400 max-w-sm leading-relaxed text-lg">Practical tools for the daily work of running a small business in Africa.</p>
+            </div>
+            <div class="space-y-6">
+                <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest">Solutions</h4>
+                <div class="flex flex-col gap-4">
+                    <a href="https://ceazr.com" target="_blank" rel="noopener" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Inventory · Ceazr</a>
+                    <a href="https://yakobooks.com" target="_blank" rel="noopener" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Accounting · Yako</a>
+                    <a href="https://paytton.com" target="_blank" rel="noopener" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Procurement · Paytton</a>
+                    <a href="https://admeistr.com" target="_blank" rel="noopener" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Media · Admeistr</a>
+                </div>
+            </div>
+            <div class="space-y-6">
+                <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest">Company</h4>
+                <div class="flex flex-col gap-4">
+                    <a href="about.html" class="text-left text-gray-300 hover:text-white transition-colors font-medium">About Us</a>
+                    <a href="partner.html" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Partner with us</a>
+                    <a href="resellers.html" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Resell our tools</a>
+                    <a href="work-with-us.html" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Work with Us</a>
+                    <a href="contact.html" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Contact Us</a>
+                </div>
+            </div>
+            <div class="space-y-6">
+                <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest">Ecosystem</h4>
+                <div class="flex flex-col gap-4">
+                    <a href="https://log10media.com" target="_blank" rel="noopener" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Log10 Media</a>
+                    <a href="https://casiaconsulting.com" target="_blank" rel="noopener" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Casia Consulting</a>
+                    <a href="about.html#ecosystem" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Veins</a>                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-gray-500 text-sm font-medium">© 2026 Casia Lab. All rights reserved.</p>
+            <div class="flex gap-8">
+                <a href="privacy.html" class="text-sm text-gray-500 hover:text-white transition-colors font-medium">Privacy Policy</a>
+                <a href="terms.html" class="text-sm text-gray-500 hover:text-white transition-colors font-medium">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="js/site.js?v=19"></script>
+
 </body>
 </html>
