@@ -82,98 +82,19 @@ document.documentElement.classList.add('js-ready');
             });
         });
 
-        // Form submission — POSTs as JSON to a FormSubmit AJAX endpoint
-        // configured via the form's `action` attribute. Falls back to local-only
-        // success state if no action is set.
+        // Anti-spam guard. Forms submit natively (standard POST) so FormSubmit's
+        // own server-side CAPTCHA runs and the user is redirected to thanks.html.
+        // Here we only block the obvious bots before the request leaves the page:
+        //   1) Honeypot — a hidden field a human never fills.
+        //   2) Time-trap — submissions faster than a human could plausibly fill.
+        var FORM_MIN_MS = 3000;
+        var pageReadyAt = Date.now();
         document.querySelectorAll('form[data-form]').forEach(function (form) {
             form.addEventListener("submit", function (e) {
-                e.preventDefault();
-                var card = form.closest('[data-form-card]');
-                var btn = form.querySelector('button[type="submit"]');
-                var originalLabel = btn ? btn.innerHTML : null;
-                var action = form.getAttribute('action');
-
-                function showSuccess() {
-                    if (!card) return;
-                    form.classList.add("hidden");
-                    var success = card.querySelector('[data-form-success]');
-                    if (success) {
-                        success.classList.remove("hidden");
-                        if (window.lucide) window.lucide.createIcons();
-                    }
-                }
-                function showError(msg) {
-                    var existing = form.querySelector('[data-form-error]');
-                    if (!existing) {
-                        existing = document.createElement('div');
-                        existing.setAttribute('data-form-error', '');
-                        existing.className = 'p-3 rounded-lg bg-red-50 border border-red-200 text-sm text-red-800';
-                        form.appendChild(existing);
-                    }
-                    existing.textContent = msg || 'Sorry — your message could not be sent. Please email corporate@casialab.com directly.';
-                    if (btn) { btn.disabled = false; btn.innerHTML = originalLabel; }
-                }
-
-                // No endpoint? Fall back to the legacy in-place success state.
-                if (!action) { showSuccess(); return; }
-
-                // Honeypot triggered (bot filled the hidden _honey field) — drop silently.
                 var honey = form.querySelector('input[name="_honey"]');
-                if (honey && honey.value) { showSuccess(); return; }
-
-                // Build a JSON payload. Checkboxes with the same name collapse to an array.
-                var data = {};
-                var fd = new FormData(form);
-                fd.forEach(function (value, key) {
-                    if (typeof value !== 'string') return; // skip files etc.
-                    if (data[key] !== undefined) {
-                        if (!Array.isArray(data[key])) data[key] = [data[key]];
-                        data[key].push(value);
-                    } else {
-                        data[key] = value;
-                    }
-                });
-
-                if (btn) { btn.disabled = true; btn.innerHTML = 'Sending…'; }
-
-                fetch(action, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
-                    },
-                    body: JSON.stringify(data)
-                }).then(function (res) {
-                    if (!res.ok) throw new Error('HTTP ' + res.status);
-                    return res.json();
-                }).then(function (json) {
-                    var ok = json && (json.success === true || json.success === 'true');
-                    if (ok) {
-                        showSuccess();
-                    } else {
-                        var msg = json && json.message;
-                        // FormSubmit's "needs Activation" response — the recipient's
-                        // inbox actually receives a confirmation email. Treat as soft success.
-                        if (msg && /activation/i.test(msg)) {
-                            showSuccess();
-                        } else {
-                            showError(msg);
-                        }
-                    }
-                }).catch(function (err) {
-                    showError(err && err.message ? null : null);
-                });
-            });
-        });
-
-        document.querySelectorAll('[data-form-reset]').forEach(function (btn) {
-            btn.addEventListener("click", function () {
-                var card = btn.closest('[data-form-card]');
-                if (!card) return;
-                var form = card.querySelector("form[data-form]");
-                var success = card.querySelector('[data-form-success]');
-                if (form) { form.reset(); form.classList.remove("hidden"); }
-                if (success) success.classList.add("hidden");
+                if (honey && honey.value) { e.preventDefault(); return; }
+                if (Date.now() - pageReadyAt < FORM_MIN_MS) { e.preventDefault(); return; }
+                // Otherwise allow the native submit — FormSubmit handles CAPTCHA + redirect.
             });
         });
 
