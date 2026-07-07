@@ -3,57 +3,98 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Privacy Policy | Casia Lab</title>
+<title>Privacy Policy | Casia Lab. Do it easy.</title>
 <meta name="description" content="How Casia Growth Lab LLC collects, uses, stores, and protects personal data, framed under the UAE Personal Data Protection Law.">
 <meta name="robots" content="noindex">
 <link rel="icon" href="images/logo.png">
+<link rel="canonical" href="https://casialab.com/privacy.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link href="css/tailwind.css?v=30" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+        colors: {
+          brand: {
+            fg: '#09090B', surface: '#18181B', surface2: '#3F3F46',
+            canvas: '#FAFAFA', muted: '#E8ECF0', border: '#E4E4E7',
+            accent: '#00D67E', accentDark: '#00A863',
+          },
+          product: {
+            ceazr: '#10B981', yako: '#3B82F6',
+            paytton: '#F59E0B', chatledger: '#0EA5E9',
+          }
+        }
+      }
+    }
+  }
+</script>
 <style>
-    .legal h2 { font-size: 1.5rem; font-weight: 700; color: #111827; margin-top: 2.5rem; margin-bottom: 1rem; letter-spacing: -0.01em; }
-    .legal h3 { font-size: 1.125rem; font-weight: 600; color: #111827; margin-top: 1.75rem; margin-bottom: 0.5rem; }
-    .legal p { color: #4B5563; line-height: 1.75; margin-bottom: 1rem; }
-    .legal ul { list-style: disc; padding-left: 1.4rem; color: #4B5563; line-height: 1.75; margin-bottom: 1rem; }
-    .legal ul li { margin-bottom: 0.35rem; }
-    .legal a { color: #047857; text-decoration: underline; }
+  :root {
+    --fg: #09090B; --surface: #18181B; --canvas: #FAFAFA;
+    --border: #E4E4E7; --accent: #00D67E; --accent-dark: #00A863;
+  }
+  html, body { background: var(--canvas); color: var(--fg); }
+  body { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  .btn-primary { background: var(--surface); color: var(--canvas); transition: background-color 180ms ease; }
+  .btn-primary:hover { background: #000; }
+  .btn-secondary { background: transparent; color: var(--fg); border: 1px solid var(--border); transition: border-color 180ms ease, background-color 180ms ease; }
+  .btn-secondary:hover { border-color: var(--surface); background: white; }
+  .nav-link { position: relative; padding-bottom: 2px; }
+  .nav-link::after { content: ''; position: absolute; left: 0; right: 100%; bottom: -2px; height: 2px; background: var(--accent); transition: right 180ms ease; }
+  .nav-link:hover::after { right: 0; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+  .legal h2 { font-size: 1.5rem; font-weight: 700; color: #09090B; margin-top: 2.5rem; margin-bottom: 1rem; letter-spacing: -0.01em; }
+  .legal h3 { font-size: 1.125rem; font-weight: 600; color: #09090B; margin-top: 1.75rem; margin-bottom: 0.5rem; }
+  .legal p { color: rgba(9, 9, 11, 0.7); line-height: 1.75; margin-bottom: 1rem; }
+  .legal ul { list-style: disc; padding-left: 1.4rem; color: rgba(9, 9, 11, 0.7); line-height: 1.75; margin-bottom: 1rem; }
+  .legal ul li { margin-bottom: 0.35rem; }
+  .legal a { color: #00D67E; text-decoration: underline; }
 </style>
 </head>
-<body class="min-h-screen bg-white text-gray-900 font-sans flex flex-col">
+<body class="min-h-screen flex flex-col">
 
-<!-- Navbar -->
-<nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
-    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-20">
-        <a href="index.html" class="text-2xl font-black tracking-tight text-black hover:opacity-80 transition-opacity">Casia Lab.</a>
-        <div class="hidden md:flex items-center gap-8 h-full">
-            <a href="index.html" class="h-full flex items-center text-sm font-semibold border-b-2 border-transparent text-gray-500 hover:text-black transition-colors">Home</a>
-            <a href="index.html#solutions" class="h-full flex items-center text-sm font-semibold border-b-2 border-transparent text-gray-500 hover:text-black transition-colors">Solutions</a>
-            <a href="about.html" class="h-full flex items-center text-sm font-semibold border-b-2 border-transparent text-gray-500 hover:text-black transition-colors">About Us</a>
-            <a href="partner.html" class="h-full flex items-center text-sm font-semibold border-b-2 border-transparent text-gray-500 hover:text-black transition-colors">Partnerships</a>
-        </div>
-        <div class="hidden md:block">
-            <a href="contact.html" class="inline-flex items-center justify-center px-6 py-2.5 rounded-lg font-medium bg-black text-white hover:bg-gray-800 hover:shadow-lg transition-all">Contact us</a>
-        </div>
-        <button id="navToggle" class="md:hidden p-2 text-gray-600" aria-controls="mobileNav" aria-expanded="false" aria-label="Open menu">
-            <i data-lucide="menu" class="w-6 h-6"></i>
-        </button>
+<a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:bg-white focus:text-brand-fg focus:px-4 focus:py-2 focus:rounded focus:border focus:border-brand-border">Skip to content</a>
+
+<!-- Nav -->
+<nav class="sticky top-0 z-50 bg-white border-b border-brand-border">
+  <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
+    <div class="flex items-center gap-10">
+      <a href="index.html" class="flex items-baseline gap-2">
+        <span class="text-lg font-extrabold tracking-tight text-brand-fg">Casia Lab.</span>
+        <span class="hidden md:inline text-xs italic font-semibold text-brand-fg/50">Do it easy.</span>
+      </a>
+      <div class="hidden lg:flex items-center gap-7 text-sm font-semibold text-brand-fg/70">
+        <a href="index.html#pains" class="nav-link hover:text-brand-fg">Where it hurts</a>
+        <a href="index.html#products" class="nav-link hover:text-brand-fg">Products</a>
+        <a href="partner.html" class="nav-link hover:text-brand-fg">Partners</a>
+        <a href="about.html" class="nav-link hover:text-brand-fg">About</a>
+      </div>
     </div>
-    <div id="mobileNav" class="hidden md:hidden absolute top-20 left-0 w-full bg-white border-b border-gray-200 shadow-xl py-4 px-6 flex flex-col gap-4">
-        <a href="index.html" class="text-left text-lg py-3 font-semibold text-gray-500">Home</a>
-        <a href="index.html#solutions" class="text-left text-lg py-3 font-semibold text-gray-500">Solutions</a>
-        <a href="about.html" class="text-left text-lg py-3 font-semibold text-gray-500">About Us</a>
-        <a href="partner.html" class="text-left text-lg py-3 font-semibold text-gray-500">Partnerships</a>
-        <a href="contact.html" class="inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium bg-black text-white mt-4">Contact us</a>
+    <div class="flex items-center gap-2">
+      <a href="contact.html" class="btn-primary inline-flex items-center gap-2 text-sm font-semibold px-4 sm:px-5 py-2 sm:py-2.5">Contact Sales</a>
+      <button id="navToggle" class="lg:hidden p-2 text-brand-fg" aria-controls="mobileNav" aria-expanded="false" aria-label="Open menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
     </div>
+  </div>
+  <div id="mobileNav" class="hidden lg:hidden bg-white border-b border-brand-border py-2 px-6 flex-col">
+    <a href="index.html#pains" class="block py-3 text-base font-semibold text-brand-fg border-b border-brand-border/50">Where it hurts</a>
+    <a href="index.html#products" class="block py-3 text-base font-semibold text-brand-fg border-b border-brand-border/50">Products</a>
+    <a href="partner.html" class="block py-3 text-base font-semibold text-brand-fg border-b border-brand-border/50">Partners</a>
+    <a href="about.html" class="block py-3 text-base font-semibold text-brand-fg">About</a>
+  </div>
 </nav>
 
-<main class="flex-grow animate-in fade-in duration-500">
+<main id="main" class="flex-grow">
 
     <div class="max-w-3xl mx-auto px-6 py-16 legal">
-        <span class="text-emerald-700 font-bold tracking-widest uppercase text-xs mb-4 block">Legal</span>
-        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">Privacy Policy</h1>
-        <p class="text-gray-500 mb-10">Last updated: 10 May 2026</p>
+        <span class="text-brand-fg/60 font-bold tracking-[0.2em] uppercase text-xs mb-4 block">Legal</span>
+        <h1 class="text-4xl md:text-5xl font-extrabold text-brand-fg mb-4 leading-tight">Privacy Policy</h1>
+        <p class="text-brand-fg/50 mb-10">Last updated: 10 May 2026</p>
 
         <p>This Privacy Policy explains how <strong>Casia Growth Lab LLC</strong> ("Casia Lab", "we", "us", or "our") collects, uses, stores, and protects personal data when you visit <a href="https://www.casialab.com">www.casialab.com</a>, contact us, or use our products. We operate from Dubai, United Arab Emirates, and process personal data in line with the <strong>UAE Federal Decree-Law No. 45 of 2021 on the Protection of Personal Data (PDPL)</strong> and related regulations issued by the UAE Data Office.</p>
 
@@ -146,45 +187,62 @@
 </main>
 
 <!-- Footer -->
-<footer class="w-full bg-gray-950 text-white pt-24 pb-12 mt-12 border-t border-gray-800">
-    <div class="max-w-7xl mx-auto px-6">
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 mb-20">
-            <div class="col-span-2 space-y-6">
-                <div class="text-3xl font-black tracking-tight text-white mb-2">Casia Lab.</div>
-                <p class="text-gray-400 max-w-sm leading-relaxed text-lg">Practical tools for the daily work of running a growing business.</p>
-            </div>
-            <div class="space-y-6">
-                <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest">Solutions</h4>
-                <div class="flex flex-col gap-4">
-                    <a href="https://ceazr.com" target="_blank" rel="noopener" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Inventory · Ceazr</a>
-                    <a href="https://yakobooks.com" target="_blank" rel="noopener" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Accounting · Yako</a>
-                    <a href="https://paytton.com" target="_blank" rel="noopener" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Procurement · Paytton</a>
-                    <a href="https://chatledger.casialab.com" target="_blank" rel="noopener" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Customers · ChatLedger</a>
-                </div>
-            </div>
-            <div class="space-y-6">
-                <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest">Company</h4>
-                <div class="flex flex-col gap-4">
-                    <a href="about.html" class="text-left text-gray-300 hover:text-white transition-colors font-medium">About Us</a>
-                    <a href="partner.html" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Partner with us</a>
-                    <a href="resellers.html" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Resell our tools</a>
-                    <a href="work-with-us.html" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Work with Us</a>
-                    <a href="contact.html" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Contact Us</a>
-                </div>
-            </div>
+<footer class="bg-white border-t border-brand-border pt-20 pb-10">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-10 mb-14">
+      <div class="col-span-2 space-y-3">
+        <div class="text-xl font-extrabold tracking-tight text-brand-fg">Casia Lab.</div>
+        <div class="text-base italic font-semibold text-brand-fg/60">Do it easy.</div>
+        <p class="text-brand-fg/60 max-w-sm leading-relaxed pt-2 text-sm">Enterprise tools without enterprise headache. Built for the daily work of running a growing business.</p>
+      </div>
+      <div class="space-y-4">
+        <h4 class="text-xs font-bold text-brand-fg/50 uppercase tracking-[0.2em]">Solutions</h4>
+        <div class="flex flex-col gap-3 text-sm">
+          <a href="https://ceazr.com" target="_blank" rel="noopener noreferrer" class="text-brand-fg/80 hover:text-brand-fg font-semibold">Ceazr</a>
+          <a href="https://yakobooks.com" target="_blank" rel="noopener noreferrer" class="text-brand-fg/80 hover:text-brand-fg font-semibold">Yako</a>
+          <a href="https://paytton.com" target="_blank" rel="noopener noreferrer" class="text-brand-fg/80 hover:text-brand-fg font-semibold">Paytton</a>
+          <a href="https://chatledger.casialab.com" target="_blank" rel="noopener noreferrer" class="text-brand-fg/80 hover:text-brand-fg font-semibold">ChatLedger</a>
         </div>
-        <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
-            <p class="text-gray-500 text-sm font-medium">© 2026 Casia Lab. All rights reserved. <span class="text-gray-600">·</span> Part of <a href="https://casiaconsulting.com" target="_blank" rel="noopener" class="text-gray-400 hover:text-gray-200 transition-colors">Casia Growth Lab LLC</a>.</p>
-            <div class="flex gap-8">
-                <a href="privacy.html" class="text-sm text-gray-500 hover:text-white transition-colors font-medium">Privacy Policy</a>
-                <a href="terms.html" class="text-sm text-gray-500 hover:text-white transition-colors font-medium">Terms of Service</a>
-            </div>
+      </div>
+      <div class="space-y-4">
+        <h4 class="text-xs font-bold text-brand-fg/50 uppercase tracking-[0.2em]">Company</h4>
+        <div class="flex flex-col gap-3 text-sm">
+          <a href="about.html" class="text-brand-fg/80 hover:text-brand-fg font-semibold">About Us</a>
+          <a href="partner.html" class="text-brand-fg/80 hover:text-brand-fg font-semibold">Partner with us</a>
+          <a href="resellers.html" class="text-brand-fg/80 hover:text-brand-fg font-semibold">Resell our tools</a>
+          <a href="work-with-us.html" class="text-brand-fg/80 hover:text-brand-fg font-semibold">Work with Us</a>
+          <a href="contact.html" class="text-brand-fg/80 hover:text-brand-fg font-semibold">Contact Us</a>
         </div>
+      </div>
     </div>
+    <div class="border-t border-brand-border pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-brand-fg/60">
+      <p>© 2026 Casia Lab. Part of <a href="https://casiaconsulting.com" target="_blank" rel="noopener noreferrer" class="hover:text-brand-fg underline">Casia Growth Lab LLC</a>.</p>
+      <div class="flex gap-6">
+        <a href="privacy.html" class="hover:text-brand-fg">Privacy Policy</a>
+        <a href="terms.html" class="hover:text-brand-fg">Terms of Service</a>
+      </div>
+    </div>
+  </div>
 </footer>
 
-<script src="https://unpkg.com/lucide@latest"></script>
-<script src="js/site.js?v=30"></script>
+<script>
+  (function () {
+    var toggle = document.getElementById('navToggle');
+    var menu = document.getElementById('mobileNav');
+    if (!toggle || !menu) return;
+    menu.classList.add('flex');
+    toggle.addEventListener('click', function () {
+      var isHidden = menu.classList.toggle('hidden');
+      toggle.setAttribute('aria-expanded', String(!isHidden));
+    });
+    menu.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        menu.classList.add('hidden');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  })();
+</script>
 
 </body>
 </html>

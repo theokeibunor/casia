@@ -3,118 +3,157 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>About | Casia Lab — Building practical tools for owner-led business growth</title>
+<title>About | Casia Lab. Do it easy.</title>
 <meta name="description" content="Casia Lab is a product company building tools that help owner-led micro and small businesses operate with more control, visibility, and discipline.">
 <link rel="icon" href="images/logo.png">
+<link rel="canonical" href="https://casialab.com/about.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link href="css/tailwind.css?v=30" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+        colors: {
+          brand: {
+            fg: '#09090B', surface: '#18181B', surface2: '#3F3F46',
+            canvas: '#FAFAFA', muted: '#E8ECF0', border: '#E4E4E7',
+            accent: '#00D67E', accentDark: '#00A863',
+          },
+          product: {
+            ceazr: '#10B981', yako: '#3B82F6',
+            paytton: '#F59E0B', chatledger: '#0EA5E9',
+          }
+        }
+      }
+    }
+  }
+</script>
+<style>
+  :root {
+    --fg: #09090B; --surface: #18181B; --canvas: #FAFAFA;
+    --border: #E4E4E7; --accent: #00D67E; --accent-dark: #00A863;
+  }
+  html, body { background: var(--canvas); color: var(--fg); }
+  body { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  .btn-primary { background: var(--surface); color: var(--canvas); transition: background-color 180ms ease; }
+  .btn-primary:hover { background: #000; }
+  .btn-secondary { background: transparent; color: var(--fg); border: 1px solid var(--border); transition: border-color 180ms ease, background-color 180ms ease; }
+  .btn-secondary:hover { border-color: var(--surface); background: white; }
+  .nav-link { position: relative; padding-bottom: 2px; }
+  .nav-link::after { content: ''; position: absolute; left: 0; right: 100%; bottom: -2px; height: 2px; background: var(--accent); transition: right 180ms ease; }
+  .nav-link:hover::after { right: 0; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+</style>
 </head>
-<body class="min-h-screen bg-white text-gray-900 font-sans flex flex-col">
+<body class="min-h-screen flex flex-col">
 
-<!-- Navbar -->
-<nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
-    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-20">
-        <a href="index.html" class="text-2xl font-black tracking-tight text-black hover:opacity-80 transition-opacity">Casia Lab.</a>
-        <div class="hidden md:flex items-center gap-8 h-full">
-            <a href="index.html" class="h-full flex items-center text-sm font-semibold border-b-2 border-transparent text-gray-500 hover:text-black transition-colors">Home</a>
-            <a href="index.html#solutions" class="h-full flex items-center text-sm font-semibold border-b-2 border-transparent text-gray-500 hover:text-black transition-colors">Solutions</a>
-            <a href="about.html" class="h-full flex items-center text-sm font-semibold border-b-2 border-black text-black">About Us</a>
-            <a href="partner.html" class="h-full flex items-center text-sm font-semibold border-b-2 border-transparent text-gray-500 hover:text-black transition-colors">Partnerships</a>
-        </div>
-        <div class="hidden md:block">
-            <a href="contact.html" class="inline-flex items-center justify-center px-6 py-2.5 rounded-lg font-medium bg-black text-white hover:bg-gray-800 hover:shadow-lg transition-all">Contact us</a>
-        </div>
-        <button id="navToggle" class="md:hidden p-2 text-gray-600" aria-controls="mobileNav" aria-expanded="false" aria-label="Open menu">
-            <i data-lucide="menu" class="w-6 h-6"></i>
-        </button>
+<a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:bg-white focus:text-brand-fg focus:px-4 focus:py-2 focus:rounded focus:border focus:border-brand-border">Skip to content</a>
+
+<!-- Nav -->
+<nav class="sticky top-0 z-50 bg-white border-b border-brand-border">
+  <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
+    <div class="flex items-center gap-10">
+      <a href="index.html" class="flex items-baseline gap-2">
+        <span class="text-lg font-extrabold tracking-tight text-brand-fg">Casia Lab.</span>
+        <span class="hidden md:inline text-xs italic font-semibold text-brand-fg/50">Do it easy.</span>
+      </a>
+      <div class="hidden lg:flex items-center gap-7 text-sm font-semibold text-brand-fg/70">
+        <a href="index.html#pains" class="nav-link hover:text-brand-fg">Where it hurts</a>
+        <a href="index.html#products" class="nav-link hover:text-brand-fg">Products</a>
+        <a href="partner.html" class="nav-link hover:text-brand-fg">Partners</a>
+        <a href="about.html" class="nav-link font-bold text-brand-fg" aria-current="page">About</a>
+      </div>
     </div>
-    <div id="mobileNav" class="hidden md:hidden absolute top-20 left-0 w-full bg-white border-b border-gray-200 shadow-xl py-4 px-6 flex flex-col gap-4">
-        <a href="index.html" class="text-left text-lg py-3 font-semibold text-gray-500">Home</a>
-        <a href="index.html#solutions" class="text-left text-lg py-3 font-semibold text-gray-500">Solutions</a>
-        <a href="about.html" class="text-left text-lg py-3 font-semibold text-black">About Us</a>
-        <a href="partner.html" class="text-left text-lg py-3 font-semibold text-gray-500">Partnerships</a>
-        <a href="contact.html" class="inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium bg-black text-white mt-4">Contact us</a>
+    <div class="flex items-center gap-2">
+      <a href="contact.html" class="btn-primary inline-flex items-center gap-2 text-sm font-semibold px-4 sm:px-5 py-2 sm:py-2.5">Contact Sales</a>
+      <button id="navToggle" class="lg:hidden p-2 text-brand-fg" aria-controls="mobileNav" aria-expanded="false" aria-label="Open menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
     </div>
+  </div>
+  <div id="mobileNav" class="hidden lg:hidden bg-white border-b border-brand-border py-2 px-6 flex-col">
+    <a href="index.html#pains" class="block py-3 text-base font-semibold text-brand-fg border-b border-brand-border/50">Where it hurts</a>
+    <a href="index.html#products" class="block py-3 text-base font-semibold text-brand-fg border-b border-brand-border/50">Products</a>
+    <a href="partner.html" class="block py-3 text-base font-semibold text-brand-fg border-b border-brand-border/50">Partners</a>
+    <a href="about.html" class="block py-3 text-base font-semibold text-brand-fg" aria-current="page">About</a>
+  </div>
 </nav>
 
-<main class="flex-grow animate-in fade-in duration-500">
+<main id="main" class="flex-grow">
 
     <!-- Hero -->
     <section class="py-24 max-w-7xl mx-auto px-6">
         <div class="grid md:grid-cols-2 gap-16 items-center mb-16">
             <div class="space-y-6">
-                <span class="text-emerald-700 font-bold tracking-widest text-xs uppercase bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100 w-fit inline-block">About Casia Lab</span>
-                <h1 class="text-5xl md:text-6xl font-bold leading-[1.1] text-gray-900">Building practical tools for owner-led business growth.</h1>
-                <div class="space-y-4 text-xl text-gray-600 max-w-xl leading-relaxed">
+                <span class="text-xs font-bold tracking-[0.2em] uppercase text-brand-fg/60 mb-4 block">About Casia Lab</span>
+                <h1 class="text-5xl md:text-6xl font-bold leading-[1.1] text-brand-fg">Building practical tools for owner-led business growth.</h1>
+                <div class="space-y-4 text-xl text-brand-fg/70 max-w-xl leading-relaxed">
                     <p>Casia Lab is a product company building tools that help owner-led micro and small businesses operate with more control, visibility, and discipline.</p>
-                    <p>We believe small business growth is not only constrained by capital, policy, or market access. It is also constrained by the daily operating systems businesses rely on — or do not have.</p>
+                    <p>We believe small business growth is not only constrained by capital, policy, or market access. It is also constrained by the daily operating systems businesses rely on, or do not have.</p>
                 </div>
             </div>
-            <div class="relative h-[480px] w-full bg-gray-100 rounded-3xl overflow-hidden border border-gray-200 shadow-xl">
+            <div class="relative h-[480px] w-full bg-white overflow-hidden border border-brand-border">
                 <img src="https://images.unsplash.com/photo-1573497019418-b400bb3ab074?auto=format&fit=crop&q=80&w=2000" alt="Casia Lab office" class="absolute inset-0 w-full h-full object-cover">
             </div>
         </div>
     </section>
 
-    <div class="w-full h-4 border-y border-black/5 pattern-kente" aria-hidden="true"></div>
-
     <!-- Thesis -->
-    <section data-reveal class="py-24 bg-gray-50 border-y border-gray-200">
+    <section class="py-24 bg-white border-y border-brand-border">
         <div class="max-w-4xl mx-auto px-6">
-            <h2 class="text-4xl font-bold mb-8 text-gray-900 text-center">Why we're building this.</h2>
-            <div class="space-y-6 text-xl text-gray-600 leading-relaxed font-medium">
+            <h2 class="text-4xl font-bold mb-8 text-brand-fg text-center">Why we're building this.</h2>
+            <div class="space-y-6 text-xl text-brand-fg/70 leading-relaxed font-medium">
                 <p>Capital matters. Policy matters. Access to markets matters. But capital only compounds when a business can manage it well. Policy reforms only translate into growth when businesses have the systems to respond.</p>
-                <p>For most owner-led MSMEs the missing layer isn't ambition or talent. It's the boring, daily operating layer — the tools you'd use to know what's on the shelf, what was bought, what's owed, and whether the month was actually profitable.</p>
+                <p>For most owner-led MSMEs the missing layer isn't ambition or talent. It's the boring, daily operating layer, the tools you'd use to know what's on the shelf, what was bought, what's owed, and whether the month was actually profitable.</p>
                 <p>That's the layer Casia Lab is building.</p>
             </div>
         </div>
     </section>
 
-    <div class="w-full h-4 border-y border-black/5 pattern-mudcloth" aria-hidden="true"></div>
-
     <!-- Why this matters -->
-    <section data-reveal class="py-24 max-w-7xl mx-auto px-6 border-b border-gray-200">
+    <section class="py-24 max-w-7xl mx-auto px-6 border-b border-brand-border">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-8 text-gray-900">Small business productivity is prosperity infrastructure.</h2>
-            <p class="text-xl text-gray-600 leading-relaxed mb-12">Micro and small businesses are central to employment, trade, household income, local supply chains, and community resilience in every market that matters. When they operate better, the benefits compound:</p>
+            <h2 class="text-4xl font-bold mb-8 text-brand-fg">Small business productivity is prosperity infrastructure.</h2>
+            <p class="text-xl text-brand-fg/70 leading-relaxed mb-12">Micro and small businesses are central to employment, trade, household income, local supply chains, and community resilience in every market that matters. When they operate better, the benefits compound:</p>
             <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 text-left justify-center">
-                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 flex flex-col gap-4"><i data-lucide="line-chart" class="w-8 h-8 text-emerald-600"></i><p class="font-semibold text-gray-900">Better records improve access to finance</p></div>
-                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 flex flex-col gap-4"><i data-lucide="box" class="w-8 h-8 text-emerald-600"></i><p class="font-semibold text-gray-900">Better inventory control reduces waste</p></div>
-                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 flex flex-col gap-4"><i data-lucide="shopping-cart" class="w-8 h-8 text-emerald-600"></i><p class="font-semibold text-gray-900">Better procurement reduces leakage</p></div>
-                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 flex flex-col gap-4"><i data-lucide="activity" class="w-8 h-8 text-emerald-600"></i><p class="font-semibold text-gray-900">Better visibility improves decisions</p></div>
-                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 flex flex-col gap-4"><i data-lucide="network" class="w-8 h-8 text-emerald-600"></i><p class="font-semibold text-gray-900">Better systems make growth sustainable</p></div>
+                <div class="bg-white p-6 border border-brand-border flex flex-col gap-4"><i data-lucide="line-chart" class="w-8 h-8 text-brand-accent"></i><p class="font-semibold text-brand-fg">Better records improve access to finance</p></div>
+                <div class="bg-white p-6 border border-brand-border flex flex-col gap-4"><i data-lucide="box" class="w-8 h-8 text-brand-accent"></i><p class="font-semibold text-brand-fg">Better inventory control reduces waste</p></div>
+                <div class="bg-white p-6 border border-brand-border flex flex-col gap-4"><i data-lucide="shopping-cart" class="w-8 h-8 text-brand-accent"></i><p class="font-semibold text-brand-fg">Better procurement reduces leakage</p></div>
+                <div class="bg-white p-6 border border-brand-border flex flex-col gap-4"><i data-lucide="activity" class="w-8 h-8 text-brand-accent"></i><p class="font-semibold text-brand-fg">Better visibility improves decisions</p></div>
+                <div class="bg-white p-6 border border-brand-border flex flex-col gap-4"><i data-lucide="network" class="w-8 h-8 text-brand-accent"></i><p class="font-semibold text-brand-fg">Better systems make growth sustainable</p></div>
             </div>
         </div>
     </section>
 
     <!-- Approach & Market Focus -->
-    <section data-reveal class="py-24 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20">
+    <section class="py-24 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20">
         <div class="space-y-8">
             <div>
-                <h2 class="text-3xl font-bold mb-6 text-gray-900">Our Approach</h2>
-                <p class="text-lg text-gray-600 leading-relaxed mb-6">Many business tools are designed for companies that already have formal processes, stable teams, and clean records. That is not where many small businesses start. Casia Lab builds for the transition:</p>
+                <h2 class="text-3xl font-bold mb-6 text-brand-fg">Our Approach</h2>
+                <p class="text-lg text-brand-fg/70 leading-relaxed mb-6">Many business tools are designed for companies that already have formal processes, stable teams, and clean records. That is not where many small businesses start. Casia Lab builds for the transition:</p>
                 <ul class="space-y-4">
-                    <li class="flex items-center gap-3"><i data-lucide="arrow-right" class="w-5 h-5 text-emerald-500"></i><span class="text-lg font-medium text-gray-800">From paper to digital.</span></li>
-                    <li class="flex items-center gap-3"><i data-lucide="arrow-right" class="w-5 h-5 text-emerald-500"></i><span class="text-lg font-medium text-gray-800">From memory to records.</span></li>
-                    <li class="flex items-center gap-3"><i data-lucide="arrow-right" class="w-5 h-5 text-emerald-500"></i><span class="text-lg font-medium text-gray-800">From WhatsApp follow-ups to structured workflows.</span></li>
-                    <li class="flex items-center gap-3"><i data-lucide="arrow-right" class="w-5 h-5 text-emerald-500"></i><span class="text-lg font-medium text-gray-800">From scattered receipts to accountant-ready information.</span></li>
-                    <li class="flex items-center gap-3"><i data-lucide="arrow-right" class="w-5 h-5 text-emerald-500"></i><span class="text-lg font-medium text-gray-800">From reactive decisions to clearer visibility.</span></li>
+                    <li class="flex items-center gap-3"><i data-lucide="arrow-right" class="w-5 h-5 text-brand-accent"></i><span class="text-lg font-medium text-brand-fg">From paper to digital.</span></li>
+                    <li class="flex items-center gap-3"><i data-lucide="arrow-right" class="w-5 h-5 text-brand-accent"></i><span class="text-lg font-medium text-brand-fg">From memory to records.</span></li>
+                    <li class="flex items-center gap-3"><i data-lucide="arrow-right" class="w-5 h-5 text-brand-accent"></i><span class="text-lg font-medium text-brand-fg">From WhatsApp follow-ups to structured workflows.</span></li>
+                    <li class="flex items-center gap-3"><i data-lucide="arrow-right" class="w-5 h-5 text-brand-accent"></i><span class="text-lg font-medium text-brand-fg">From scattered receipts to accountant-ready information.</span></li>
+                    <li class="flex items-center gap-3"><i data-lucide="arrow-right" class="w-5 h-5 text-brand-accent"></i><span class="text-lg font-medium text-brand-fg">From reactive decisions to clearer visibility.</span></li>
                 </ul>
             </div>
         </div>
         <div>
-            <h2 class="text-3xl font-bold mb-6 text-gray-900">Our Market Focus</h2>
-            <div class="bg-black text-white rounded-3xl p-10 flex flex-col sm:flex-row items-center sm:items-start gap-8 shadow-xl h-full">
+            <h2 class="text-3xl font-bold mb-6 text-brand-fg">Our Market Focus</h2>
+            <div class="bg-brand-surface text-white p-10 flex flex-col sm:flex-row items-center sm:items-start gap-8 h-full">
                 <div class="flex-shrink-0">
                     <img src="https://images.unsplash.com/photo-1493612276216-ee3925520721?auto=format&fit=crop&q=80&w=800" alt="Market focus" class="w-32 h-32 rounded-full object-cover border-4 border-gray-800">
                 </div>
                 <div>
-                    <p class="text-gray-300 text-lg leading-relaxed mb-6">Built in <strong class="text-white">Dubai</strong> for the owner-led business. The pains we solve — scattered records, multi-location stock, vendors expecting invoices, money across accounts — are the same in any market we serve.</p>
-                    <div class="inline-flex items-center gap-2 text-emerald-400 font-semibold bg-emerald-900/30 px-4 py-2 rounded-lg">
+                    <p class="text-gray-300 text-lg leading-relaxed mb-6">Built in <strong class="text-white">Dubai</strong> for the owner-led business. The pains we solve, scattered records, multi-location stock, vendors expecting invoices, money across accounts, are the same in any market we serve.</p>
+                    <div class="inline-flex items-center gap-2 text-brand-accent font-semibold bg-white/10 px-4 py-2 rounded-lg">
                         <i data-lucide="map-pin" class="w-5 h-5 shrink-0"></i>
-                        <span>Headquartered in Dubai, UAE — serving owner-led businesses globally.</span>
+                        <span>Headquartered in Dubai, UAE, serving owner-led businesses globally.</span>
                     </div>
                 </div>
             </div>
@@ -123,64 +162,80 @@
 
 
     <!-- CTA -->
-    <section data-reveal class="py-24 max-w-5xl mx-auto px-6 text-center">
-        <div class="bg-emerald-900 text-white py-20 px-8 rounded-3xl shadow-2xl relative overflow-hidden">
+    <section class="py-24 max-w-5xl mx-auto px-6 text-center">
+        <div class="bg-brand-surface text-white py-20 px-8 relative overflow-hidden">
             <div class="relative z-10">
                 <h2 class="text-4xl font-bold mb-6">Partner with Casia Lab.</h2>
-                <p class="text-xl text-emerald-100 mb-10 max-w-2xl mx-auto">If you serve small businesses in any way — as an institution, partner, accountant, or operator — we'd like to hear from you.</p>
+                <p class="text-xl text-brand-fg/70 mb-10 max-w-2xl mx-auto">If you serve small businesses in any way, as an institution, partner, accountant, or operator, we'd like to hear from you.</p>
                 <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="partner.html" class="inline-flex items-center justify-center px-8 py-4 rounded-lg font-medium bg-white text-emerald-900 hover:bg-gray-100 text-lg transition-all">Partner with us</a>
-                    <a href="index.html#solutions" class="inline-flex items-center justify-center px-8 py-4 rounded-lg font-medium border-2 border-white/30 text-white hover:bg-white/10 hover:border-white text-lg transition-all">Explore our products</a>
+                    <a href="partner.html" class="btn-accent inline-flex items-center justify-center px-8 py-4 font-medium text-lg">Partner with us</a>
+                    <a href="index.html#products" class="inline-flex items-center justify-center px-8 py-4 font-medium border border-white/25 text-white hover:border-white text-lg transition-all">Explore our products</a>
                 </div>
             </div>
-            <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-emerald-700/50 via-emerald-900 to-emerald-950 opacity-80 pointer-events-none"></div>
         </div>
     </section>
 
 </main>
 
-<div class="w-full h-4 border-y border-black/5 pattern-adinkra" aria-hidden="true"></div>
-
 <!-- Footer -->
-<footer class="w-full bg-gray-950 text-white pt-24 pb-12 mt-12 border-t border-gray-800">
-    <div class="max-w-7xl mx-auto px-6">
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 mb-20">
-            <div class="col-span-2 space-y-6">
-                <div class="text-3xl font-black tracking-tight text-white mb-2">Casia Lab.</div>
-                <p class="text-gray-400 max-w-sm leading-relaxed text-lg">Practical tools for the daily work of running a growing business.</p>
-            </div>
-            <div class="space-y-6">
-                <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest">Solutions</h4>
-                <div class="flex flex-col gap-4">
-                    <a href="https://ceazr.com" target="_blank" rel="noopener" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Inventory · Ceazr</a>
-                    <a href="https://yakobooks.com" target="_blank" rel="noopener" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Accounting · Yako</a>
-                    <a href="https://paytton.com" target="_blank" rel="noopener" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Procurement · Paytton</a>
-                    <a href="https://chatledger.casialab.com" target="_blank" rel="noopener" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Customers · ChatLedger</a>
-                </div>
-            </div>
-            <div class="space-y-6">
-                <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest">Company</h4>
-                <div class="flex flex-col gap-4">
-                    <a href="about.html" class="text-left text-gray-300 hover:text-white transition-colors font-medium">About Us</a>
-                    <a href="partner.html" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Partner with us</a>
-                    <a href="resellers.html" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Resell our tools</a>
-                    <a href="work-with-us.html" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Work with Us</a>
-                    <a href="contact.html" class="text-left text-gray-300 hover:text-white transition-colors font-medium">Contact Us</a>
-                </div>
-            </div>
+<footer class="bg-white border-t border-brand-border pt-20 pb-10">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-10 mb-14">
+      <div class="col-span-2 space-y-3">
+        <div class="text-xl font-extrabold tracking-tight text-brand-fg">Casia Lab.</div>
+        <div class="text-base italic font-semibold text-brand-fg/60">Do it easy.</div>
+        <p class="text-brand-fg/60 max-w-sm leading-relaxed pt-2 text-sm">Enterprise tools without enterprise headache. Built for the daily work of running a growing business.</p>
+      </div>
+      <div class="space-y-4">
+        <h4 class="text-xs font-bold text-brand-fg/50 uppercase tracking-[0.2em]">Solutions</h4>
+        <div class="flex flex-col gap-3 text-sm">
+          <a href="https://ceazr.com" target="_blank" rel="noopener noreferrer" class="text-brand-fg/80 hover:text-brand-fg font-semibold">Ceazr</a>
+          <a href="https://yakobooks.com" target="_blank" rel="noopener noreferrer" class="text-brand-fg/80 hover:text-brand-fg font-semibold">Yako</a>
+          <a href="https://paytton.com" target="_blank" rel="noopener noreferrer" class="text-brand-fg/80 hover:text-brand-fg font-semibold">Paytton</a>
+          <a href="https://chatledger.casialab.com" target="_blank" rel="noopener noreferrer" class="text-brand-fg/80 hover:text-brand-fg font-semibold">ChatLedger</a>
         </div>
-        <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
-            <p class="text-gray-500 text-sm font-medium">© 2026 Casia Lab. All rights reserved. <span class="text-gray-600">·</span> Part of <a href="https://casiaconsulting.com" target="_blank" rel="noopener" class="text-gray-400 hover:text-gray-200 transition-colors">Casia Growth Lab LLC</a>.</p>
-            <div class="flex gap-8">
-                <a href="privacy.html" class="text-sm text-gray-500 hover:text-white transition-colors font-medium">Privacy Policy</a>
-                <a href="terms.html" class="text-sm text-gray-500 hover:text-white transition-colors font-medium">Terms of Service</a>
-            </div>
+      </div>
+      <div class="space-y-4">
+        <h4 class="text-xs font-bold text-brand-fg/50 uppercase tracking-[0.2em]">Company</h4>
+        <div class="flex flex-col gap-3 text-sm">
+          <a href="about.html" class="text-brand-fg/80 hover:text-brand-fg font-semibold">About Us</a>
+          <a href="partner.html" class="text-brand-fg/80 hover:text-brand-fg font-semibold">Partner with us</a>
+          <a href="resellers.html" class="text-brand-fg/80 hover:text-brand-fg font-semibold">Resell our tools</a>
+          <a href="work-with-us.html" class="text-brand-fg/80 hover:text-brand-fg font-semibold">Work with Us</a>
+          <a href="contact.html" class="text-brand-fg/80 hover:text-brand-fg font-semibold">Contact Us</a>
         </div>
+      </div>
     </div>
+    <div class="border-t border-brand-border pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-brand-fg/60">
+      <p>© 2026 Casia Lab. Part of <a href="https://casiaconsulting.com" target="_blank" rel="noopener noreferrer" class="hover:text-brand-fg underline">Casia Growth Lab LLC</a>.</p>
+      <div class="flex gap-6">
+        <a href="privacy.html" class="hover:text-brand-fg">Privacy Policy</a>
+        <a href="terms.html" class="hover:text-brand-fg">Terms of Service</a>
+      </div>
+    </div>
+  </div>
 </footer>
 
 <script src="https://unpkg.com/lucide@latest"></script>
-<script src="js/site.js?v=30"></script>
+<script>
+  (function () {
+    var toggle = document.getElementById('navToggle');
+    var menu = document.getElementById('mobileNav');
+    if (!toggle || !menu) return;
+    menu.classList.add('flex');
+    toggle.addEventListener('click', function () {
+      var isHidden = menu.classList.toggle('hidden');
+      toggle.setAttribute('aria-expanded', String(!isHidden));
+    });
+    menu.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        menu.classList.add('hidden');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+    if (window.lucide) { lucide.createIcons(); }
+  })();
+</script>
 
 </body>
 </html>
