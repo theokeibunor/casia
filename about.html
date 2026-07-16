@@ -1,241 +1,165 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>About | Casia Lab. Do it easy.</title>
-<meta name="description" content="Casia Lab is a product company building tools that help owner-led micro and small businesses operate with more control, visibility, and discipline.">
-<link rel="icon" href="images/logo.png">
+<meta charset="utf-8">
+<title>About · Casia — Do it easy.</title>
+<meta name="description" content="Casia builds the daily operating layer for owner-led businesses — everything you run on, in one place and working together, so the busywork disappears.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://casialab.com/about.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%235647E6'/%3E%3Cpath d='M22 12.5a6 6 0 1 0 0 7' stroke='%23fff' stroke-width='2.6' stroke-linecap='round' fill='none'/%3E%3Ccircle cx='21.5' cy='16' r='2.1' fill='%23fff'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
-        colors: {
-          brand: {
-            fg: '#09090B', surface: '#18181B', surface2: '#3F3F46',
-            canvas: '#FAFAFA', muted: '#E8ECF0', border: '#E4E4E7',
-            accent: '#00D67E', accentDark: '#00A863',
-          },
-          product: {
-            ceazr: '#10B981', yako: '#3B82F6',
-            paytton: '#F59E0B', chatledger: '#0EA5E9',
-          }
-        }
-      }
-    }
-  }
-</script>
-<style>
-  :root {
-    --fg: #09090B; --surface: #18181B; --canvas: #FAFAFA;
-    --border: #E4E4E7; --accent: #00D67E; --accent-dark: #00A863;
-  }
-  html, body { background: var(--canvas); color: var(--fg); }
-  body { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
-  .btn-primary { background: var(--surface); color: var(--canvas); transition: background-color 180ms ease; }
-  .btn-primary:hover { background: #000; }
-  .btn-secondary { background: transparent; color: var(--fg); border: 1px solid var(--border); transition: border-color 180ms ease, background-color 180ms ease; }
-  .btn-secondary:hover { border-color: var(--surface); background: white; }
-  .nav-link { position: relative; padding-bottom: 2px; }
-  .nav-link::after { content: ''; position: absolute; left: 0; right: 100%; bottom: -2px; height: 2px; background: var(--accent); transition: right 180ms ease; }
-  .nav-link:hover::after { right: 0; }
-  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
 </head>
-<body class="min-h-screen flex flex-col">
+<body>
 
-<a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:bg-white focus:text-brand-fg focus:px-4 focus:py-2 focus:rounded focus:border focus:border-brand-border">Skip to content</a>
+<!-- NAV (shared across every page) -->
+<nav class="nav"><div class="wrap nav-in">
+  <a class="brand" href="index.html">
+    <svg class="mark" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="#5647E6"/><path d="M22 12.5a6 6 0 1 0 0 7" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/><circle cx="21.5" cy="16" r="2.1" fill="#fff"/></svg>
+    Casia
+  </a>
+  <div class="nav-links">
+    <a href="index.html#platform">How it works</a>
+    <a href="index.html#products">What it runs</a>
+    <a href="index.html#why">Why Casia</a>
+    <a href="index.html#pricing">Pricing</a>
+    <a href="about.html">Company</a>
+  </div>
+  <div class="nav-cta">
+    <a class="btn btn-ghost btn-sm" href="https://app.casialab.com/auth/login">Sign in</a>
+    <a class="btn btn-primary btn-sm" href="index.html#demo">Book a demo</a>
+  </div>
+</div></nav>
 
-<!-- Nav -->
-<nav class="sticky top-0 z-50 bg-white border-b border-brand-border">
-  <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
-    <div class="flex items-center gap-10">
-      <a href="index.html" class="flex items-baseline gap-2">
-        <span class="text-lg font-extrabold tracking-tight text-brand-fg">Casia Lab.</span>
-        <span class="hidden md:inline text-xs italic font-semibold text-brand-fg/50">Do it easy.</span>
-      </a>
-      <div class="hidden lg:flex items-center gap-7 text-sm font-semibold text-brand-fg/70">
-        <a href="index.html#pains" class="nav-link hover:text-brand-fg">Where it hurts</a>
-        <a href="index.html#platform" class="nav-link hover:text-brand-fg">Platform</a>
-        <a href="partner.html" class="nav-link hover:text-brand-fg">Partners</a>
-        <a href="about.html" class="nav-link font-bold text-brand-fg" aria-current="page">About</a>
-      </div>
-    </div>
-    <div class="flex items-center gap-2">
-      <a href="contact.html" class="btn-primary inline-flex items-center gap-2 text-sm font-semibold px-4 sm:px-5 py-2 sm:py-2.5">Contact Sales</a>
-      <button id="navToggle" class="lg:hidden p-2 text-brand-fg" aria-controls="mobileNav" aria-expanded="false" aria-label="Open menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-      </button>
+<!-- HERO -->
+<header class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow">About Casia</span>
+    <h1>The daily operating layer<br>for owner-led business.</h1>
+    <p class="lede">Casia builds the boring, essential systems a growing business runs on — the tools you'd use to know what's on the shelf, what was bought, what's owed, who's on the team, and whether the month was actually profitable. One place, working together. You run the business; Casia makes it easy.</p>
+    <div class="page-cta">
+      <a class="btn btn-white" href="index.html#demo">Book a demo <svg class="ic" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-light" href="index.html#products">See what it runs</a>
     </div>
   </div>
-  <div id="mobileNav" class="hidden lg:hidden bg-white border-b border-brand-border py-2 px-6 flex-col">
-    <a href="index.html#pains" class="block py-3 text-base font-semibold text-brand-fg border-b border-brand-border/50">Where it hurts</a>
-    <a href="index.html#platform" class="block py-3 text-base font-semibold text-brand-fg border-b border-brand-border/50">Platform</a>
-    <a href="partner.html" class="block py-3 text-base font-semibold text-brand-fg border-b border-brand-border/50">Partners</a>
-    <a href="about.html" class="block py-3 text-base font-semibold text-brand-fg" aria-current="page">About</a>
+</header>
+
+<!-- THESIS -->
+<section class="sec">
+  <div class="wrap">
+    <div class="prose">
+      <span class="eyebrow">Why we're building this</span>
+      <h2 style="margin-top:12px">Growth is constrained by the operating layer, not just capital.</h2>
+      <p>Capital matters. Policy matters. Access to markets matters. But capital only compounds when a business can manage it well, and reforms only translate into growth when a business has the systems to respond.</p>
+      <p>For most owner-led businesses the missing layer isn't ambition or talent. It's the boring, daily operating layer — the tools that tell you what's in stock, what was bought, what's owed, and whether you actually made money this month.</p>
+      <p><strong>That's the layer Casia is building</strong> — and, unlike the pile-of-apps approach, building so every part talks to every other part, on one login, with every number living in just one place.</p>
+    </div>
   </div>
-</nav>
+</section>
 
-<main id="main" class="flex-grow">
+<!-- WHY IT MATTERS -->
+<section class="sec band">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Why it matters</span>
+      <h2>Small-business productivity is prosperity infrastructure.</h2>
+      <p>Owner-led businesses carry employment, trade, and local supply chains in every market that matters. When they operate better, the benefits compound.</p>
+    </div>
+    <div class="info-cards">
+      <div class="info-card reveal"><div class="pic"><svg class="ic" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></div><b>Better records, better access to finance</b><p>Clean books are what a lender, an investor, or a grant actually asks to see.</p></div>
+      <div class="info-card reveal"><div class="pic"><svg class="ic" viewBox="0 0 24 24"><path d="M21 8 12 3 3 8l9 5 9-5Z"/><path d="M3 8v8l9 5 9-5V8"/></svg></div><b>Better stock control, less waste</b><p>Know what you hold and what it cost, across every location, without a count.</p></div>
+      <div class="info-card reveal"><div class="pic"><svg class="ic" viewBox="0 0 24 24"><path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg></div><b>Better buying, less leakage</b><p>Requests and approvals before the money moves — spending stays tidy.</p></div>
+      <div class="info-card reveal"><div class="pic"><svg class="ic" viewBox="0 0 24 24"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></div><b>Better visibility, better decisions</b><p>One current picture instead of four spreadsheets that disagree.</p></div>
+      <div class="info-card reveal"><div class="pic"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg></div><b>Better systems, sustainable growth</b><p>The handoffs between teams stop being the thing that breaks as you scale.</p></div>
+    </div>
+  </div>
+</section>
 
-    <!-- Hero -->
-    <section class="py-24 max-w-7xl mx-auto px-6">
-        <div class="grid md:grid-cols-2 gap-16 items-center mb-16">
-            <div class="space-y-6">
-                <span class="text-xs font-bold tracking-[0.2em] uppercase text-brand-fg/60 mb-4 block">About Casia Lab</span>
-                <h1 class="text-5xl md:text-6xl font-bold leading-[1.1] text-brand-fg">Building practical tools for owner-led business growth.</h1>
-                <div class="space-y-4 text-xl text-brand-fg/70 max-w-xl leading-relaxed">
-                    <p>Casia Lab is a product company building tools that help owner-led micro and small businesses operate with more control, visibility, and discipline.</p>
-                    <p>We believe small business growth is not only constrained by capital, policy, or market access. It is also constrained by the daily operating systems businesses rely on, or do not have.</p>
-                </div>
-            </div>
-            <div class="relative h-[480px] w-full bg-white overflow-hidden border border-brand-border">
-                <img src="https://images.unsplash.com/photo-1573497019418-b400bb3ab074?auto=format&fit=crop&q=80&w=2000" alt="Casia Lab office" class="absolute inset-0 w-full h-full object-cover">
-            </div>
-        </div>
-    </section>
+<!-- APPROACH + FOCUS -->
+<section class="sec">
+  <div class="wrap">
+    <div class="prose wide">
+      <span class="eyebrow">Our approach</span>
+      <h2 style="margin-top:12px">Built for the transition, not for who you'll be in ten years.</h2>
+      <p>Most business software is designed for companies that already have formal processes, stable teams, and clean records. That's not where many businesses start. Casia builds for the move:</p>
+      <ul>
+        <li>From paper to digital.</li>
+        <li>From memory to records.</li>
+        <li>From WhatsApp follow-ups to structured workflows.</li>
+        <li>From scattered receipts to accountant-ready information.</li>
+        <li>From reactive decisions to clear visibility.</li>
+      </ul>
+      <h3>Where we're built</h3>
+      <p>Casia is built in <strong>Dubai, UAE</strong> for owner-led businesses everywhere. The pains we solve — scattered records, multi-location stock, vendors expecting invoices, money spread across accounts — are the same in every market we serve.</p>
+    </div>
+  </div>
+</section>
 
-    <!-- Thesis -->
-    <section class="py-24 bg-white border-y border-brand-border">
-        <div class="max-w-4xl mx-auto px-6">
-            <h2 class="text-4xl font-bold mb-8 text-brand-fg text-center">Why we're building this.</h2>
-            <div class="space-y-6 text-xl text-brand-fg/70 leading-relaxed font-medium">
-                <p>Capital matters. Policy matters. Access to markets matters. But capital only compounds when a business can manage it well. Policy reforms only translate into growth when businesses have the systems to respond.</p>
-                <p>For most owner-led MSMEs the missing layer isn't ambition or talent. It's the boring, daily operating layer, the tools you'd use to know what's on the shelf, what was bought, what's owed, and whether the month was actually profitable.</p>
-                <p>That's the layer Casia Lab is building.</p>
-            </div>
-        </div>
-    </section>
+<!-- CTA -->
+<section class="sec cta" id="start">
+  <div class="wrap">
+    <div class="cta-motto">Do it easy.</div>
+    <h2>Serve small businesses? Let's talk.</h2>
+    <p>Institution, partner, accountant, reseller, or operator — if you work with owner-led businesses, we'd like to hear from you.</p>
+    <div class="cta-btns">
+      <a class="btn btn-white" href="partner.html" style="height:52px;padding:0 30px">Partner with us</a>
+      <a class="btn btn-light" href="index.html#products" style="height:52px;padding:0 30px">Explore the platform</a>
+    </div>
+  </div>
+</section>
 
-    <!-- Why this matters -->
-    <section class="py-24 max-w-7xl mx-auto px-6 border-b border-brand-border">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-8 text-brand-fg">Small business productivity is prosperity infrastructure.</h2>
-            <p class="text-xl text-brand-fg/70 leading-relaxed mb-12">Micro and small businesses are central to employment, trade, household income, local supply chains, and community resilience in every market that matters. When they operate better, the benefits compound:</p>
-            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 text-left justify-center">
-                <div class="bg-white p-6 border border-brand-border flex flex-col gap-4"><i data-lucide="line-chart" class="w-8 h-8 text-brand-accent"></i><p class="font-semibold text-brand-fg">Better records improve access to finance</p></div>
-                <div class="bg-white p-6 border border-brand-border flex flex-col gap-4"><i data-lucide="box" class="w-8 h-8 text-brand-accent"></i><p class="font-semibold text-brand-fg">Better inventory control reduces waste</p></div>
-                <div class="bg-white p-6 border border-brand-border flex flex-col gap-4"><i data-lucide="shopping-cart" class="w-8 h-8 text-brand-accent"></i><p class="font-semibold text-brand-fg">Better procurement reduces leakage</p></div>
-                <div class="bg-white p-6 border border-brand-border flex flex-col gap-4"><i data-lucide="activity" class="w-8 h-8 text-brand-accent"></i><p class="font-semibold text-brand-fg">Better visibility improves decisions</p></div>
-                <div class="bg-white p-6 border border-brand-border flex flex-col gap-4"><i data-lucide="network" class="w-8 h-8 text-brand-accent"></i><p class="font-semibold text-brand-fg">Better systems make growth sustainable</p></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Approach & Market Focus -->
-    <section class="py-24 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20">
-        <div class="space-y-8">
-            <div>
-                <h2 class="text-3xl font-bold mb-6 text-brand-fg">Our Approach</h2>
-                <p class="text-lg text-brand-fg/70 leading-relaxed mb-6">Many business tools are designed for companies that already have formal processes, stable teams, and clean records. That is not where many small businesses start. Casia Lab builds for the transition:</p>
-                <ul class="space-y-4">
-                    <li class="flex items-center gap-3"><i data-lucide="arrow-right" class="w-5 h-5 text-brand-accent"></i><span class="text-lg font-medium text-brand-fg">From paper to digital.</span></li>
-                    <li class="flex items-center gap-3"><i data-lucide="arrow-right" class="w-5 h-5 text-brand-accent"></i><span class="text-lg font-medium text-brand-fg">From memory to records.</span></li>
-                    <li class="flex items-center gap-3"><i data-lucide="arrow-right" class="w-5 h-5 text-brand-accent"></i><span class="text-lg font-medium text-brand-fg">From WhatsApp follow-ups to structured workflows.</span></li>
-                    <li class="flex items-center gap-3"><i data-lucide="arrow-right" class="w-5 h-5 text-brand-accent"></i><span class="text-lg font-medium text-brand-fg">From scattered receipts to accountant-ready information.</span></li>
-                    <li class="flex items-center gap-3"><i data-lucide="arrow-right" class="w-5 h-5 text-brand-accent"></i><span class="text-lg font-medium text-brand-fg">From reactive decisions to clearer visibility.</span></li>
-                </ul>
-            </div>
-        </div>
-        <div>
-            <h2 class="text-3xl font-bold mb-6 text-brand-fg">Our Market Focus</h2>
-            <div class="bg-brand-surface text-white p-10 flex flex-col sm:flex-row items-center sm:items-start gap-8 h-full">
-                <div class="flex-shrink-0">
-                    <img src="https://images.unsplash.com/photo-1493612276216-ee3925520721?auto=format&fit=crop&q=80&w=800" alt="Market focus" class="w-32 h-32 rounded-full object-cover border-4 border-gray-800">
-                </div>
-                <div>
-                    <p class="text-gray-300 text-lg leading-relaxed mb-6">Built in <strong class="text-white">Dubai</strong> for the owner-led business. The pains we solve, scattered records, multi-location stock, vendors expecting invoices, money across accounts, are the same in any market we serve.</p>
-                    <div class="inline-flex items-center gap-2 text-brand-accent font-semibold bg-white/10 px-4 py-2 rounded-lg">
-                        <i data-lucide="map-pin" class="w-5 h-5 shrink-0"></i>
-                        <span>Headquartered in Dubai, UAE, serving owner-led businesses globally.</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- CTA -->
-    <section class="py-24 max-w-5xl mx-auto px-6 text-center">
-        <div class="bg-brand-surface text-white py-20 px-8 relative overflow-hidden">
-            <div class="relative z-10">
-                <h2 class="text-4xl font-bold mb-6">Partner with Casia Lab.</h2>
-                <p class="text-xl text-brand-fg/70 mb-10 max-w-2xl mx-auto">If you serve small businesses in any way, as an institution, partner, accountant, or operator, we'd like to hear from you.</p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="partner.html" class="btn-accent inline-flex items-center justify-center px-8 py-4 font-medium text-lg">Partner with us</a>
-                    <a href="index.html#platform" class="inline-flex items-center justify-center px-8 py-4 font-medium border border-white/25 text-white hover:border-white text-lg transition-all">Explore our products</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-</main>
-
-<!-- Footer -->
-<footer class="bg-white border-t border-brand-border pt-20 pb-10">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-10 mb-14">
-      <div class="col-span-2 space-y-3">
-        <div class="text-xl font-extrabold tracking-tight text-brand-fg">Casia Lab.</div>
-        <div class="text-base italic font-semibold text-brand-fg/60">Do it easy.</div>
-        <p class="text-brand-fg/60 max-w-sm leading-relaxed pt-2 text-sm">Enterprise tools without enterprise headache. Built for the daily work of running a growing business.</p>
+<!-- FOOTER (shared across every page) -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="index.html">
+          <svg class="mark" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="#5647E6"/><path d="M22 12.5a6 6 0 1 0 0 7" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/><circle cx="21.5" cy="16" r="2.1" fill="#fff"/></svg>
+          Casia
+        </a>
+        <div class="foot-motto">Do it easy.</div>
+        <p>Everything your business runs on, in one place — working together, so the busywork disappears.</p>
       </div>
-      <div class="space-y-4">
-        <h4 class="text-xs font-bold text-brand-fg/50 uppercase tracking-[0.2em]">Solutions</h4>
-        <div class="flex flex-col gap-3 text-sm">
-          <a href="https://ceazr.com" target="_blank" rel="noopener noreferrer" class="text-brand-fg/80 hover:text-brand-fg font-semibold">Ceazr</a>
-          <a href="https://yakobooks.com" target="_blank" rel="noopener noreferrer" class="text-brand-fg/80 hover:text-brand-fg font-semibold">Yako</a>
-          <a href="https://paytton.com" target="_blank" rel="noopener noreferrer" class="text-brand-fg/80 hover:text-brand-fg font-semibold">Paytton</a>
-          <a href="https://chatledger.casialab.com" target="_blank" rel="noopener noreferrer" class="text-brand-fg/80 hover:text-brand-fg font-semibold">ChatLedger</a>
-        </div>
+      <div class="foot-col">
+        <h4>Products</h4>
+        <a href="index.html#products">Road10 · People</a>
+        <a href="index.html#products">Yakobooks · Finance</a>
+        <a href="index.html#products">Ceazr · Inventory</a>
+        <a href="index.html#products">Paytton · Procurement</a>
+        <a href="index.html#products">Admeistr · Marketing</a>
       </div>
-      <div class="space-y-4">
-        <h4 class="text-xs font-bold text-brand-fg/50 uppercase tracking-[0.2em]">Company</h4>
-        <div class="flex flex-col gap-3 text-sm">
-          <a href="about.html" class="text-brand-fg/80 hover:text-brand-fg font-semibold">About Us</a>
-          <a href="partner.html" class="text-brand-fg/80 hover:text-brand-fg font-semibold">Partner with us</a>
-          <a href="resellers.html" class="text-brand-fg/80 hover:text-brand-fg font-semibold">Resell our tools</a>
-          <a href="work-with-us.html" class="text-brand-fg/80 hover:text-brand-fg font-semibold">Work with Us</a>
-          <a href="contact.html" class="text-brand-fg/80 hover:text-brand-fg font-semibold">Contact Us</a>
-        </div>
+      <div class="foot-col">
+        <h4>Platform</h4>
+        <a href="index.html#platform">How it works</a>
+        <a href="index.html#flow">One number, once</a>
+        <a href="index.html#why">Why Casia</a>
+        <a href="index.html#pricing">Pricing</a>
+        <a href="index.html#fit">Find your fit</a>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="work-with-us.html">Careers</a>
+        <a href="partner.html">Partners</a>
+        <a href="resellers.html">Resellers</a>
+        <a href="contact.html">Contact</a>
       </div>
     </div>
-    <div class="border-t border-brand-border pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-brand-fg/60">
-      <p>© 2026 Casia Lab. Part of <a href="https://casiaconsulting.com" target="_blank" rel="noopener noreferrer" class="hover:text-brand-fg underline">Casia Growth Lab LLC</a>.</p>
-      <div class="flex gap-6">
-        <a href="privacy.html" class="hover:text-brand-fg">Privacy Policy</a>
-        <a href="terms.html" class="hover:text-brand-fg">Terms of Service</a>
-      </div>
+    <div class="foot-bar">
+      <span>© 2026 Casia Lab — Part of <a href="https://casiaconsulting.com" target="_blank" rel="noopener">Casia Growth Lab LLC</a>, Dubai, UAE.</span>
+      <span class="foot-legal"><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · casialab.com</span>
     </div>
   </div>
 </footer>
 
-<script src="https://unpkg.com/lucide@latest"></script>
 <script>
-  (function () {
-    var toggle = document.getElementById('navToggle');
-    var menu = document.getElementById('mobileNav');
-    if (!toggle || !menu) return;
-    menu.classList.add('flex');
-    toggle.addEventListener('click', function () {
-      var isHidden = menu.classList.toggle('hidden');
-      toggle.setAttribute('aria-expanded', String(!isHidden));
-    });
-    menu.querySelectorAll('a').forEach(function (a) {
-      a.addEventListener('click', function () {
-        menu.classList.add('hidden');
-        toggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-    if (window.lucide) { lucide.createIcons(); }
-  })();
+  // Reveal on scroll — same behaviour as the landing.
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+  }, { threshold: .14 });
+  document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
 </script>
-
 </body>
 </html>

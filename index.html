@@ -1,467 +1,524 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Casia Lab. Do it easy.</title>
-<meta name="description" content="Enterprise tools without enterprise headache. Casia Lab builds the operating layer for growing businesses. Ceazr, Yako, Paytton, ChatLedger. Run stock, money, procurement, and customer chats without carrying the whole business in your head.">
-<link rel="icon" href="images/logo.png">
-<link rel="canonical" href="https://casialab.com/">
+<meta charset="utf-8">
+<title>Casia — run your whole business, without the busywork. Do it easy.</title>
+<meta name="description" content="Casia brings everything your business runs on into one place, all working together — so the busywork that used to eat your day simply disappears. Do it easy.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Casia — run your whole business, without the busywork. Do it easy.">
+<meta property="og:description" content="Everything your business runs on, in one place and working together — so nobody re-types anything and the busywork disappears. Do it easy.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://casialab.com/">
+<meta property="og:image" content="https://casialab.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Casia — run your whole business, without the busywork.">
+<meta name="twitter:description" content="Everything your business runs on, in one place and working together. Do it easy.">
+<meta name="twitter:image" content="https://casialab.com/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
-        colors: {
-          brand: {
-            fg: '#09090B',
-            surface: '#18181B',
-            surface2: '#3F3F46',
-            canvas: '#FAFAFA',
-            muted: '#E8ECF0',
-            border: '#E4E4E7',
-            accent: '#00D67E',
-            accentDark: '#00A863',
-          },
-          product: {
-            ceazr: '#10B981',
-            yako: '#3B82F6',
-            paytton: '#F59E0B',
-            chatledger: '#0EA5E9',
-          }
-        }
-      }
-    }
-  }
-</script>
-<style>
-  :root {
-    --fg: #09090B;
-    --surface: #18181B;
-    --canvas: #FAFAFA;
-    --border: #E4E4E7;
-    --accent: #00D67E;
-    --accent-dark: #00A863;
-  }
-  html, body { background: var(--canvas); color: var(--fg); }
-  body { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; font-feature-settings: "ss01","cv11"; }
-
-  .btn-primary {
-    background: var(--surface);
-    color: var(--canvas);
-    transition: background-color 180ms ease;
-  }
-  .btn-primary:hover { background: #000; }
-
-  .btn-accent {
-    background: var(--accent);
-    color: var(--fg);
-    transition: background-color 180ms ease;
-  }
-  .btn-accent:hover { background: var(--accent-dark); color: white; }
-
-  .btn-secondary {
-    background: transparent;
-    color: var(--fg);
-    border: 1px solid var(--border);
-    transition: border-color 180ms ease, background-color 180ms ease;
-  }
-  .btn-secondary:hover { border-color: var(--surface); background: white; }
-
-  @keyframes rise {
-    from { opacity: 0; transform: translateY(8px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  .rise { animation: rise 400ms ease-out both; }
-  .rise-1 { animation-delay: 60ms; }
-  .rise-2 { animation-delay: 140ms; }
-  .rise-3 { animation-delay: 220ms; }
-  .rise-4 { animation-delay: 300ms; }
-  .rise-5 { animation-delay: 380ms; }
-
-  .card { transition: border-color 180ms ease, background-color 180ms ease; }
-  .card:hover { border-color: var(--surface); }
-
-  .path-card:hover .arrow { transform: translateX(4px); }
-  .arrow { transition: transform 180ms ease; }
-
-  .nav-link { position: relative; padding-bottom: 2px; }
-  .nav-link::after {
-    content: '';
-    position: absolute;
-    left: 0; right: 100%;
-    bottom: -2px;
-    height: 2px;
-    background: var(--accent);
-    transition: right 180ms ease;
-  }
-  .nav-link:hover::after { right: 0; }
-
-  .trust-logo { color: rgba(9, 9, 11, 0.5); transition: color 180ms ease; }
-  .trust-logo:hover { color: var(--fg); }
-
-  @media (prefers-reduced-motion: reduce) {
-    .rise { animation: none !important; opacity: 1 !important; transform: none !important; }
-    .card, .path-card, .arrow, .btn-primary, .btn-accent, .btn-secondary, .nav-link::after {
-      transition: none !important;
-    }
-  }
-
-  a:focus-visible, button:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 3px;
-    border-radius: 4px;
-  }
-
-  .rule { height: 1px; background: var(--border); }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://casialab.com/">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%235647E6'/%3E%3Cpath d='M22 12.5a6 6 0 1 0 0 7' stroke='%23fff' stroke-width='2.6' stroke-linecap='round' fill='none'/%3E%3Ccircle cx='21.5' cy='16' r='2.1' fill='%23fff'/%3E%3C/svg%3E">
 </head>
-<body class="min-h-screen">
+<body>
 
-<!-- Skip link -->
-<a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:bg-white focus:text-brand-fg focus:px-4 focus:py-2 focus:rounded focus:border focus:border-brand-border">Skip to content</a>
+<!-- NAV -->
+<nav class="nav"><div class="wrap nav-in">
+  <a class="brand" href="#top">
+    <svg class="mark" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="#5647E6"/><path d="M22 12.5a6 6 0 1 0 0 7" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/><circle cx="21.5" cy="16" r="2.1" fill="#fff"/></svg>
+    Casia
+  </a>
+  <div class="nav-links">
+    <a href="#platform">How it works</a>
+    <a href="#products">What it runs</a>
+    <a href="#why">Why Casia</a>
+    <a href="#pricing">Pricing</a>
+        <a href="#fit">Find your fit</a>
+  </div>
+  <div class="nav-cta">
+    <a class="btn btn-ghost btn-sm" href="#signin">Sign in</a>
+    <a class="btn btn-primary btn-sm" href="#demo">Book a demo</a>
+  </div>
+</div></nav>
 
-<!-- Nav -->
-<nav class="sticky top-0 z-50 bg-white border-b border-brand-border">
-  <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
-    <div class="flex items-center gap-10">
-      <a href="index.html" class="flex items-baseline gap-2">
-        <span class="text-lg font-extrabold tracking-tight text-brand-fg">Casia Lab.</span>
-        <span class="hidden md:inline text-xs italic font-semibold text-brand-fg/50">Do it easy.</span>
-      </a>
-      <div class="hidden lg:flex items-center gap-7 text-sm font-semibold text-brand-fg/70">
-        <a href="#pains" class="nav-link hover:text-brand-fg">Where it hurts</a>
-        <a href="#platform" class="nav-link hover:text-brand-fg">Platform</a>
-        <a href="partner.html" class="nav-link hover:text-brand-fg">Partners</a>
-        <a href="about.html" class="nav-link hover:text-brand-fg">About</a>
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="hero-glow"></div>
+  <div class="wrap hero-in">
+    <div class="hero-grid">
+      <div>
+        <span class="pill"><span class="dot"></span> The easy way to run a growing business</span>
+        <h1>Business,<br><span class="grad">without the busywork.</span></h1>
+        <p class="lede">One home for everything your business does, where it all works together — so the busywork that used to eat your day simply disappears. You run the business. Casia makes it easy.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#demo">Book a demo <svg class="ic" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-light" href="#products">See what it runs</a>
+        </div>
+        <div class="hero-motto">Do it easy.</div>
+        <div class="hero-sub">
+          <span><svg class="ic" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> One login for your whole team</span>
+          <span><svg class="ic" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Everything talks to everything</span>
+          <span><svg class="ic" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> We set it up with you</span>
+        </div>
+      </div>
+      <div class="hero-viz">
+        <svg class="diagram" viewBox="0 0 460 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The Casia platform connecting eight business apps around one core">
+          <defs>
+            <radialGradient id="hubg" cx="50%" cy="40%" r="70%">
+              <stop offset="0%" stop-color="#6E5FF0"/><stop offset="100%" stop-color="#3B2FB0"/>
+            </radialGradient>
+          </defs>
+          <!-- edges -->
+          <g>
+            <path class="edge flow" d="M230 210 L120 96"/>
+            <path class="edge" d="M230 210 L230 70"/>
+            <path class="edge flow" d="M230 210 L340 96"/>
+            <path class="edge" d="M230 210 L392 210"/>
+            <path class="edge flow" d="M230 210 L340 324"/>
+            <path class="edge" d="M230 210 L230 350"/>
+            <path class="edge flow" d="M230 210 L120 324"/>
+            <path class="edge" d="M230 210 L68 210"/>
+          </g>
+          <!-- app nodes -->
+          <g>
+            <g><circle class="node" cx="120" cy="96" r="30"/><text class="node-lbl" x="120" y="100" text-anchor="middle">People</text></g>
+            <g><circle class="node" cx="230" cy="70" r="30"/><text class="node-lbl" x="230" y="74" text-anchor="middle">Finance</text></g>
+            <g><circle class="node" cx="340" cy="96" r="30"/><text class="node-lbl" x="340" y="100" text-anchor="middle">Stock</text></g>
+            <g><circle class="node" cx="392" cy="210" r="30"/><text class="node-lbl" x="392" y="214" text-anchor="middle">Buying</text></g>
+            <g><circle class="node" cx="340" cy="324" r="30"/><text class="node-lbl" x="340" y="328" text-anchor="middle">Sales</text></g>
+            <g><circle class="node" cx="230" cy="350" r="30"/><text class="node-lbl" x="230" y="354" text-anchor="middle">Market</text></g>
+            <g><circle class="node" cx="120" cy="324" r="30"/><text class="node-lbl" x="120" y="328" text-anchor="middle">Comply</text></g>
+            <g><circle class="node" cx="68" cy="210" r="30"/><text class="node-lbl" x="68" y="214" text-anchor="middle">Deliver</text></g>
+          </g>
+          <!-- hub -->
+          <g>
+            <circle class="hub" cx="230" cy="210" r="50"/>
+            <text class="hub-lbl" x="230" y="206" text-anchor="middle">Casia</text>
+            <text class="hub-sub" x="230" y="224" text-anchor="middle">ALL IN ONE</text>
+          </g>
+        </svg>
       </div>
     </div>
-    <div class="flex items-center gap-2">
-      <a href="#contact" class="btn-primary inline-flex items-center gap-2 text-sm font-semibold px-4 sm:px-5 py-2 sm:py-2.5">
-        Contact Sales
-      </a>
-      <button id="navToggle" class="lg:hidden p-2 text-brand-fg" aria-controls="mobileNav" aria-expanded="false" aria-label="Open menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-      </button>
+    <div class="hero-foot"><div class="logos">
+      <span class="lbl">One place, every part of the business</span>
+      <div class="set"><b>People</b><b>Finance</b><b>Inventory</b><b>Procurement</b><b>Marketing</b><b>+ more</b></div>
+    </div></div>
+  </div>
+</header>
+
+<!-- PROOF -->
+<section class="proof">
+  <div class="wrap"><div class="proof-grid">
+    <div class="proof-cell"><div class="proof-n">8<span class="u">×</span></div><div class="proof-l">the tools your business needs — one account, one bill</div></div>
+    <div class="proof-cell"><div class="proof-n">0</div><div class="proof-l">re-typing — it all flows on its own</div></div>
+    <div class="proof-cell"><div class="proof-n">5<span class="u">→</span>500</div><div class="proof-l">grows with you, from your first hire to your five-hundredth</div></div>
+    <div class="proof-cell"><div class="proof-n">1</div><div class="proof-l">place your whole team opens, every morning</div></div>
+  </div></div>
+</section>
+
+<!-- PROBLEM -->
+<section class="sec problem" id="why-problem">
+  <div class="wrap"><div class="prob-grid">
+    <div class="reveal">
+      <div class="kicker-row"><span class="eyebrow">Sound familiar?</span></div>
+      <h2 style="font-size:clamp(26px,3.4vw,38px);margin:14px 0 18px;line-height:1.12">Running a business is hard enough. Your tools shouldn't make it <span style="color:var(--accent)">harder</span>.</h2>
+      <p class="prob-punch">A sale over here. Stock over there. Payroll in a spreadsheet. The same number typed three times — and wrong by the third.</p>
+      <p style="color:var(--muted);font-size:16px;margin-top:18px;line-height:1.65">Every tool solves one little thing, then hands you the hard part: making them all agree. Casia takes that off your plate.</p>
+    </div>
+    <div class="prob-list reveal">
+      <div class="prob-item"><span class="x"><svg class="ic" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg></span><div><b>Typing the same thing, over and over</b><p>A delivery, an invoice, a new hire — entered again in every place that needs to know.</p></div></div>
+      <div class="prob-item"><span class="x"><svg class="ic" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg></span><div><b>Numbers that don't agree</b><p>Sales says one thing, the books say another, and nobody's sure which to believe at month-end.</p></div></div>
+      <div class="prob-item"><span class="x"><svg class="ic" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg></span><div><b>A password for everything</b><p>Six tools, six logins, six bills — and a fresh setup every time someone joins or leaves.</p></div></div>
+      <div class="prob-item"><span class="x"><svg class="ic" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg></span><div><b>Big software that just doesn't fit</b><p>The heavyweight suites cost a fortune, need a specialist to run, and assume you're a giant. You're not — you're busy.</p></div></div>
+    </div>
+  </div></div>
+</section>
+
+<!-- PLATFORM -->
+<section class="sec platform" id="platform">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <div class="kicker-row center"><span class="eyebrow" style="color:var(--accent-2)">Why it feels easy</span></div>
+      <h2>Everything's connected. So nothing slips through the cracks.</h2>
+      <p>Anyone can sell you a pile of apps. What makes Casia easy is what happens underneath — everything shares one login, everything talks, and every number lives in just one place. So it all stays right, on its own.</p>
+    </div>
+    <div class="pillars">
+      <div class="pillar reveal">
+        <div class="pic"><svg class="ic" viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.4 8.5 8 10 4.6-1.5 8-5 8-10V6l-8-4Z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>One login for everyone</h3>
+        <p>Your team signs in once. Add someone new and they get exactly what their job needs. When they leave, access ends everywhere — instantly. No IT ticket, no loose ends.</p>
+      </div>
+      <div class="pillar reveal">
+        <div class="pic"><svg class="ic" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/><circle cx="18" cy="17" r="2"/></svg></div>
+        <h3>Everything talks to everything</h3>
+        <p>When something happens in one part of the business, the parts that care just know. A sale, a delivery, a new hire — nobody types it twice, and there's nothing to wire up yourself.</p>
+      </div>
+      <div class="pillar reveal">
+        <div class="pic"><svg class="ic" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><path d="M21 12a9 9 0 1 1-9-9c1.6 0 3.1.4 4.5 1.1"/></svg></div>
+        <h3>Your numbers stay right</h3>
+        <p>Every number has one home. So the money, the stock and the sales never quietly disagree — and month-end stops being a hunt for which figure to believe.</p>
+      </div>
     </div>
   </div>
-  <div id="mobileNav" class="hidden lg:hidden bg-white border-b border-brand-border py-2 px-6 flex-col">
-    <a href="#pains" class="block py-3 text-base font-semibold text-brand-fg border-b border-brand-border/50">Where it hurts</a>
-    <a href="#platform" class="block py-3 text-base font-semibold text-brand-fg border-b border-brand-border/50">Platform</a>
-    <a href="partner.html" class="block py-3 text-base font-semibold text-brand-fg border-b border-brand-border/50">Partners</a>
-    <a href="about.html" class="block py-3 text-base font-semibold text-brand-fg">About</a>
+</section>
+
+<!-- PRODUCTS -->
+<section class="sec" id="products">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker-row"><span class="eyebrow">All in one place</span></div>
+      <h2>Everything your business needs — and only what it needs.</h2>
+      <p>Each part is a complete, capable tool on its own — and worth more the moment it stands beside the others. Switch on what you need today. Add the rest whenever you're ready.</p>
+    </div>
+    <div class="apps-grid">
+      <a class="app-card reveal" href="http://127.0.0.1:4500/">
+        <div class="app-ic" style="background:#5647E6"><svg class="ic" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>People &amp; HR</h3>
+        <p>Hiring, onboarding, reviews, leave and pay — your whole team looked after, from their first day to their last.</p>
+        <span class="app-more">Learn more <svg class="ic" viewBox="0 0 24 24" style="width:13px;height:13px"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="app-card reveal" href="https://yakobooks.com" target="_blank" rel="noopener">
+        <div class="app-ic" style="background:#0EA5A0"><svg class="ic" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg></div>
+        <h3>Finance</h3>
+        <p>Bookkeeping, invoicing and reports — with the rest of the business quietly keeping the books fed and up to date.</p>
+        <span class="app-more">Learn more <svg class="ic" viewBox="0 0 24 24" style="width:13px;height:13px"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="app-card reveal" href="https://ceazr.com" target="_blank" rel="noopener">
+        <div class="app-ic" style="background:#D97706"><svg class="ic" viewBox="0 0 24 24"><path d="M21 8 12 3 3 8l9 5 9-5Z"/><path d="M3 8v8l9 5 9-5V8"/></svg></div>
+        <h3>Inventory</h3>
+        <p>Multi-location stock control with real costing — every movement lands in your books automatically.</p>
+        <span class="app-more">Learn more <svg class="ic" viewBox="0 0 24 24" style="width:13px;height:13px"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="app-card reveal" href="https://paytton.com" target="_blank" rel="noopener">
+        <div class="app-ic" style="background:#2563EB"><svg class="ic" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg></div>
+        <h3>Procurement</h3>
+        <p>Requests, approvals and supplier bills — so spending stays tidy long before it reaches the books.</p>
+        <span class="app-more">Learn more <svg class="ic" viewBox="0 0 24 24" style="width:13px;height:13px"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="app-card reveal" href="https://admeistr.com" target="_blank" rel="noopener">
+        <div class="app-ic" style="background:#DB2777"><svg class="ic" viewBox="0 0 24 24"><path d="M3 11l18-8-8 18-2-8-8-2Z"/></svg></div>
+        <h3>Marketing</h3>
+        <p>Campaigns and budgets — what you spend flows straight to finance, already sorted and ready to sign off.</p>
+        <span class="app-more">Learn more <svg class="ic" viewBox="0 0 24 24" style="width:13px;height:13px"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="app-card reveal" href="mailto:products@casialab.com">
+        <div class="app-ic" style="background:#0891B2"><svg class="ic" viewBox="0 0 24 24"><path d="M5 17h14M5 17a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2M9 21h6"/></svg></div>
+        <h3>Distribution</h3>
+        <p>Routes, dispatch and last-mile delivery — closing the loop from stock to your customer's door.</p>
+        <span class="app-more">Learn more <svg class="ic" viewBox="0 0 24 24" style="width:13px;height:13px"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="app-card reveal" href="mailto:products@casialab.com">
+        <div class="app-ic" style="background:#16A34A"><svg class="ic" viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-12.5 7.5L3 21l2-5.5A8.5 8.5 0 1 1 21 11.5Z"/></svg></div>
+        <h3>Sales</h3>
+        <p>Turn everyday conversations into real orders and payments — meeting your customers where they already are.</p>
+        <span class="app-more">Learn more <svg class="ic" viewBox="0 0 24 24" style="width:13px;height:13px"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="app-card reveal" href="mailto:products@casialab.com">
+        <div class="app-ic" style="background:#475569"><svg class="ic" viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.4 8.5 8 10 4.6-1.5 8-5 8-10V6l-8-4Z"/></svg></div>
+        <h3>Legal &amp; Compliance</h3>
+        <p>Filings, deadlines and audit trails — quiet peace of mind as the business grows into new obligations.</p>
+        <span class="app-more">Learn more <svg class="ic" viewBox="0 0 24 24" style="width:13px;height:13px"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    </div>
   </div>
-</nav>
+</section>
 
-<main id="main">
+<!-- FLOW -->
+<section class="sec flow" id="flow">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <div class="kicker-row center"><span class="eyebrow">One number, entered once</span></div>
+      <h2>Watch one thing ripple across the whole business.</h2>
+      <p>Nobody re-types a thing. Each part does its job and passes it on — on its own, and always tracked.</p>
+    </div>
+    <div class="flow-track">
+      <div class="flow-step reveal"><div class="n">01</div><div class="app">Inventory</div><h4>A delivery is received</h4><p>Your storekeeper confirms goods in. Stock levels and item costs update on the spot.</p><span class="arr"><svg class="ic" viewBox="0 0 24 24" style="width:13px;height:13px"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      <div class="flow-step reveal"><div class="n">02</div><div class="app">Finance</div><h4>Finance already has it</h4><p>The cost shows up in your books, ready to go. Your accountant checks it off — and never re-types a thing.</p><span class="arr"><svg class="ic" viewBox="0 0 24 24" style="width:13px;height:13px"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      <div class="flow-step reveal"><div class="n">03</div><div class="app">People</div><h4>Payroll adds itself up</h4><p>At month-end, pay is tallied and handed to finance as a total to approve — no midnight spreadsheet, no double entry.</p><span class="arr"><svg class="ic" viewBox="0 0 24 24" style="width:13px;height:13px"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      <div class="flow-step reveal"><div class="n">04</div><div class="app">Your view</div><h4>You see it all, in one place</h4><p>It all shows up on your Casia home as it happens — the whole business, live, without opening six tabs.</p></div>
+    </div>
+    <p class="flow-note reveal"><b>That's the whole idea.</b> Other tools leave the joining-up to you. Casia does it for you — so you can do it easy.</p>
+  </div>
+</section>
 
-<!-- Hero -->
-<section class="relative">
-  <div class="max-w-7xl mx-auto px-6 pt-20 pb-28 md:pt-32 md:pb-40">
-    <div class="max-w-4xl">
-      <p class="rise rise-1 text-xs font-bold tracking-[0.2em] uppercase text-brand-fg/60 mb-6">
-        The operating layer for growing businesses
-      </p>
-      <h1 class="rise rise-2 text-5xl md:text-7xl font-extrabold tracking-tight text-brand-fg leading-[1.02] mb-8">
-        Enterprise tools<br>
-        without enterprise<br>
-        <span class="relative inline-block">
-          <span class="relative z-10">headache.</span>
-          <span class="absolute left-0 right-0 bottom-1 md:bottom-2 h-3 md:h-5 bg-brand-accent -z-0 opacity-90"></span>
-        </span>
-      </h1>
-      <p class="rise rise-3 text-lg md:text-xl text-brand-fg/70 leading-relaxed max-w-2xl mb-10">
-        Run stock, money, procurement, and customers without carrying the whole business in your head.
-      </p>
-      <div class="rise rise-4 flex flex-wrap gap-3">
-        <a href="#contact" class="btn-primary inline-flex items-center gap-2 font-semibold px-6 py-3">
-          Contact Sales
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+<!-- WHY -->
+<section class="sec" id="why">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker-row"><span class="eyebrow">Why Casia</span></div>
+      <h2>All the power. None of the pain.</h2>
+      <p>The kind of joined-up, nothing-falls-over setup the big players charge a fortune for — made simple enough to run yourself, from day one.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal"><div class="ic-w"><svg class="ic" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8Z"/></svg></div><h3>Up and running the same day</h3><p>No consultants. No six-month rollout. Switch on the part you need most, and you're working by this afternoon.</p></div>
+      <div class="why-card reveal"><div class="ic-w"><svg class="ic" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><h3>Grows with you, not ahead of you</h3><p>You add parts as your business grows, and the price follows your growth — never getting ahead of it, and never a seat-count spreadsheet in sight.</p></div>
+      <div class="why-card reveal"><div class="ic-w"><svg class="ic" viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.4 8.5 8 10 4.6-1.5 8-5 8-10V6l-8-4Z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Trust built right in</h3><p>Sensitive changes need two hands. Money only moves when someone approves it, never quietly. Promises the software keeps — not just the policy page.</p></div>
+      <div class="why-card reveal"><div class="ic-w"><svg class="ic" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg></div><h3>Start with one, not all</h3><p>You don't have to take the whole thing to feel the difference. Take the one part you need. The rest are waiting when you're ready.</p></div>
+      <div class="why-card reveal"><div class="ic-w"><svg class="ic" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg></div><h3>Your data, one clean source</h3><p>Each fact has one owner and one home. No more three versions of the same number arguing at month-end.</p></div>
+      <div class="why-card reveal"><div class="ic-w"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20Z"/></svg></div><h3>Built to get out of your way</h3><p>The best software is the kind you barely notice. Casia does the heavy lifting quietly, so you can just get on with the work.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="sec pricing" id="pricing">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <div class="kicker-row center"><span class="eyebrow">Pricing</span></div>
+      <h2>One simple price. Everything in it.</h2>
+      <p>No confusing tiers, no surprise add-ons. One subscription that grows with your business — you pay for what you use, and it pays for itself in the hours it hands back.</p>
+    </div>
+    <div class="price-card reveal">
+      <span class="tag">Built to grow with you</span>
+      <div class="big">One price.</div>
+      <p class="sub">Everything included, one account, one bill. You pay for what your business uses, and it scales as you grow — never ahead of you. Let's find the right fit together.</p>
+      <div class="price-feats">
+        <span><svg class="ic" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Everything included</span>
+        <span><svg class="ic" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> One account, one bill</span>
+        <span><svg class="ic" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> A real person to help you set up</span>
+      </div>
+      <div class="price-cta">
+        <a class="btn btn-primary" href="#fit" style="height:50px;padding:0 30px">Find your starting point</a>
+        <a class="btn btn-ghost" href="mailto:products@casialab.com" style="height:50px;padding:0 30px">Talk to sales</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<!-- Find your fit — the qualification lane -->
+<section class="sec" id="fit">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Find your starting point</span>
+      <h2>You don't have to take all of it.</h2>
+      <p>Most businesses start where it hurts most, and add the rest when it's earned. Two questions, and we'll tell you where we'd start — no form, no email, no call.</p>
+    </div>
+    <div class="fit-box reveal">
+      <div class="fit-q">
+        <label>How many people work there?</label>
+        <div class="fit-opts" data-group="size">
+          <button type="button" class="fit-opt" data-v="tiny">Just a few</button>
+          <button type="button" class="fit-opt" data-v="small">5–25</button>
+          <button type="button" class="fit-opt" data-v="mid">26–100</button>
+          <button type="button" class="fit-opt" data-v="large">100+</button>
+        </div>
+      </div>
+      <div class="fit-q">
+        <label>What's costing you the most time right now?</label>
+        <div class="fit-opts" data-group="pain">
+          <button type="button" class="fit-opt" data-v="people">Hiring, leave and payday</button>
+          <button type="button" class="fit-opt" data-v="books">The books never being current</button>
+          <button type="button" class="fit-opt" data-v="stock">Not knowing what stock we hold</button>
+          <button type="button" class="fit-opt" data-v="spend">Spending that surprises us</button>
+        </div>
+      </div>
+      <div class="fit-out" id="fit-out" hidden></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec cta" id="start">
+  <div class="wrap">
+    <div class="cta-motto">Do it easy.</div>
+    <h2>Give your business one calm place to run from.</h2>
+    <p>See it work on your own business. Book a demo, or talk it through with our team.</p>
+    <div class="cta-btns">
+      <a class="btn btn-white" href="#demo" style="height:52px;padding:0 30px">Book a demo</a>
+      <a class="btn btn-light" href="mailto:products@casialab.com" style="height:52px;padding:0 30px">Talk to sales</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="#top">
+          <svg class="mark" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="#5647E6"/><path d="M22 12.5a6 6 0 1 0 0 7" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/><circle cx="21.5" cy="16" r="2.1" fill="#fff"/></svg>
+          Casia
         </a>
-        <a href="#pains" class="btn-secondary inline-flex items-center gap-2 font-semibold px-6 py-3">
-          See where it hurts
-        </a>
+        <div class="foot-motto">Do it easy.</div>
+        <p>Everything your business runs on, in one place — working together, so the busywork disappears.</p>
       </div>
-
-      <div class="rise rise-5 mt-14 flex items-center gap-3 text-brand-fg/60">
-        <div class="w-8 h-px bg-brand-fg/30"></div>
-        <p class="text-sm font-semibold italic">Do it easy.</p>
+      <div class="foot-col">
+        <h4>Products</h4>
+        <a href="#products">Road10 · People</a>
+        <a href="#products">Yakobooks · Finance</a>
+        <a href="#products">Ceazr · Inventory</a>
+        <a href="#products">Paytton · Procurement</a>
+        <a href="#products">Admeistr · Marketing</a>
       </div>
-    </div>
-  </div>
-</section>
-
-<div class="rule"></div>
-
-<!-- Where does it hurt most? -->
-<section id="pains" class="py-24 md:py-32 scroll-mt-20">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="grid md:grid-cols-12 gap-10 mb-14">
-      <div class="md:col-span-5">
-        <p class="text-xs font-bold tracking-[0.2em] uppercase text-brand-fg/60 mb-4">Start where it hurts</p>
-        <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight text-brand-fg leading-[1.05]">
-          Where does it hurt most?
-        </h2>
+      <div class="foot-col">
+        <h4>Platform</h4>
+        <a href="#platform">How it works</a>
+        <a href="#flow">One number, once</a>
+        <a href="#why">Why Casia</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#fit">Find your fit</a>
       </div>
-      <div class="md:col-span-6 md:col-start-7 pt-2">
-        <p class="text-lg text-brand-fg/70 leading-relaxed">
-          Every operating loop breaks in the same handful of ways. Pick the one that stings today. We'll show you the tool that closes it, and how the others fit alongside.
-        </p>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="work-with-us.html">Careers</a>
+        <a href="partner.html">Partners</a>
+        <a href="resellers.html">Resellers</a>
+        <a href="contact.html">Contact</a>
       </div>
     </div>
-
-    <div class="grid md:grid-cols-2 lg:grid-cols-4">
-      <!-- Stock pain -->
-      <a href="#platform" class="path-card group border border-brand-border border-r-0 last:border-r bg-white p-8 hover:bg-brand-canvas transition-colors">
-        <div class="flex items-center gap-2 mb-6">
-          <span class="w-1.5 h-1.5 rounded-full bg-product-ceazr"></span>
-          <span class="text-xs font-bold tracking-[0.2em] uppercase text-brand-fg/50">01 · Stock</span>
-        </div>
-        <h3 class="text-xl font-extrabold text-brand-fg mb-4 leading-tight">You can't see what's in stock or where it's leaking.</h3>
-        <ul class="text-sm text-brand-fg/70 leading-relaxed mb-8 space-y-1.5">
-          <li>Batches creep toward expiry. You bin stock you already paid for.</li>
-          <li>Three branches, three counts. None of them agree.</li>
-          <li>Every "let me check" is a sale you might lose.</li>
-        </ul>
-        <div class="flex items-center justify-between border-t border-brand-border pt-4">
-          <span class="text-xs font-bold uppercase tracking-widest text-brand-fg/60">Solved with Ceazr · Do stock easy.</span>
-          <svg class="arrow text-brand-fg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </div>
-      </a>
-
-      <!-- Money pain -->
-      <a href="#platform" class="path-card group border border-brand-border border-r-0 last:border-r bg-white p-8 hover:bg-brand-canvas transition-colors">
-        <div class="flex items-center gap-2 mb-6">
-          <span class="w-1.5 h-1.5 rounded-full bg-product-yako"></span>
-          <span class="text-xs font-bold tracking-[0.2em] uppercase text-brand-fg/50">02 · Money</span>
-        </div>
-        <h3 class="text-xl font-extrabold text-brand-fg mb-4 leading-tight">You don't understand your numbers.</h3>
-        <ul class="text-sm text-brand-fg/70 leading-relaxed mb-8 space-y-1.5">
-          <li>Every quarter, reconciliation becomes an archaeology dig.</li>
-          <li>One payment. Five places to hunt for the story.</li>
-          <li>Client money, your money, project margin. All one blur.</li>
-        </ul>
-        <div class="flex items-center justify-between border-t border-brand-border pt-4">
-          <span class="text-xs font-bold uppercase tracking-widest text-brand-fg/60">Solved with Yako · Do numbers easy.</span>
-          <svg class="arrow text-brand-fg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </div>
-      </a>
-
-      <!-- Procurement pain -->
-      <a href="#platform" class="path-card group border border-brand-border border-r-0 last:border-r bg-white p-8 hover:bg-brand-canvas transition-colors">
-        <div class="flex items-center gap-2 mb-6">
-          <span class="w-1.5 h-1.5 rounded-full bg-product-paytton"></span>
-          <span class="text-xs font-bold tracking-[0.2em] uppercase text-brand-fg/50">03 · Procurement</span>
-        </div>
-        <h3 class="text-xl font-extrabold text-brand-fg mb-4 leading-tight">You're still chasing procurement.</h3>
-        <ul class="text-sm text-brand-fg/70 leading-relaxed mb-8 space-y-1.5">
-          <li>Everything waits on one sign-off, so spending stalls.</li>
-          <li>Bills clear before anyone checks what actually arrived.</li>
-          <li>Every audit is weeks of scrambling for proof.</li>
-        </ul>
-        <div class="flex items-center justify-between border-t border-brand-border pt-4">
-          <span class="text-xs font-bold uppercase tracking-widest text-brand-fg/60">Solved with Paytton · Do buying easy.</span>
-          <svg class="arrow text-brand-fg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </div>
-      </a>
-
-      <!-- Customers pain -->
-      <a href="#platform" class="path-card group border border-brand-border bg-white p-8 hover:bg-brand-canvas transition-colors">
-        <div class="flex items-center gap-2 mb-6">
-          <span class="w-1.5 h-1.5 rounded-full bg-product-chatledger"></span>
-          <span class="text-xs font-bold tracking-[0.2em] uppercase text-brand-fg/50">04 · Customers</span>
-        </div>
-        <h3 class="text-xl font-extrabold text-brand-fg mb-4 leading-tight">You're losing sales in WhatsApp.</h3>
-        <ul class="text-sm text-brand-fg/70 leading-relaxed mb-8 space-y-1.5">
-          <li>The whole business lives on one phone. You can't step away.</li>
-          <li>You can't hand chats to a rep without wondering what they're saying.</li>
-          <li>Every returning customer walks in a stranger.</li>
-        </ul>
-        <div class="flex items-center justify-between border-t border-brand-border pt-4">
-          <span class="text-xs font-bold uppercase tracking-widest text-brand-fg/60">Solved with ChatLedger · Do sales easy.</span>
-          <svg class="arrow text-brand-fg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </div>
-      </a>
-    </div>
-
-    <p class="text-sm text-brand-fg/50 mt-8 text-center italic">Not seeing your pain? <a href="#contact" class="underline hover:text-brand-fg font-semibold not-italic">Tell us where it hurts.</a></p>
-  </div>
-</section>
-
-<div class="rule"></div>
-
-<!-- Platform (capability axis) -->
-<section id="platform" class="py-24 md:py-32 bg-white scroll-mt-20">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="grid md:grid-cols-12 gap-10 mb-14">
-      <div class="md:col-span-6">
-        <p class="text-xs font-bold tracking-[0.2em] uppercase text-brand-fg/60 mb-4">One layer, four loops</p>
-        <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight text-brand-fg leading-[1.05]">
-          The same architecture<br>under every loop.
-        </h2>
-      </div>
-      <div class="md:col-span-5 md:col-start-8 pt-2">
-        <p class="text-lg text-brand-fg/70 leading-relaxed">
-          Records, workflows, controls, and insights are shared primitives. Set once, they work everywhere the layer touches. That's what makes four tools feel like one thing.
-        </p>
-      </div>
-    </div>
-
-    <div class="grid md:grid-cols-4 border border-brand-border mb-12">
-      <div class="p-8 border-b md:border-b-0 md:border-r border-brand-border">
-        <div class="text-xs font-bold tracking-[0.2em] uppercase text-brand-fg/50 mb-6">01 · Records</div>
-        <h3 class="text-xl font-extrabold text-brand-fg mb-3 leading-tight">Every event, a searchable record.</h3>
-        <p class="text-sm text-brand-fg/70 leading-relaxed">Stock movement, ledger entry, purchase request, customer chat. Retrievable, out of anyone's head.</p>
-      </div>
-      <div class="p-8 border-b md:border-b-0 md:border-r border-brand-border">
-        <div class="text-xs font-bold tracking-[0.2em] uppercase text-brand-fg/50 mb-6">02 · Workflows</div>
-        <h3 class="text-xl font-extrabold text-brand-fg mb-3 leading-tight">One routing engine.</h3>
-        <p class="text-sm text-brand-fg/70 leading-relaxed">Approvals, hand-offs, follow-ups. Same primitives across every loop. Whoever's covering can pick up the work.</p>
-      </div>
-      <div class="p-8 border-b md:border-b-0 md:border-r border-brand-border">
-        <div class="text-xs font-bold tracking-[0.2em] uppercase text-brand-fg/50 mb-6">03 · Controls</div>
-        <h3 class="text-xl font-extrabold text-brand-fg mb-3 leading-tight">Rules set once, enforced everywhere.</h3>
-        <p class="text-sm text-brand-fg/70 leading-relaxed">Reorder points, approval limits, credit terms. Governed at the loop, applied on the ground.</p>
-      </div>
-      <div class="p-8">
-        <div class="text-xs font-bold tracking-[0.2em] uppercase text-brand-fg/50 mb-6">04 · Insights</div>
-        <h3 class="text-xl font-extrabold text-brand-fg mb-3 leading-tight">Live signals, not reports.</h3>
-        <p class="text-sm text-brand-fg/70 leading-relaxed">Records plus rules equals real-time nudges. What's stuck, what's leaking, what needs eyes now.</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<div class="rule"></div>
-
-<!-- Philosophy -->
-<section id="philosophy" class="py-24 md:py-32 scroll-mt-20">
-  <div class="max-w-7xl mx-auto px-6">
-
-    <div class="grid md:grid-cols-12 gap-10 mb-14">
-      <div class="md:col-span-6">
-        <p class="text-xs font-bold tracking-[0.2em] uppercase text-brand-fg/60 mb-4">The philosophy</p>
-        <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight text-brand-fg leading-[1.05]">
-          Easy doesn't mean<br>simplistic.
-        </h2>
-      </div>
-      <div class="md:col-span-5 md:col-start-8 pt-2">
-        <p class="text-lg text-brand-fg/70 leading-relaxed">
-          The daily work of running a growing business is not simple. Stock across locations, cash across accounts, chats across phones, approvals across time zones. We build tools that stop it from becoming the whole job.
-        </p>
-      </div>
-    </div>
-
-    <div class="border border-brand-border bg-white">
-      <div class="p-10 md:p-14">
-        <p class="text-xs font-bold tracking-[0.2em] uppercase text-brand-fg/50 mb-8">What "easy" delivers</p>
-        <p class="text-xl md:text-2xl font-bold text-brand-fg leading-snug mb-10 max-w-3xl">
-          Fewer things trapped in one person's head. Fewer decisions taken on memory. Fewer nights lying awake wondering what someone bought, sold, or promised.
-        </p>
-        <div class="pt-8 border-t border-brand-border flex items-center gap-4">
-          <div class="w-8 h-px bg-brand-fg/30"></div>
-          <p class="text-lg font-bold italic text-brand-fg">Do it easy.</p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<div class="rule"></div>
-
-<!-- Contact Sales -->
-<section id="contact" class="py-24 md:py-32 bg-brand-surface text-white scroll-mt-20">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="grid md:grid-cols-12 gap-10 items-end">
-      <div class="md:col-span-8">
-        <p class="text-xs font-bold tracking-[0.2em] uppercase text-brand-accent mb-6">Talk to a person</p>
-        <h2 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.02] mb-6">
-          Do it easy.
-        </h2>
-        <p class="text-xl text-white/70 leading-relaxed max-w-2xl">
-          Tell us where it hurts. We'll point you at the right tool, in the right order, and stay with you while you get it running.
-        </p>
-      </div>
-      <div class="md:col-span-4 flex md:justify-end">
-        <div class="flex flex-col sm:flex-row md:flex-col gap-3 w-full sm:w-auto">
-          <a href="contact.html" class="btn-accent inline-flex items-center justify-center gap-2 font-semibold px-6 py-4 whitespace-nowrap">
-            Contact Sales
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-          <a href="#platform" class="inline-flex items-center justify-center gap-2 font-semibold px-6 py-4 border border-white/25 text-white hover:border-white transition-colors whitespace-nowrap">
-            See the platform
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<!-- Footer -->
-<footer class="bg-white border-t border-brand-border pt-20 pb-10">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-10 mb-14">
-      <div class="col-span-2 space-y-3">
-        <div class="text-xl font-extrabold tracking-tight text-brand-fg">Casia Lab.</div>
-        <div class="text-base italic font-semibold text-brand-fg/60">Do it easy.</div>
-        <p class="text-brand-fg/60 max-w-sm leading-relaxed pt-2 text-sm">Enterprise tools without enterprise headache. Built for the daily work of running a growing business.</p>
-      </div>
-      <div class="space-y-4">
-        <h4 class="text-xs font-bold text-brand-fg/50 uppercase tracking-[0.2em]">Solutions</h4>
-        <div class="flex flex-col gap-3 text-sm">
-          <a href="https://ceazr.com" target="_blank" rel="noopener noreferrer" class="text-brand-fg/80 hover:text-brand-fg font-semibold">Ceazr</a>
-          <a href="https://yakobooks.com" target="_blank" rel="noopener noreferrer" class="text-brand-fg/80 hover:text-brand-fg font-semibold">Yako</a>
-          <a href="https://paytton.com" target="_blank" rel="noopener noreferrer" class="text-brand-fg/80 hover:text-brand-fg font-semibold">Paytton</a>
-          <a href="https://chatledger.casialab.com" target="_blank" rel="noopener noreferrer" class="text-brand-fg/80 hover:text-brand-fg font-semibold">ChatLedger</a>
-        </div>
-      </div>
-      <div class="space-y-4">
-        <h4 class="text-xs font-bold text-brand-fg/50 uppercase tracking-[0.2em]">Company</h4>
-        <div class="flex flex-col gap-3 text-sm">
-          <a href="about.html" class="text-brand-fg/80 hover:text-brand-fg font-semibold">About Us</a>
-          <a href="partner.html" class="text-brand-fg/80 hover:text-brand-fg font-semibold">Partner with us</a>
-          <a href="resellers.html" class="text-brand-fg/80 hover:text-brand-fg font-semibold">Resell our tools</a>
-          <a href="work-with-us.html" class="text-brand-fg/80 hover:text-brand-fg font-semibold">Work with Us</a>
-          <a href="contact.html" class="text-brand-fg/80 hover:text-brand-fg font-semibold">Contact Us</a>
-        </div>
-      </div>
-    </div>
-    <div class="border-t border-brand-border pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-brand-fg/60">
-      <p>© 2026 Casia Lab. Part of <a href="https://casiaconsulting.com" target="_blank" rel="noopener noreferrer" class="hover:text-brand-fg underline">Casia Growth Lab LLC</a>.</p>
-      <div class="flex gap-6">
-        <a href="privacy.html" class="hover:text-brand-fg">Privacy Policy</a>
-        <a href="terms.html" class="hover:text-brand-fg">Terms of Service</a>
-      </div>
+    <div class="foot-bar">
+      <span>© 2026 Casia Lab — Part of <a href="https://casiaconsulting.com" target="_blank" rel="noopener">Casia Growth Lab LLC</a>, Dubai, UAE.</span>
+      <span class="foot-legal"><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · casialab.com</span>
     </div>
   </div>
 </footer>
 
+
+<!-- Book a demo / Talk to sales (CEO 2026-07-15). One dialog, two intents:
+     the fields are the same conversation, only the opening line differs. Casia
+     is sales-led and premium — no "start free", no credit card, no drip. A
+     human replies. -->
+<dialog id="lead-dlg" class="lead-dlg" aria-labelledby="lead-title">
+  <form id="lead-form" method="dialog">
+    <button type="button" class="lead-x" data-close aria-label="Close">&times;</button>
+    <h3 id="lead-title">Book a demo</h3>
+    <p class="lead-sub" id="lead-sub">Thirty minutes, your questions, no slides. Tell us where to reach you.</p>
+    <input type="hidden" name="kind" value="demo">
+    <input type="hidden" name="source" value="">
+    <!-- A bot fills every field it finds; a person never sees this one. -->
+    <div class="lead-hp" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+    <label class="lead-l">Your name<input name="name" required maxlength="120" autocomplete="name"></label>
+    <label class="lead-l">Work email<input name="email" type="email" required maxlength="200" autocomplete="email"></label>
+    <label class="lead-l">Company<input name="company" maxlength="200" autocomplete="organization"></label>
+    <div class="lead-row">
+      <label class="lead-l">Industry<input name="industry" maxlength="120" placeholder="e.g. logistics, retail" autocomplete="off"></label>
+      <label class="lead-l">Location<input name="location" maxlength="120" placeholder="City, country" autocomplete="off"></label>
+    </div>
+    <div class="lead-row">
+      <label class="lead-l">Which area?
+        <select name="area">
+          <option value="">Choose…</option>
+          <option>People &amp; HR</option>
+          <option>Finance</option>
+          <option>Inventory</option>
+          <option>Procurement</option>
+          <option>Marketing</option>
+          <option>Distribution</option>
+          <option>Sales</option>
+          <option>The whole platform</option>
+        </select></label>
+      <label class="lead-l">How many people?
+        <select name="team_size">
+          <option value="">Choose…</option>
+          <option>Under 20</option><option>20–50</option><option>50–150</option><option>150+</option>
+        </select></label>
+    </div>
+    <label class="lead-l" id="lead-msg-l">What would you like to see?<textarea name="message" rows="3" maxlength="2000"></textarea></label>
+    <p class="lead-err" id="lead-err" hidden></p>
+    <button class="btn btn-primary" type="submit" id="lead-go">Request a demo</button>
+    <p class="lead-fine">We'll reply from a real address, usually the same day. We don't add you to a list.</p>
+  </form>
+</dialog>
 <script>
+  /* Where things live. Spec 12: every product is a subdomain of casialab.com;
+     locally they're ports. Defined ONCE — a hardcoded host in a card is how a
+     marketing site ships a link to someone's laptop. */
+  const LOCAL = /^(localhost|127\.|0\.0\.0\.0|\[::1\])/.test(location.hostname) || location.protocol === "file:";
+  const CASIA = {
+    shell:  LOCAL ? "http://127.0.0.1:4400" : "https://app.casialab.com",
+    road10: LOCAL ? "http://127.0.0.1:4500" : "https://road10.casialab.com",
+    api:    LOCAL ? "http://127.0.0.1:4400" : "https://app.casialab.com",
+  };
+  /* Sign in is not a form — it's WorkOS. Send them to the shell's real door. */
+  document.querySelectorAll('a[href="#signin"]').forEach((a) => { a.href = CASIA.shell + "/auth/login"; });
+  document.querySelectorAll('a[href^="http://127.0.0.1:4500"]').forEach((a) => { a.href = CASIA.road10 + "/"; });
+
+  /* The two CTAs that used to point at nothing. Same fields either way — what
+     changes is the opening line, because "show me" and "let's talk about
+     buying" are the same conversation at different moments. */
   (function () {
-    var toggle = document.getElementById('navToggle');
-    var menu = document.getElementById('mobileNav');
-    if (!toggle || !menu) return;
-    menu.classList.add('flex');
-    toggle.addEventListener('click', function () {
-      var isHidden = menu.classList.toggle('hidden');
-      toggle.setAttribute('aria-expanded', String(!isHidden));
-    });
-    menu.querySelectorAll('a').forEach(function (a) {
-      a.addEventListener('click', function () {
-        menu.classList.add('hidden');
-        toggle.setAttribute('aria-expanded', 'false');
+    const dlg = document.getElementById("lead-dlg");
+    if (!dlg) return;
+    const form = document.getElementById("lead-form");
+    /* Demo is the only dialog now — "Talk to sales" is a plain mailto to
+       products@, so a buyer who's decided just writes to a person. */
+    const open = (source) => {
+      form.kind.value = "demo"; form.source.value = source || "";
+      document.getElementById("lead-err").hidden = true;
+      dlg.showModal();
+    };
+    document.querySelectorAll('a[href="#demo"]').forEach((a) => {
+      a.addEventListener("click", (e) => {
+        e.preventDefault();
+        /* Where they were standing when they asked — a lead off the pricing
+           section is a different conversation from one off the hero. */
+        open((a.closest("section") || {}).id || "nav");
       });
     });
+    /* Arriving from an internal page's "Book a demo" (index.html#demo) opens
+       the form straight away, instead of landing on a hash that does nothing. */
+    if (location.hash === "#demo") open("direct");
+    dlg.querySelector("[data-close]").addEventListener("click", () => dlg.close());
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const btn = document.getElementById("lead-go"), err = document.getElementById("lead-err");
+      btn.disabled = true; err.hidden = true;
+      const body = Object.fromEntries(new FormData(form).entries());
+      try {
+        const res = await fetch(CASIA.api + "/leads", { method: "POST",
+          headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+        if (!res.ok) throw new Error((await res.json()).error || "That didn't send.");
+        /* Say only what's true: no confirmation email exists yet. */
+        form.outerHTML = '<div class="lead-done"><h3>Thank you \u2014 that\'s with us.</h3>' +
+          '<p>A person will reply to <strong>' + String(body.email).replace(/[<>&]/g, "") +
+          '</strong>, usually the same day.</p></div>';
+      } catch (ex) {
+        err.textContent = ex.message; err.hidden = false; btn.disabled = false;
+      }
+    });
   })();
-</script>
 
+  // Reveal on scroll
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } });
+  }, { threshold: .14 });
+  document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+
+// Find your fit — routes by pain, sizes by headcount. No form, no email: the
+// page answers the question it asked, and the demo stays available for people
+// who've decided. Naming the START, not the catalogue, is the point.
+(function () {
+  var pick = { size: null, pain: null };
+  var START = {
+    people: { name: "People &amp; HR", href: "http://127.0.0.1:4500/",
+      line: "Hiring, onboarding, leave and payday — one place, and payroll hands finance a total instead of a spreadsheet." },
+    books:  { name: "Finance", href: "https://yakobooks.com",
+      line: "Your books, current — because the rest of the business posts to them as work happens, and your accountant ratifies rather than re-types." },
+    stock:  { name: "Inventory", href: "https://ceazr.com",
+      line: "What you hold, what it cost, across every location — and every movement lands in the books on its own." },
+    spend:  { name: "Procurement", href: "https://paytton.com",
+      line: "Requests and approvals before the money moves, so spending is tidy long before it reaches the books." }
+  };
+  var SIZE = {
+    tiny:  "At your size the whole thing is one person's memory. Start with one part, keep it honest, and add the rest as you hire.",
+    small: "This is the size where the spreadsheets stop working. Start with one part and let it earn the next.",
+    mid:   "At this size the handoffs between teams are the cost. Start here, then connect the next part — that's where the time comes back.",
+    large: "At your size you'll want a conversation — the shape of the rollout matters more than where you start."
+  };
+  function render() {
+    if (!pick.size || !pick.pain) return;
+    var s = START[pick.pain], out = document.getElementById("fit-out");
+    out.innerHTML = '<h4>Start with ' + s.name + '.</h4>' +
+      '<p>' + s.line + ' ' + SIZE[pick.size] + '</p>' +
+      '<a class="btn btn-primary" href="' + s.href + '">See ' + s.name + '</a>' +
+      '<a class="btn btn-ghost" href="#demo">Book a demo</a>';
+    out.hidden = false;
+  }
+  document.querySelectorAll(".fit-opts").forEach(function (g) {
+    g.addEventListener("click", function (e) {
+      var b = e.target.closest(".fit-opt"); if (!b) return;
+      g.querySelectorAll(".fit-opt").forEach(function (x) { x.classList.toggle("on", x === b); });
+      pick[g.dataset.group] = b.dataset.v;
+      render();
+    });
+  });
+})();
+</script>
 </body>
 </html>

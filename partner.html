@@ -1,284 +1,206 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Partner with us | Casia Lab. Do it easy.</title>
-<meta name="description" content="Partner with Casia Lab. We work with associations, accountants, lenders and trade groups serving owner-led businesses worldwide.">
-<link rel="icon" href="images/logo.png">
+<meta charset="utf-8">
+<title>Partners · Casia — Do it easy.</title>
+<meta name="description" content="Partner with Casia. We work with associations, accountants, lenders and trade groups that already serve owner-led businesses — so the businesses you work with can run better.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://casialab.com/partner.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%235647E6'/%3E%3Cpath d='M22 12.5a6 6 0 1 0 0 7' stroke='%23fff' stroke-width='2.6' stroke-linecap='round' fill='none'/%3E%3Ccircle cx='21.5' cy='16' r='2.1' fill='%23fff'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
-        colors: {
-          brand: {
-            fg: '#09090B', surface: '#18181B', surface2: '#3F3F46',
-            canvas: '#FAFAFA', muted: '#E8ECF0', border: '#E4E4E7',
-            accent: '#00D67E', accentDark: '#00A863',
-          },
-          product: {
-            ceazr: '#10B981', yako: '#3B82F6',
-            paytton: '#F59E0B', chatledger: '#0EA5E9',
-          }
-        }
-      }
-    }
-  }
-</script>
-<style>
-  :root {
-    --fg: #09090B; --surface: #18181B; --canvas: #FAFAFA;
-    --border: #E4E4E7; --accent: #00D67E; --accent-dark: #00A863;
-  }
-  html, body { background: var(--canvas); color: var(--fg); }
-  body { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
-  .btn-primary { background: var(--surface); color: var(--canvas); transition: background-color 180ms ease; }
-  .btn-primary:hover { background: #000; }
-  .btn-secondary { background: transparent; color: var(--fg); border: 1px solid var(--border); transition: border-color 180ms ease, background-color 180ms ease; }
-  .btn-secondary:hover { border-color: var(--surface); background: white; }
-  .btn-accent { background: var(--accent); color: var(--fg); transition: background-color 180ms ease; }
-  .btn-accent:hover { background: var(--accent-dark); }
-  .nav-link { position: relative; padding-bottom: 2px; }
-  .nav-link::after { content: ''; position: absolute; left: 0; right: 100%; bottom: -2px; height: 2px; background: var(--accent); transition: right 180ms ease; }
-  .nav-link:hover::after { right: 0; }
-  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
 </head>
-<body class="min-h-screen flex flex-col">
+<body>
 
-<a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:bg-white focus:text-brand-fg focus:px-4 focus:py-2 focus:rounded focus:border focus:border-brand-border">Skip to content</a>
+<!-- NAV (shared across every page) -->
+<nav class="nav"><div class="wrap nav-in">
+  <a class="brand" href="index.html">
+    <svg class="mark" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="#5647E6"/><path d="M22 12.5a6 6 0 1 0 0 7" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/><circle cx="21.5" cy="16" r="2.1" fill="#fff"/></svg>
+    Casia
+  </a>
+  <div class="nav-links">
+    <a href="index.html#platform">How it works</a>
+    <a href="index.html#products">What it runs</a>
+    <a href="index.html#why">Why Casia</a>
+    <a href="index.html#pricing">Pricing</a>
+    <a href="about.html">Company</a>
+  </div>
+  <div class="nav-cta">
+    <a class="btn btn-ghost btn-sm" href="https://app.casialab.com/auth/login">Sign in</a>
+    <a class="btn btn-primary btn-sm" href="index.html#demo">Book a demo</a>
+  </div>
+</div></nav>
 
-<!-- Nav -->
-<nav class="sticky top-0 z-50 bg-white border-b border-brand-border">
-  <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
-    <div class="flex items-center gap-10">
-      <a href="index.html" class="flex items-baseline gap-2">
-        <span class="text-lg font-extrabold tracking-tight text-brand-fg">Casia Lab.</span>
-        <span class="hidden md:inline text-xs italic font-semibold text-brand-fg/50">Do it easy.</span>
-      </a>
-      <div class="hidden lg:flex items-center gap-7 text-sm font-semibold text-brand-fg/70">
-        <a href="index.html#pains" class="nav-link hover:text-brand-fg">Where it hurts</a>
-        <a href="index.html#platform" class="nav-link hover:text-brand-fg">Platform</a>
-        <a href="partner.html" aria-current="page" class="nav-link font-bold text-brand-fg">Partners</a>
-        <a href="about.html" class="nav-link hover:text-brand-fg">About</a>
-      </div>
-    </div>
-    <div class="flex items-center gap-2">
-      <a href="contact.html" class="btn-primary inline-flex items-center gap-2 text-sm font-semibold px-4 sm:px-5 py-2 sm:py-2.5">Contact Sales</a>
-      <button id="navToggle" class="lg:hidden p-2 text-brand-fg" aria-controls="mobileNav" aria-expanded="false" aria-label="Open menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-      </button>
+<!-- HERO -->
+<header class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow">Partnerships</span>
+    <h1>Partner with Casia.</h1>
+    <p class="lede">We work with organisations that already serve owner-led businesses — associations, accountants, lenders, trade groups. You bring the local relationships; Casia brings the daily operating layer, so the businesses you work with can run better.</p>
+    <div class="page-cta">
+      <a class="btn btn-white" href="#partner-form">Become a partner <svg class="ic" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-light" href="index.html#products">Explore the platform</a>
     </div>
   </div>
-  <div id="mobileNav" class="hidden lg:hidden bg-white border-b border-brand-border py-2 px-6 flex-col">
-    <a href="index.html#pains" class="block py-3 text-base font-semibold text-brand-fg border-b border-brand-border/50">Where it hurts</a>
-    <a href="index.html#platform" class="block py-3 text-base font-semibold text-brand-fg border-b border-brand-border/50">Platform</a>
-    <a href="partner.html" aria-current="page" class="block py-3 text-base font-bold text-brand-fg border-b border-brand-border/50">Partners</a>
-    <a href="about.html" class="block py-3 text-base font-semibold text-brand-fg">About</a>
+</header>
+
+<!-- WHO WE WORK WITH -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Who we work with</span>
+      <h2>Building an ecosystem around owner-led productivity.</h2>
+      <p>If your organisation already stands next to small businesses, we'd like to stand there with you.</p>
+    </div>
+    <div class="info-cards">
+      <div class="info-card reveal"><div class="pic"><svg class="ic" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg></div><b>Business associations &amp; cooperatives</b></div>
+      <div class="info-card reveal"><div class="pic"><svg class="ic" viewBox="0 0 24 24"><path d="M9 11H5a2 2 0 0 0-2 2v7h6z"/><path d="M9 7h6v13H9z"/><path d="M15 4h4a2 2 0 0 1 2 2v14h-6z"/></svg></div><b>Accountants &amp; bookkeeping professionals</b></div>
+      <div class="info-card reveal"><div class="pic"><svg class="ic" viewBox="0 0 24 24"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><b>SME lenders &amp; financial institutions</b></div>
+      <div class="info-card reveal"><div class="pic"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20"/></svg></div><b>Market access &amp; trade organisations</b></div>
+      <div class="info-card reveal"><div class="pic"><svg class="ic" viewBox="0 0 24 24"><path d="M3 21h18M6 21V8l6-4 6 4v13"/><path d="M10 21v-6h4v6"/></svg></div><b>Chambers of commerce</b></div>
+      <div class="info-card reveal"><div class="pic"><svg class="ic" viewBox="0 0 24 24"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><b>Distribution networks</b></div>
+      <div class="info-card reveal"><div class="pic"><svg class="ic" viewBox="0 0 24 24"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></div><b>Technology partners</b></div>
+      <div class="info-card reveal"><div class="pic"><svg class="ic" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></div><b>Investors aligned with small-business productivity</b></div>
+    </div>
   </div>
-</nav>
+</section>
 
-<main id="main" class="flex-grow">
+<!-- HOW WE WORK TOGETHER -->
+<section class="sec band">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">How we work together</span>
+      <h2>A few ways to build with us.</h2>
+      <p>Pick the shape that fits how your organisation already reaches owner-led businesses.</p>
+    </div>
+    <div class="info-cards">
+      <div class="info-card reveal"><div class="pic"><svg class="ic" viewBox="0 0 24 24"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><b>Distribution partnerships</b><p>Take Casia to the businesses you already work with. We support training and onboarding; you bring the local relationships.</p></div>
+      <div class="info-card reveal"><div class="pic"><svg class="ic" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div><b>Program partnerships</b><p>Bundle Casia into SME training, accelerator, or enterprise-development programmes your organisation runs.</p></div>
+      <div class="info-card reveal"><div class="pic"><svg class="ic" viewBox="0 0 24 24"><path d="M14 7h5a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h5"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></div><b>Product alliances</b><p>Integrations between Casia and a tool you already operate, where it makes sense for both sides.</p></div>
+    </div>
+  </div>
+</section>
 
-  <div class="max-w-7xl mx-auto px-6 py-16">
-
-    <!-- Hero -->
-    <section class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
-      <div>
-        <span class="text-xs font-bold tracking-[0.2em] uppercase text-brand-fg mb-4 block">Partnerships</span>
-        <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight text-brand-fg mb-6 leading-tight">Partner with Casia Lab.</h1>
-        <p class="text-xl text-brand-fg/70 max-w-xl mb-10 leading-relaxed">We work with organisations that already serve owner-led businesses. Associations, accountants, lenders, trade groups. So the businesses you work with can run better.</p>
-        <div class="flex flex-wrap gap-4">
-          <a href="#partnership-form" class="btn-primary inline-flex items-center justify-center px-6 py-3 font-semibold">Become a Partner</a>
-        </div>
-      </div>
-      <div class="relative h-[480px] bg-white overflow-hidden border border-brand-border">
-        <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&q=80&w=2000" alt="Corporate partnership" class="w-full h-full object-cover">
-      </div>
-    </section>
-
-    <!-- Who we work with -->
-    <section class="mb-24">
-      <div class="mb-12">
-        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-brand-fg mb-4">Who we work with</h2>
-        <p class="text-lg text-brand-fg/70 max-w-2xl">We are building an ecosystem around small business productivity.</p>
-      </div>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="bg-white p-6 border border-brand-border flex items-center gap-4"><div class="w-2 h-2 rounded-full bg-brand-accent shrink-0"></div><p class="text-brand-fg font-medium text-sm leading-snug">Business associations &amp; cooperatives</p></div>
-        <div class="bg-white p-6 border border-brand-border flex items-center gap-4"><div class="w-2 h-2 rounded-full bg-brand-accent shrink-0"></div><p class="text-brand-fg font-medium text-sm leading-snug">Accountants &amp; bookkeeping professionals</p></div>
-        <div class="bg-white p-6 border border-brand-border flex items-center gap-4"><div class="w-2 h-2 rounded-full bg-brand-accent shrink-0"></div><p class="text-brand-fg font-medium text-sm leading-snug">SME lenders &amp; financial institutions</p></div>
-        <div class="bg-white p-6 border border-brand-border flex items-center gap-4"><div class="w-2 h-2 rounded-full bg-brand-accent shrink-0"></div><p class="text-brand-fg font-medium text-sm leading-snug">Market access &amp; trade organizations</p></div>
-        <div class="bg-white p-6 border border-brand-border flex items-center gap-4"><div class="w-2 h-2 rounded-full bg-brand-accent shrink-0"></div><p class="text-brand-fg font-medium text-sm leading-snug">Chambers of commerce</p></div>
-        <div class="bg-white p-6 border border-brand-border flex items-center gap-4"><div class="w-2 h-2 rounded-full bg-brand-accent shrink-0"></div><p class="text-brand-fg font-medium text-sm leading-snug">Distribution networks</p></div>
-        <div class="bg-white p-6 border border-brand-border flex items-center gap-4"><div class="w-2 h-2 rounded-full bg-brand-accent shrink-0"></div><p class="text-brand-fg font-medium text-sm leading-snug">Technology partners</p></div>
-        <div class="bg-white p-6 border border-brand-border flex items-center gap-4"><div class="w-2 h-2 rounded-full bg-brand-accent shrink-0"></div><p class="text-brand-fg font-medium text-sm leading-snug">Investors aligned with small-business productivity</p></div>
-      </div>
-    </section>
-
-    <!-- Partnership models -->
-    <section class="mb-24">
-      <div class="mb-12">
-        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-brand-fg mb-4">How we work together</h2>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[500px]">
-        <div class="md:col-span-8 bg-white p-10 border border-brand-border flex flex-col justify-between overflow-hidden relative group">
-          <div class="z-10">
-            <span class="bg-brand-accent/10 text-brand-fg px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] mb-6 inline-block">For your network</span>
-            <h3 class="text-4xl font-extrabold mb-4 text-brand-fg">Distribution Partnerships</h3>
-            <p class="text-lg text-brand-fg/70 max-w-lg leading-relaxed">Take Casia Lab tools to the businesses you already work with. We support training and onboarding. You bring the local relationships.</p>
-          </div>
-          <div class="mt-10 z-10">
-            <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&q=80&w=1200" alt="Distribution" class="h-56 w-full object-cover">
-          </div>
-        </div>
-        <div class="md:col-span-4 grid grid-rows-2 gap-6">
-          <div class="bg-brand-surface text-white p-8 flex flex-col justify-center">
-            <i data-lucide="handshake" class="text-brand-accent w-10 h-10 mb-4"></i>
-            <h4 class="text-2xl font-extrabold mb-2">Program Partnerships</h4>
-            <p class="text-white/70 text-sm leading-relaxed">Bundling Casia Lab tools into SME training, accelerator, or enterprise-development programmes.</p>
-          </div>
-          <div class="bg-white border border-brand-border p-8 flex flex-col justify-center">
-            <i data-lucide="puzzle" class="text-brand-fg w-10 h-10 mb-4"></i>
-            <h4 class="text-2xl font-extrabold mb-2 text-brand-fg">Product Alliances</h4>
-            <p class="text-brand-fg/70 text-sm leading-relaxed">Integrations between Casia Lab and a tool you already operate, where it makes sense for both sides.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Form -->
-    <section id="partnership-form" data-form-card class="bg-white p-10 md:p-16 border border-brand-border max-w-4xl mx-auto mb-16 scroll-mt-24">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-extrabold text-brand-fg mb-4">Partnership Inquiry</h2>
-        <p class="text-brand-fg/70 text-lg">Tell us a bit about your organisation. We read every message ourselves and respond when there's a real fit.</p>
-      </div>
-
+<!-- FORM -->
+<section class="sec" id="partner-form">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Partnership inquiry</span>
+      <h2>Tell us about your organisation.</h2>
+      <p>We read every message ourselves and respond when there's a real fit.</p>
+    </div>
+    <div class="form-card" style="margin:0 auto">
       <!-- FORM-DELIVERY: change the email below to route submissions elsewhere. -->
-      <form data-form action="https://formsubmit.co/corporate@casialab.com" method="POST" class="space-y-8">
-          <input type="hidden" name="_subject" value="Casia Lab. New partnership inquiry">
-          <input type="hidden" name="_next" value="https://casialab.com/thanks.html">
-          <input type="hidden" name="_template" value="table">
-          <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;height:0;width:0;opacity:0" aria-hidden="true">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="space-y-2">
-            <label class="text-sm font-semibold text-brand-fg">Full Name</label>
-            <input required name="name" class="w-full bg-white border border-brand-border p-3 focus:border-brand-fg focus:ring-1 focus:ring-brand-accent outline-none transition-all" placeholder="Jane Doe" type="text">
+      <form action="https://formsubmit.co/corporate@casialab.com" method="POST">
+        <input type="hidden" name="_subject" value="Casia — New partnership inquiry">
+        <input type="hidden" name="_next" value="https://casialab.com/thanks.html">
+        <input type="hidden" name="_template" value="table">
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;height:0;width:0;opacity:0" aria-hidden="true">
+        <div class="form-grid">
+          <div class="lead-row">
+            <label class="lead-l">Full name
+              <input required name="name" type="text" placeholder="Jane Doe">
+            </label>
+            <label class="lead-l">Organisation name
+              <input required name="organization" type="text" placeholder="ACME Trade Group">
+            </label>
           </div>
-          <div class="space-y-2">
-            <label class="text-sm font-semibold text-brand-fg">Organization Name</label>
-            <input required name="organization" class="w-full bg-white border border-brand-border p-3 focus:border-brand-fg focus:ring-1 focus:ring-brand-accent outline-none transition-all" placeholder="ACME Trade Group" type="text">
+          <div class="lead-row">
+            <label class="lead-l">Email address
+              <input required name="email" type="email" placeholder="jane@organization.com">
+            </label>
+            <label class="lead-l">Type of organisation
+              <select name="organization_type">
+                <option>Association</option>
+                <option>Chamber of Commerce</option>
+                <option>NGO / Development Agency</option>
+                <option>Technology Provider</option>
+                <option>Financial Institution</option>
+                <option>Other</option>
+              </select>
+            </label>
           </div>
+          <div class="lead-l">Partnership interest
+            <label style="display:flex;align-items:center;gap:9px;font-weight:400;margin-top:4px"><input type="checkbox" name="interest" value="Distribution & Reselling" style="width:auto"> Distribution &amp; reselling</label>
+            <label style="display:flex;align-items:center;gap:9px;font-weight:400"><input type="checkbox" name="interest" value="Custom Program Implementation" style="width:auto"> Custom program implementation</label>
+            <label style="display:flex;align-items:center;gap:9px;font-weight:400"><input type="checkbox" name="interest" value="Technical Product Alliance" style="width:auto"> Technical product alliance</label>
+            <label style="display:flex;align-items:center;gap:9px;font-weight:400"><input type="checkbox" name="interest" value="Co-Marketing & Growth" style="width:auto"> Co-marketing &amp; growth</label>
+          </div>
+          <label class="lead-l">Tell us about your interest
+            <textarea required name="message" rows="4" placeholder="How can Casia help your organisation and members?"></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary" style="height:52px;justify-content:center">Submit partnership interest</button>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="space-y-2">
-            <label class="text-sm font-semibold text-brand-fg">Email Address</label>
-            <input required name="email" class="w-full bg-white border border-brand-border p-3 focus:border-brand-fg focus:ring-1 focus:ring-brand-accent outline-none transition-all" placeholder="jane@organization.com" type="email">
-          </div>
-          <div class="space-y-2">
-            <label class="text-sm font-semibold text-brand-fg">Type of Organization</label>
-            <select name="organization_type" class="w-full bg-white border border-brand-border p-3 focus:border-brand-fg focus:ring-1 focus:ring-brand-accent outline-none transition-all">
-              <option>Association</option>
-              <option>Chamber of Commerce</option>
-              <option>NGO / Development Agency</option>
-              <option>Technology Provider</option>
-              <option>Financial Institution</option>
-              <option>Other</option>
-            </select>
-          </div>
-        </div>
-        <div class="space-y-4">
-          <label class="text-sm font-semibold text-brand-fg">Partnership Interest</label>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-brand-canvas p-6 border border-brand-border">
-            <label class="flex items-center space-x-3 cursor-pointer group"><input type="checkbox" name="interest" value="Distribution & Reselling" class="w-5 h-5 border-brand-border text-brand-fg focus:ring-brand-accent accent-black cursor-pointer"><span class="text-brand-fg font-medium">Distribution &amp; Reselling</span></label>
-            <label class="flex items-center space-x-3 cursor-pointer group"><input type="checkbox" name="interest" value="Custom Program Implementation" class="w-5 h-5 border-brand-border text-brand-fg focus:ring-brand-accent accent-black cursor-pointer"><span class="text-brand-fg font-medium">Custom Program Implementation</span></label>
-            <label class="flex items-center space-x-3 cursor-pointer group"><input type="checkbox" name="interest" value="Technical Product Alliance" class="w-5 h-5 border-brand-border text-brand-fg focus:ring-brand-accent accent-black cursor-pointer"><span class="text-brand-fg font-medium">Technical Product Alliance</span></label>
-            <label class="flex items-center space-x-3 cursor-pointer group"><input type="checkbox" name="interest" value="Co-Marketing & Growth" class="w-5 h-5 border-brand-border text-brand-fg focus:ring-brand-accent accent-black cursor-pointer"><span class="text-brand-fg font-medium">Co-Marketing &amp; Growth</span></label>
-          </div>
-        </div>
-        <div class="space-y-2">
-          <label class="text-sm font-semibold text-brand-fg">Tell us about your interest</label>
-          <textarea required name="message" class="w-full bg-white border border-brand-border p-4 focus:border-brand-fg focus:ring-1 focus:ring-brand-accent outline-none transition-all" placeholder="How can Casia Lab help your organization and members?" rows="4"></textarea>
-        </div>
-        <button type="submit" class="btn-primary w-full inline-flex items-center justify-center px-6 py-4 font-semibold text-lg">Submit Partnership Interest</button>
       </form>
-
-      <div data-form-success class="hidden text-center py-12">
-        <div class="w-20 h-20 bg-brand-accent/10 text-brand-fg flex items-center justify-center mx-auto mb-6"><i data-lucide="check-circle-2" class="w-10 h-10"></i></div>
-        <h3 class="text-2xl font-extrabold text-brand-fg mb-2">Message received</h3>
-        <p class="text-brand-fg/70 mb-8">We'll be in touch within a few business days.</p>
-        <button type="button" data-form-reset class="btn-primary inline-flex items-center justify-center px-6 py-3 font-semibold">Submit Another</button>
-      </div>
-    </section>
-
+    </div>
   </div>
+</section>
 
-</main>
+<!-- CTA -->
+<section class="sec cta">
+  <div class="wrap">
+    <div class="cta-motto">Do it easy.</div>
+    <h2>Serve owner-led businesses? Let's build together.</h2>
+    <p>Institution, partner, accountant, reseller, or operator — if you work with owner-led businesses, we'd like to hear from you.</p>
+    <div class="cta-btns">
+      <a class="btn btn-white" href="#partner-form" style="height:52px;padding:0 30px">Become a partner</a>
+      <a class="btn btn-light" href="index.html#products" style="height:52px;padding:0 30px">Explore the platform</a>
+    </div>
+  </div>
+</section>
 
-<!-- Footer -->
-<footer class="bg-white border-t border-brand-border pt-20 pb-10">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-10 mb-14">
-      <div class="col-span-2 space-y-3">
-        <div class="text-xl font-extrabold tracking-tight text-brand-fg">Casia Lab.</div>
-        <div class="text-base italic font-semibold text-brand-fg/60">Do it easy.</div>
-        <p class="text-brand-fg/60 max-w-sm leading-relaxed pt-2 text-sm">Enterprise tools without enterprise headache. Built for the daily work of running a growing business.</p>
+<!-- FOOTER (shared across every page) -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="index.html">
+          <svg class="mark" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="#5647E6"/><path d="M22 12.5a6 6 0 1 0 0 7" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/><circle cx="21.5" cy="16" r="2.1" fill="#fff"/></svg>
+          Casia
+        </a>
+        <div class="foot-motto">Do it easy.</div>
+        <p>Everything your business runs on, in one place — working together, so the busywork disappears.</p>
       </div>
-      <div class="space-y-4">
-        <h4 class="text-xs font-bold text-brand-fg/50 uppercase tracking-[0.2em]">Solutions</h4>
-        <div class="flex flex-col gap-3 text-sm">
-          <a href="https://ceazr.com" target="_blank" rel="noopener noreferrer" class="text-brand-fg/80 hover:text-brand-fg font-semibold">Ceazr</a>
-          <a href="https://yakobooks.com" target="_blank" rel="noopener noreferrer" class="text-brand-fg/80 hover:text-brand-fg font-semibold">Yako</a>
-          <a href="https://paytton.com" target="_blank" rel="noopener noreferrer" class="text-brand-fg/80 hover:text-brand-fg font-semibold">Paytton</a>
-          <a href="https://chatledger.casialab.com" target="_blank" rel="noopener noreferrer" class="text-brand-fg/80 hover:text-brand-fg font-semibold">ChatLedger</a>
-        </div>
+      <div class="foot-col">
+        <h4>Products</h4>
+        <a href="index.html#products">Road10 · People</a>
+        <a href="index.html#products">Yakobooks · Finance</a>
+        <a href="index.html#products">Ceazr · Inventory</a>
+        <a href="index.html#products">Paytton · Procurement</a>
+        <a href="index.html#products">Admeistr · Marketing</a>
       </div>
-      <div class="space-y-4">
-        <h4 class="text-xs font-bold text-brand-fg/50 uppercase tracking-[0.2em]">Company</h4>
-        <div class="flex flex-col gap-3 text-sm">
-          <a href="about.html" class="text-brand-fg/80 hover:text-brand-fg font-semibold">About Us</a>
-          <a href="partner.html" class="text-brand-fg/80 hover:text-brand-fg font-semibold">Partner with us</a>
-          <a href="resellers.html" class="text-brand-fg/80 hover:text-brand-fg font-semibold">Resell our tools</a>
-          <a href="work-with-us.html" class="text-brand-fg/80 hover:text-brand-fg font-semibold">Work with Us</a>
-          <a href="contact.html" class="text-brand-fg/80 hover:text-brand-fg font-semibold">Contact Us</a>
-        </div>
+      <div class="foot-col">
+        <h4>Platform</h4>
+        <a href="index.html#platform">How it works</a>
+        <a href="index.html#flow">One number, once</a>
+        <a href="index.html#why">Why Casia</a>
+        <a href="index.html#pricing">Pricing</a>
+        <a href="index.html#fit">Find your fit</a>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="work-with-us.html">Careers</a>
+        <a href="partner.html">Partners</a>
+        <a href="resellers.html">Resellers</a>
+        <a href="contact.html">Contact</a>
       </div>
     </div>
-    <div class="border-t border-brand-border pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-brand-fg/60">
-      <p>© 2026 Casia Lab. Part of <a href="https://casiaconsulting.com" target="_blank" rel="noopener noreferrer" class="hover:text-brand-fg underline">Casia Growth Lab LLC</a>.</p>
-      <div class="flex gap-6">
-        <a href="privacy.html" class="hover:text-brand-fg">Privacy Policy</a>
-        <a href="terms.html" class="hover:text-brand-fg">Terms of Service</a>
-      </div>
+    <div class="foot-bar">
+      <span>© 2026 Casia Lab — Part of <a href="https://casiaconsulting.com" target="_blank" rel="noopener">Casia Growth Lab LLC</a>, Dubai, UAE.</span>
+      <span class="foot-legal"><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · casialab.com</span>
     </div>
   </div>
 </footer>
 
-<script src="https://unpkg.com/lucide@latest"></script>
 <script>
-  (function () {
-    var toggle = document.getElementById('navToggle');
-    var menu = document.getElementById('mobileNav');
-    if (!toggle || !menu) return;
-    menu.classList.add('flex');
-    toggle.addEventListener('click', function () {
-      var isHidden = menu.classList.toggle('hidden');
-      toggle.setAttribute('aria-expanded', String(!isHidden));
-    });
-    menu.querySelectorAll('a').forEach(function (a) {
-      a.addEventListener('click', function () {
-        menu.classList.add('hidden');
-        toggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-    if (window.lucide) { lucide.createIcons(); }
-  })();
+  // Reveal on scroll — same behaviour as the landing.
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+  }, { threshold: .14 });
+  document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
 </script>
-
 </body>
 </html>

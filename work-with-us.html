@@ -1,277 +1,213 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Work with us | Casia Lab. Do it easy.</title>
-<meta name="description" content="We don't always have open roles, but we're always interested in strong people who want to build for owner-led businesses. Send us your profile.">
-<link rel="icon" href="images/logo.png">
+<meta charset="utf-8">
+<title>Careers · Casia — Do it easy.</title>
+<meta name="description" content="We don't always have open roles, but we're always interested in strong people who want to build the daily operating layer for owner-led business. Send us your profile.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://casialab.com/work-with-us.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%235647E6'/%3E%3Cpath d='M22 12.5a6 6 0 1 0 0 7' stroke='%23fff' stroke-width='2.6' stroke-linecap='round' fill='none'/%3E%3Ccircle cx='21.5' cy='16' r='2.1' fill='%23fff'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
-        colors: {
-          brand: {
-            fg: '#09090B', surface: '#18181B', surface2: '#3F3F46',
-            canvas: '#FAFAFA', muted: '#E8ECF0', border: '#E4E4E7',
-            accent: '#00D67E', accentDark: '#00A863',
-          },
-          product: {
-            ceazr: '#10B981', yako: '#3B82F6',
-            paytton: '#F59E0B', chatledger: '#0EA5E9',
-          }
-        }
-      }
-    }
-  }
-</script>
-<style>
-  :root {
-    --fg: #09090B; --surface: #18181B; --canvas: #FAFAFA;
-    --border: #E4E4E7; --accent: #00D67E; --accent-dark: #00A863;
-  }
-  html, body { background: var(--canvas); color: var(--fg); }
-  body { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
-  .btn-primary { background: var(--surface); color: var(--canvas); transition: background-color 180ms ease; }
-  .btn-primary:hover { background: #000; }
-  .btn-secondary { background: transparent; color: var(--fg); border: 1px solid var(--border); transition: border-color 180ms ease, background-color 180ms ease; }
-  .btn-secondary:hover { border-color: var(--surface); background: white; }
-  .nav-link { position: relative; padding-bottom: 2px; }
-  .nav-link::after { content: ''; position: absolute; left: 0; right: 100%; bottom: -2px; height: 2px; background: var(--accent); transition: right 180ms ease; }
-  .nav-link:hover::after { right: 0; }
-  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
 </head>
-<body class="min-h-screen flex flex-col">
+<body>
 
-<a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:bg-white focus:text-brand-fg focus:px-4 focus:py-2 focus:rounded focus:border focus:border-brand-border">Skip to content</a>
+<!-- NAV (shared across every page) -->
+<nav class="nav"><div class="wrap nav-in">
+  <a class="brand" href="index.html">
+    <svg class="mark" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="#5647E6"/><path d="M22 12.5a6 6 0 1 0 0 7" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/><circle cx="21.5" cy="16" r="2.1" fill="#fff"/></svg>
+    Casia
+  </a>
+  <div class="nav-links">
+    <a href="index.html#platform">How it works</a>
+    <a href="index.html#products">What it runs</a>
+    <a href="index.html#why">Why Casia</a>
+    <a href="index.html#pricing">Pricing</a>
+    <a href="about.html">Company</a>
+  </div>
+  <div class="nav-cta">
+    <a class="btn btn-ghost btn-sm" href="https://app.casialab.com/auth/login">Sign in</a>
+    <a class="btn btn-primary btn-sm" href="index.html#demo">Book a demo</a>
+  </div>
+</div></nav>
 
-<!-- Nav -->
-<nav class="sticky top-0 z-50 bg-white border-b border-brand-border">
-  <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
-    <div class="flex items-center gap-10">
-      <a href="index.html" class="flex items-baseline gap-2">
-        <span class="text-lg font-extrabold tracking-tight text-brand-fg">Casia Lab.</span>
-        <span class="hidden md:inline text-xs italic font-semibold text-brand-fg/50">Do it easy.</span>
-      </a>
-      <div class="hidden lg:flex items-center gap-7 text-sm font-semibold text-brand-fg/70">
-        <a href="index.html#pains" class="nav-link hover:text-brand-fg">Where it hurts</a>
-        <a href="index.html#platform" class="nav-link hover:text-brand-fg">Platform</a>
-        <a href="partner.html" class="nav-link hover:text-brand-fg">Partners</a>
-        <a href="about.html" class="nav-link hover:text-brand-fg">About</a>
-      </div>
-    </div>
-    <div class="flex items-center gap-2">
-      <a href="contact.html" class="btn-primary inline-flex items-center gap-2 text-sm font-semibold px-4 sm:px-5 py-2 sm:py-2.5">Contact Sales</a>
-      <button id="navToggle" class="lg:hidden p-2 text-brand-fg" aria-controls="mobileNav" aria-expanded="false" aria-label="Open menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-      </button>
+<!-- HERO -->
+<header class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow">Careers</span>
+    <h1>Build operating tools<br>for owner-led business.</h1>
+    <p class="lede">We're a small team building the practical, daily tools that owner-led businesses run on — shops, pharmacies, hotels, restaurants, and growing operators, wherever they work. If that work matters to you, we'd like to hear from you, even if there's no role open today.</p>
+    <div class="page-cta">
+      <a class="btn btn-white" href="#careers-form">Send your profile <svg class="ic" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-light" href="about.html">About Casia</a>
     </div>
   </div>
-  <div id="mobileNav" class="hidden lg:hidden bg-white border-b border-brand-border py-2 px-6 flex-col">
-    <a href="index.html#pains" class="block py-3 text-base font-semibold text-brand-fg border-b border-brand-border/50">Where it hurts</a>
-    <a href="index.html#platform" class="block py-3 text-base font-semibold text-brand-fg border-b border-brand-border/50">Platform</a>
-    <a href="partner.html" class="block py-3 text-base font-semibold text-brand-fg border-b border-brand-border/50">Partners</a>
-    <a href="about.html" class="block py-3 text-base font-semibold text-brand-fg">About</a>
+</header>
+
+<!-- ROLES WE LOOK FOR -->
+<section class="sec band">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Who we work with</span>
+      <h2>The kinds of people we build with.</h2>
+      <p>We rarely have a long jobs page. We do have a steady need for people who can build, sell, support, and scale our products with care.</p>
+    </div>
+    <div class="info-cards">
+      <div class="info-card reveal"><div class="pic"><svg class="ic" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><b>Product designers</b></div>
+      <div class="info-card reveal"><div class="pic"><svg class="ic" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg></div><b>Software engineers</b></div>
+      <div class="info-card reveal"><div class="pic"><svg class="ic" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M21 7v6h-6"/></svg></div><b>Growth &amp; content marketers</b></div>
+      <div class="info-card reveal"><div class="pic"><svg class="ic" viewBox="0 0 24 24"><path d="M11 17a4 4 0 0 1-4-4V6l4-2 4 2v7a4 4 0 0 1-4 4Z"/><path d="M11 21v-4"/></svg></div><b>Sales &amp; partner managers</b></div>
+      <div class="info-card reveal"><div class="pic"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="m5 5 4 4M15 15l4 4M15 9l4-4M5 19l4-4"/></svg></div><b>Customer success operators</b></div>
+      <div class="info-card reveal"><div class="pic"><svg class="ic" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></div><b>Product managers</b></div>
+      <div class="info-card reveal"><div class="pic"><svg class="ic" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div><b>User researchers</b></div>
+      <div class="info-card reveal"><div class="pic"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg></div><b>Operations &amp; sector specialists</b></div>
+    </div>
   </div>
-</nav>
+</section>
 
-<main id="main" class="flex-grow">
-
-    <div class="max-w-7xl mx-auto px-6 py-16">
-
-        <!-- Hero -->
-        <section class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
-            <div>
-                <p class="text-xs font-bold tracking-[0.2em] uppercase text-brand-fg mb-4">Careers</p>
-                <h1 class="text-5xl md:text-6xl font-extrabold text-brand-fg mb-6 leading-tight tracking-tight">Build operating tools for growing businesses worldwide.</h1>
-                <p class="text-xl text-brand-fg/70 max-w-xl mb-10 leading-relaxed">We're a small team building practical tools for the people running shops, pharmacies, hotels, restaurants and growing businesses, wherever they operate. If that work matters to you, we'd like to hear from you, even if there's no role open today.</p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="#careers-form" class="btn-primary inline-flex items-center justify-center px-6 py-3 font-semibold">Send your profile</a>
-                    <a href="about.html" class="btn-secondary inline-flex items-center justify-center px-6 py-3 font-semibold">About Casia Lab</a>
-                </div>
-            </div>
-            <div class="relative h-[480px] bg-white overflow-hidden border border-brand-border">
-                <!-- IMAGE-REVIEW: Owner-led team in a real office setting -->
-                <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=2000" alt="Team at work" class="w-full h-full object-cover">
-            </div>
-        </section>
-
-        <!-- Roles we look for -->
-        <section class="mb-24">
-            <div class="mb-12">
-                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-brand-fg mb-4">The kinds of people we work with.</h2>
-                <p class="text-lg text-brand-fg/70 max-w-2xl">We rarely have a long jobs page. We do have a steady need for people who can build, sell, support, and scale our products with care.</p>
-            </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="bg-white p-6 border border-brand-border hover:border-brand-fg transition-all flex items-center gap-4"><i data-lucide="layout" class="text-brand-accent w-5 h-5 shrink-0"></i><p class="text-brand-fg font-medium text-sm leading-snug">Product designers</p></div>
-                <div class="bg-white p-6 border border-brand-border hover:border-brand-fg transition-all flex items-center gap-4"><i data-lucide="code" class="text-brand-accent w-5 h-5 shrink-0"></i><p class="text-brand-fg font-medium text-sm leading-snug">Software engineers</p></div>
-                <div class="bg-white p-6 border border-brand-border hover:border-brand-fg transition-all flex items-center gap-4"><i data-lucide="trending-up" class="text-brand-accent w-5 h-5 shrink-0"></i><p class="text-brand-fg font-medium text-sm leading-snug">Growth &amp; content marketers</p></div>
-                <div class="bg-white p-6 border border-brand-border hover:border-brand-fg transition-all flex items-center gap-4"><i data-lucide="handshake" class="text-brand-accent w-5 h-5 shrink-0"></i><p class="text-brand-fg font-medium text-sm leading-snug">Sales &amp; partner managers</p></div>
-                <div class="bg-white p-6 border border-brand-border hover:border-brand-fg transition-all flex items-center gap-4"><i data-lucide="life-buoy" class="text-brand-accent w-5 h-5 shrink-0"></i><p class="text-brand-fg font-medium text-sm leading-snug">Customer success operators</p></div>
-                <div class="bg-white p-6 border border-brand-border hover:border-brand-fg transition-all flex items-center gap-4"><i data-lucide="briefcase" class="text-brand-accent w-5 h-5 shrink-0"></i><p class="text-brand-fg font-medium text-sm leading-snug">Product managers</p></div>
-                <div class="bg-white p-6 border border-brand-border hover:border-brand-fg transition-all flex items-center gap-4"><i data-lucide="search" class="text-brand-accent w-5 h-5 shrink-0"></i><p class="text-brand-fg font-medium text-sm leading-snug">User researchers</p></div>
-                <div class="bg-white p-6 border border-brand-border hover:border-brand-fg transition-all flex items-center gap-4"><i data-lucide="settings" class="text-brand-accent w-5 h-5 shrink-0"></i><p class="text-brand-fg font-medium text-sm leading-snug">Operations &amp; sector specialists</p></div>
-            </div>
-        </section>
-
-        <!-- How we work -->
-        <section class="mb-24 grid grid-cols-1 md:grid-cols-12 gap-6">
-            <div class="md:col-span-7 bg-white border border-brand-border p-10">
-                <h3 class="text-2xl font-extrabold text-brand-fg mb-3">How we work.</h3>
-                <p class="text-brand-fg/70 mb-6">We're early. The work is real, the structure is light, and most days you'll have to figure something out yourself.</p>
-                <ul class="space-y-3 text-brand-fg">
-                    <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="text-brand-accent w-5 h-5 shrink-0 mt-0.5"></i><span>Think clearly and write things down.</span></li>
-                    <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="text-brand-accent w-5 h-5 shrink-0 mt-0.5"></i><span>Move fast without being sloppy.</span></li>
-                    <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="text-brand-accent w-5 h-5 shrink-0 mt-0.5"></i><span>Talk to users, actual shop owners, not just dashboards.</span></li>
-                    <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="text-brand-accent w-5 h-5 shrink-0 mt-0.5"></i><span>Take ownership of a problem end to end.</span></li>
-                    <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="text-brand-accent w-5 h-5 shrink-0 mt-0.5"></i><span>Improve the systems you find as you go.</span></li>
-                </ul>
-            </div>
-            <div class="md:col-span-5 bg-brand-surface text-white p-10 flex flex-col justify-between">
-                <div>
-                    <h3 class="text-2xl font-extrabold mb-3">No open role today?</h3>
-                    <p class="text-white/70 leading-relaxed mb-6">Send your profile anyway. We keep applications on file and reach out when the work matches the person.</p>
-                </div>
-                <a href="#careers-form" class="inline-flex items-center justify-center px-6 py-3 font-semibold bg-white text-brand-fg hover:bg-brand-canvas transition-all">Send your profile <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i></a>
-            </div>
-        </section>
-
-        <!-- Form -->
-        <section id="careers-form" data-form-card class="bg-white p-10 md:p-16 border border-brand-border max-w-4xl mx-auto mb-16 scroll-mt-24">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-extrabold text-brand-fg mb-4">Tell us about yourself.</h2>
-                <p class="text-brand-fg/70 text-lg">A short note + a link to your work goes a long way.</p>
-            </div>
-
-            <!-- FORM-DELIVERY: change the email below to route submissions elsewhere. -->
-            <form data-form action="https://formsubmit.co/corporate@casialab.com" method="POST" class="space-y-8">
-                    <input type="hidden" name="_subject" value="Casia Lab. New careers profile">
-                    <input type="hidden" name="_next" value="https://casialab.com/thanks.html">
-                    <input type="hidden" name="_template" value="table">
-                    <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;height:0;width:0;opacity:0" aria-hidden="true">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="space-y-2">
-                        <label class="text-sm font-semibold text-brand-fg">Full name</label>
-                        <input required type="text" name="name" placeholder="Tunde Bakare" class="w-full bg-white border border-brand-border p-3 focus:border-brand-fg focus:ring-1 focus:ring-brand-accent outline-none transition-all">
-                    </div>
-                    <div class="space-y-2">
-                        <label class="text-sm font-semibold text-brand-fg">Email</label>
-                        <input required type="email" name="email" placeholder="tunde@example.com" class="w-full bg-white border border-brand-border p-3 focus:border-brand-fg focus:ring-1 focus:ring-brand-accent outline-none transition-all">
-                    </div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="space-y-2">
-                        <label class="text-sm font-semibold text-brand-fg">Phone / WhatsApp</label>
-                        <input type="tel" name="phone" placeholder="+234 …" class="w-full bg-white border border-brand-border p-3 focus:border-brand-fg focus:ring-1 focus:ring-brand-accent outline-none transition-all">
-                    </div>
-                    <div class="space-y-2">
-                        <label class="text-sm font-semibold text-brand-fg">Country</label>
-                        <input type="text" name="country" placeholder="e.g. UAE" class="w-full bg-white border border-brand-border p-3 focus:border-brand-fg focus:ring-1 focus:ring-brand-accent outline-none transition-all">
-                    </div>
-                </div>
-                <div class="space-y-2">
-                    <label class="text-sm font-semibold text-brand-fg">Area of interest</label>
-                    <select name="area_of_interest" class="w-full bg-white border border-brand-border p-3 focus:border-brand-fg focus:ring-1 focus:ring-brand-accent outline-none transition-all">
-                        <option>Product</option>
-                        <option>Engineering</option>
-                        <option>Design</option>
-                        <option>Sales</option>
-                        <option>Marketing</option>
-                        <option>Customer Success</option>
-                        <option>Operations</option>
-                        <option>Research</option>
-                        <option>Other</option>
-                    </select>
-                </div>
-                <div class="space-y-2">
-                    <label class="text-sm font-semibold text-brand-fg">Link to your work</label>
-                    <input type="url" name="profile_url" placeholder="LinkedIn, portfolio, GitHub, or website" class="w-full bg-white border border-brand-border p-3 focus:border-brand-fg focus:ring-1 focus:ring-brand-accent outline-none transition-all">
-                </div>
-                <div class="space-y-2">
-                    <label class="text-sm font-semibold text-brand-fg">Tell us how you can contribute</label>
-                    <textarea required name="message" rows="5" placeholder="What kinds of problems do you want to work on? What have you built or run before?" class="w-full bg-white border border-brand-border p-3 focus:border-brand-fg focus:ring-1 focus:ring-brand-accent outline-none transition-all"></textarea>
-                </div>
-                <button type="submit" class="btn-primary w-full inline-flex items-center justify-center px-6 py-4 font-semibold text-lg">Send my profile</button>
-            </form>
-
-            <div data-form-success class="hidden text-center py-12">
-                <div class="w-20 h-20 bg-brand-accent/10 text-brand-accent rounded-full flex items-center justify-center mx-auto mb-6"><i data-lucide="check-circle-2" class="w-10 h-10"></i></div>
-                <h3 class="text-2xl font-extrabold text-brand-fg mb-2">Thank you</h3>
-                <p class="text-brand-fg/70 mb-8">Your profile is on file. We'll reach out when there's a real fit.</p>
-                <button type="button" data-form-reset class="btn-primary inline-flex items-center justify-center px-6 py-3 font-semibold">Send another</button>
-            </div>
-        </section>
-
+<!-- HOW WE WORK -->
+<section class="sec">
+  <div class="wrap">
+    <div class="prose wide">
+      <span class="eyebrow">How we work</span>
+      <h2 style="margin-top:12px">Early, real work with light structure.</h2>
+      <p>We're early. The work is real, the structure is light, and most days you'll have to figure something out yourself. The people who thrive here tend to:</p>
+      <ul>
+        <li>Think clearly and write things down.</li>
+        <li>Move fast without being sloppy.</li>
+        <li>Talk to users — actual shop owners, not just dashboards.</li>
+        <li>Take ownership of a problem end to end.</li>
+        <li>Improve the systems you find as you go.</li>
+      </ul>
+      <h3>No open role today?</h3>
+      <p>Send your profile anyway. We keep applications on file and reach out when the work matches the person. <strong>Do it easy.</strong></p>
     </div>
+  </div>
+</section>
 
-</main>
+<!-- FORM -->
+<section class="sec band" id="careers-form">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Tell us about yourself</span>
+      <h2>A short note and a link to your work goes a long way.</h2>
+      <p>We read every profile. Tell us what you want to work on and what you've built or run before.</p>
+    </div>
+    <div class="form-card" style="margin:0 auto">
+      <!-- FORM-DELIVERY: change the email below to route submissions elsewhere. -->
+      <form action="https://formsubmit.co/corporate@casialab.com" method="POST">
+        <input type="hidden" name="_subject" value="Casia Lab. New careers profile">
+        <input type="hidden" name="_next" value="https://casialab.com/thanks.html">
+        <input type="hidden" name="_template" value="table">
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;height:0;width:0;opacity:0" aria-hidden="true">
+        <div class="form-grid">
+          <div class="lead-row">
+            <label class="lead-l">Full name
+              <input required type="text" name="name" placeholder="Tunde Bakare">
+            </label>
+            <label class="lead-l">Email
+              <input required type="email" name="email" placeholder="tunde@example.com">
+            </label>
+          </div>
+          <div class="lead-row">
+            <label class="lead-l">Phone / WhatsApp
+              <input type="tel" name="phone" placeholder="+234 …">
+            </label>
+            <label class="lead-l">Country
+              <input type="text" name="country" placeholder="e.g. UAE">
+            </label>
+          </div>
+          <label class="lead-l">Area of interest
+            <select name="area_of_interest">
+              <option>Product</option>
+              <option>Engineering</option>
+              <option>Design</option>
+              <option>Sales</option>
+              <option>Marketing</option>
+              <option>Customer Success</option>
+              <option>Operations</option>
+              <option>Research</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <label class="lead-l">Link to your work
+            <input type="url" name="profile_url" placeholder="LinkedIn, portfolio, GitHub, or website">
+          </label>
+          <label class="lead-l">Tell us how you can contribute
+            <textarea required name="message" rows="5" placeholder="What kinds of problems do you want to work on? What have you built or run before?"></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary">Send my profile <svg class="ic" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
 
-<!-- Footer -->
-<footer class="bg-white border-t border-brand-border pt-20 pb-10">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-10 mb-14">
-      <div class="col-span-2 space-y-3">
-        <div class="text-xl font-extrabold tracking-tight text-brand-fg">Casia Lab.</div>
-        <div class="text-base italic font-semibold text-brand-fg/60">Do it easy.</div>
-        <p class="text-brand-fg/60 max-w-sm leading-relaxed pt-2 text-sm">Enterprise tools without enterprise headache. Built for the daily work of running a growing business.</p>
+<!-- CTA -->
+<section class="sec cta">
+  <div class="wrap">
+    <div class="cta-motto">Do it easy.</div>
+    <h2>Rather explore the work first?</h2>
+    <p>See what Casia runs, or learn who's building it. When you're ready, your profile is a click away.</p>
+    <div class="cta-btns">
+      <a class="btn btn-white" href="index.html#products" style="height:52px;padding:0 30px">Explore the platform</a>
+      <a class="btn btn-light" href="about.html" style="height:52px;padding:0 30px">About Casia</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER (shared across every page) -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="index.html">
+          <svg class="mark" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="#5647E6"/><path d="M22 12.5a6 6 0 1 0 0 7" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/><circle cx="21.5" cy="16" r="2.1" fill="#fff"/></svg>
+          Casia
+        </a>
+        <div class="foot-motto">Do it easy.</div>
+        <p>Everything your business runs on, in one place — working together, so the busywork disappears.</p>
       </div>
-      <div class="space-y-4">
-        <h4 class="text-xs font-bold text-brand-fg/50 uppercase tracking-[0.2em]">Solutions</h4>
-        <div class="flex flex-col gap-3 text-sm">
-          <a href="https://ceazr.com" target="_blank" rel="noopener noreferrer" class="text-brand-fg/80 hover:text-brand-fg font-semibold">Ceazr</a>
-          <a href="https://yakobooks.com" target="_blank" rel="noopener noreferrer" class="text-brand-fg/80 hover:text-brand-fg font-semibold">Yako</a>
-          <a href="https://paytton.com" target="_blank" rel="noopener noreferrer" class="text-brand-fg/80 hover:text-brand-fg font-semibold">Paytton</a>
-          <a href="https://chatledger.casialab.com" target="_blank" rel="noopener noreferrer" class="text-brand-fg/80 hover:text-brand-fg font-semibold">ChatLedger</a>
-        </div>
+      <div class="foot-col">
+        <h4>Products</h4>
+        <a href="index.html#products">Road10 · People</a>
+        <a href="index.html#products">Yakobooks · Finance</a>
+        <a href="index.html#products">Ceazr · Inventory</a>
+        <a href="index.html#products">Paytton · Procurement</a>
+        <a href="index.html#products">Admeistr · Marketing</a>
       </div>
-      <div class="space-y-4">
-        <h4 class="text-xs font-bold text-brand-fg/50 uppercase tracking-[0.2em]">Company</h4>
-        <div class="flex flex-col gap-3 text-sm">
-          <a href="about.html" class="text-brand-fg/80 hover:text-brand-fg font-semibold">About Us</a>
-          <a href="partner.html" class="text-brand-fg/80 hover:text-brand-fg font-semibold">Partner with us</a>
-          <a href="resellers.html" class="text-brand-fg/80 hover:text-brand-fg font-semibold">Resell our tools</a>
-          <a href="work-with-us.html" class="text-brand-fg/80 hover:text-brand-fg font-semibold">Work with Us</a>
-          <a href="contact.html" class="text-brand-fg/80 hover:text-brand-fg font-semibold">Contact Us</a>
-        </div>
+      <div class="foot-col">
+        <h4>Platform</h4>
+        <a href="index.html#platform">How it works</a>
+        <a href="index.html#flow">One number, once</a>
+        <a href="index.html#why">Why Casia</a>
+        <a href="index.html#pricing">Pricing</a>
+        <a href="index.html#fit">Find your fit</a>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="work-with-us.html">Careers</a>
+        <a href="partner.html">Partners</a>
+        <a href="resellers.html">Resellers</a>
+        <a href="contact.html">Contact</a>
       </div>
     </div>
-    <div class="border-t border-brand-border pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-brand-fg/60">
-      <p>© 2026 Casia Lab. Part of <a href="https://casiaconsulting.com" target="_blank" rel="noopener noreferrer" class="hover:text-brand-fg underline">Casia Growth Lab LLC</a>.</p>
-      <div class="flex gap-6">
-        <a href="privacy.html" class="hover:text-brand-fg">Privacy Policy</a>
-        <a href="terms.html" class="hover:text-brand-fg">Terms of Service</a>
-      </div>
+    <div class="foot-bar">
+      <span>© 2026 Casia Lab — Part of <a href="https://casiaconsulting.com" target="_blank" rel="noopener">Casia Growth Lab LLC</a>, Dubai, UAE.</span>
+      <span class="foot-legal"><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · casialab.com</span>
     </div>
   </div>
 </footer>
 
-<script src="https://unpkg.com/lucide@latest"></script>
 <script>
-  (function () {
-    var toggle = document.getElementById('navToggle');
-    var menu = document.getElementById('mobileNav');
-    if (!toggle || !menu) return;
-    menu.classList.add('flex');
-    toggle.addEventListener('click', function () {
-      var isHidden = menu.classList.toggle('hidden');
-      toggle.setAttribute('aria-expanded', String(!isHidden));
-    });
-    menu.querySelectorAll('a').forEach(function (a) {
-      a.addEventListener('click', function () {
-        menu.classList.add('hidden');
-        toggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-  })();
-  if (window.lucide) { lucide.createIcons(); }
+  // Reveal on scroll — same behaviour as the landing.
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+  }, { threshold: .14 });
+  document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
 </script>
-
 </body>
 </html>
