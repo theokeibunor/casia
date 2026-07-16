@@ -308,7 +308,7 @@
           <button type="button" class="fit-opt" data-v="spend">Spending that surprises us</button>
         </div>
       </div>
-      <div class="fit-out" id="fit-out" hidden></div>
+      <div class="fit-out" id="fit-out"></div>
     </div>
   </div>
 </section>
@@ -443,13 +443,15 @@
       document.getElementById("lead-err").hidden = true;
       dlg.showModal();
     };
-    document.querySelectorAll('a[href="#demo"]').forEach((a) => {
-      a.addEventListener("click", (e) => {
-        e.preventDefault();
-        /* Where they were standing when they asked — a lead off the pricing
-           section is a different conversation from one off the hero. */
-        open((a.closest("section") || {}).id || "nav");
-      });
+    /* Delegated, so it also catches "Book a demo" buttons that JS builds later
+       (e.g. inside the "Find your fit" result card). */
+    document.addEventListener("click", (e) => {
+      const a = e.target.closest && e.target.closest('a[href="#demo"]');
+      if (!a) return;
+      e.preventDefault();
+      /* Where they were standing when they asked — a lead off the pricing
+         section is a different conversation from one off the hero. */
+      open((a.closest("section") || {}).id || "nav");
     });
     /* Arriving from an internal page's "Book a demo" (index.html#demo) opens
        the form straight away, instead of landing on a hash that does nothing. */
@@ -485,31 +487,61 @@
 // who've decided. Naming the START, not the catalogue, is the point.
 (function () {
   var pick = { size: null, pain: null };
+  // The module registry — name, where it lives, and a glyph. People routes to
+  // road10 via CASIA (prod subdomain vs local port); the others to their sites.
+  var MOD = {
+    people:  { name: "People & HR", href: CASIA.road10 + "/",
+      ic: '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/>' },
+    finance: { name: "Finance", href: "https://yakobooks.com",
+      ic: '<path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/>' },
+    stock:   { name: "Inventory", href: "https://ceazr.com",
+      ic: '<path d="M21 8 12 3 3 8l9 5 9-5Z"/><path d="M3 8v8l9 5 9-5V8"/>' },
+    buying:  { name: "Procurement", href: "https://paytton.com",
+      ic: '<path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M6 6 5 3H2"/>' }
+  };
+  // Pain → where we'd start, and what naturally follows once it's earned.
   var START = {
-    people: { name: "People &amp; HR", href: "http://127.0.0.1:4500/",
-      line: "Hiring, onboarding, leave and payday — one place, and payroll hands finance a total instead of a spreadsheet." },
-    books:  { name: "Finance", href: "https://yakobooks.com",
-      line: "Your books, current — because the rest of the business posts to them as work happens, and your accountant ratifies rather than re-types." },
-    stock:  { name: "Inventory", href: "https://ceazr.com",
-      line: "What you hold, what it cost, across every location — and every movement lands in the books on its own." },
-    spend:  { name: "Procurement", href: "https://paytton.com",
-      line: "Requests and approvals before the money moves, so spending is tidy long before it reaches the books." }
+    people: { mod: "people", next: ["finance", "stock"],
+      line: "People & HR is where the day starts and ends — hiring, leave and payday in one place, with payroll handing Finance a total instead of a spreadsheet." },
+    books:  { mod: "finance", next: ["stock", "buying"],
+      line: "Your books stay current on their own, because the rest of the business posts to them as work happens — your accountant ratifies rather than re-types." },
+    stock:  { mod: "stock", next: ["finance", "buying"],
+      line: "Know what you hold and what it cost, across every location — and every movement lands in the books by itself." },
+    spend:  { mod: "buying", next: ["finance", "stock"],
+      line: "Requests and approvals sit before the money moves, so spending is tidy long before it reaches the books." }
   };
   var SIZE = {
-    tiny:  "At your size the whole thing is one person's memory. Start with one part, keep it honest, and add the rest as you hire.",
-    small: "This is the size where the spreadsheets stop working. Start with one part and let it earn the next.",
-    mid:   "At this size the handoffs between teams are the cost. Start here, then connect the next part — that's where the time comes back.",
-    large: "At your size you'll want a conversation — the shape of the rollout matters more than where you start."
+    tiny:  "At your size the whole thing is one person's memory — start with one part, keep it honest, and add the rest as you hire.",
+    small: "This is the size where the spreadsheets stop working — start with one part and let it earn the next.",
+    mid:   "At this size the handoffs between teams are the cost — start here, then connect the next part, and that's where the time comes back.",
+    large: "At your size it's worth a conversation — where to begin depends on how you already run today."
   };
-  function render() {
-    if (!pick.size || !pick.pain) return;
-    var s = START[pick.pain], out = document.getElementById("fit-out");
-    out.innerHTML = '<h4>Start with ' + s.name + '.</h4>' +
-      '<p>' + s.line + ' ' + SIZE[pick.size] + '</p>' +
-      '<a class="btn btn-primary" href="' + s.href + '">See ' + s.name + '</a>' +
-      '<a class="btn btn-ghost" href="#demo">Book a demo</a>';
-    out.hidden = false;
+  var out = document.getElementById("fit-out");
+  var EMPTY = '<div class="fit-empty">Answer both, and we’ll name the one place to start — and what to add next.</div>';
+  function chip(k) {
+    var n = MOD[k];
+    return '<span class="fit-chip"><svg class="ic" viewBox="0 0 24 24">' + n.ic + '</svg>' + n.name + '</span>';
   }
+  function render() {
+    if (!pick.size || !pick.pain) { out.innerHTML = EMPTY; return; }
+    var s = START[pick.pain], m = MOD[s.mod];
+    out.innerHTML =
+      '<div class="fit-result">' +
+        '<div class="fit-lead">' +
+          '<span class="fit-badge"><svg class="ic" viewBox="0 0 24 24">' + m.ic + '</svg></span>' +
+          '<div><span class="eyebrow">Where we’d start you</span><h4>' + m.name + '</h4></div>' +
+        '</div>' +
+        '<p class="fit-why">' + s.line + ' ' + SIZE[pick.size] + '</p>' +
+        '<div class="fit-next"><span class="fit-next-lbl">Then, as it earns its place</span>' +
+          '<div class="fit-next-chips">' + s.next.map(chip).join("") + '</div></div>' +
+        '<div class="fit-actions">' +
+          '<a class="btn btn-primary" href="' + m.href + '">See ' + m.name +
+            ' <svg class="ic" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>' +
+          '<a class="btn btn-ghost" href="#demo">Book a demo</a>' +
+        '</div>' +
+      '</div>';
+  }
+  render();   // seed the empty state so the card is never a blank void
   document.querySelectorAll(".fit-opts").forEach(function (g) {
     g.addEventListener("click", function (e) {
       var b = e.target.closest(".fit-opt"); if (!b) return;
