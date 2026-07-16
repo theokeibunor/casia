@@ -91,7 +91,7 @@
   .diagram .edge.flow { stroke: rgba(124,111,242,.9); stroke-dasharray: 4 7; animation: dash 2.4s linear infinite; }
   @keyframes dash { to { stroke-dashoffset: -22; } }
   .diagram .node { fill: #141C38; stroke: rgba(255,255,255,.14); }
-  .diagram .node-lbl { fill: #C7CDEA; font: 600 12px "Inter"; }
+  .diagram .node-lbl { fill: #C7CDEA; font: 600 11px "Inter"; }
   .diagram .hub { fill: url(#hubg); stroke: rgba(124,111,242,.5); }
   .diagram .hub-lbl { fill: #fff; font: 700 15px "Sora"; }
   .diagram .hub-sub { fill: #B7BEDA; font: 500 10px "Inter"; letter-spacing: .1em; }
