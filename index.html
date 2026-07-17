@@ -36,7 +36,7 @@
     <a href="#products">What it runs</a>
     <a href="#why">Why Casia</a>
     <a href="#pricing">Pricing</a>
-        <a href="#fit">Find your fit</a>
+        <a href="#fit">Where to start</a>
   </div>
   <div class="nav-cta">
     <a class="btn btn-ghost btn-sm" href="#signin">Sign in</a>
@@ -281,34 +281,39 @@
 </section>
 
 <!-- CTA -->
-<!-- Find your fit — the qualification lane -->
+<!-- The third door (CEO 2026-07-17). "Book a demo" is show-me-the-product;
+     "Talk to sales" is let's-talk-terms; THIS is for the person who doesn't know
+     where to start — and usually can't: the thing that hurts is not reliably the
+     thing to fix. So it deliberately names no module. A person reads it. -->
 <section class="sec" id="fit">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="kicker">Find your starting point</span>
-      <h2>You don't have to take all of it.</h2>
-      <p>Most businesses start where it hurts most, and add the rest when it's earned. Two questions, and we'll tell you where we'd start — no form, no email, no call.</p>
+      <span class="kicker">Speak with a Casia advisor</span>
+      <h2>The thing that hurts isn't always the thing to fix.</h2>
+      <p>Most businesses know something's wrong long before they know what to change. Tell us what's going on — in your own words. A Casia advisor reads it and comes back with where we'd actually start.</p>
     </div>
     <div class="fit-box reveal">
-      <div class="fit-q">
-        <label>How many people work there?</label>
-        <div class="fit-opts" data-group="size">
-          <button type="button" class="fit-opt" data-v="tiny">Just a few</button>
-          <button type="button" class="fit-opt" data-v="small">5–25</button>
-          <button type="button" class="fit-opt" data-v="mid">26–100</button>
-          <button type="button" class="fit-opt" data-v="large">100+</button>
+      <form id="adv-form" novalidate>
+        <!-- A bot fills every field it finds; a person never sees this one. -->
+        <div class="lead-hp" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+        <div class="lead-row">
+          <label class="lead-l">Your name<input name="name" required maxlength="120" autocomplete="name"></label>
+          <label class="lead-l">Work email<input name="email" type="email" required maxlength="200" autocomplete="email"></label>
         </div>
-      </div>
-      <div class="fit-q">
-        <label>What's costing you the most time right now?</label>
-        <div class="fit-opts" data-group="pain">
-          <button type="button" class="fit-opt" data-v="people">Hiring, leave and payday</button>
-          <button type="button" class="fit-opt" data-v="books">The books never being current</button>
-          <button type="button" class="fit-opt" data-v="stock">Not knowing what stock we hold</button>
-          <button type="button" class="fit-opt" data-v="spend">Spending that surprises us</button>
+        <div class="lead-row">
+          <label class="lead-l">Company<input name="company" id="adv-co" maxlength="200" autocomplete="organization"></label>
+          <label class="lead-l">Industry<input name="industry" maxlength="120" placeholder="e.g. logistics, retail"></label>
         </div>
-      </div>
-      <div class="fit-out" id="fit-out"></div>
+        <label class="lead-l"><span id="q-broken">What's broken, or hurting right now?</span>
+          <textarea name="broken" rows="3" maxlength="2000" placeholder="In your own words — “honestly, I'm not sure, it all just feels heavy” is a real answer."></textarea></label>
+        <label class="lead-l"><span id="q-tried">What have you tried?</span>
+          <textarea name="tried" rows="2" maxlength="2000" placeholder="Spreadsheets, a tool that didn't fit, hiring someone…"></textarea></label>
+        <label class="lead-l"><span id="q-why">Why now — what changed?</span>
+          <textarea name="why_now" rows="2" maxlength="2000" placeholder="Growing, lost money, someone left, an investor asked…"></textarea></label>
+        <p class="lead-err" id="adv-err" hidden></p>
+        <button class="btn btn-primary" type="submit" id="adv-go">Speak with a Casia advisor</button>
+        <p class="lead-fine">No pitch deck, no drip. A person reads what you wrote and replies from a real address.</p>
+      </form>
     </div>
   </div>
 </section>
@@ -351,7 +356,7 @@
         <a href="#flow">One number, once</a>
         <a href="#why">Why Casia</a>
         <a href="#pricing">Pricing</a>
-        <a href="#fit">Find your fit</a>
+        <a href="#fit">Where to start</a>
       </div>
       <div class="foot-col">
         <h4>Company</h4>
@@ -443,8 +448,8 @@
       document.getElementById("lead-err").hidden = true;
       dlg.showModal();
     };
-    /* Delegated, so it also catches "Book a demo" buttons that JS builds later
-       (e.g. inside the "Find your fit" result card). */
+    /* Delegated, so it also catches any "Book a demo" the page builds later
+       rather than only the ones present at load. */
     document.addEventListener("click", (e) => {
       const a = e.target.closest && e.target.closest('a[href="#demo"]');
       if (!a) return;
@@ -482,75 +487,53 @@
   }, { threshold: .14 });
   document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
 
-// Find your fit — routes by pain, sizes by headcount. No form, no email: the
-// page answers the question it asked, and the demo stays available for people
-// who've decided. Naming the START, not the catalogue, is the point.
+// Speak with a Casia advisor — the door for people who don't know where to
+// start. It asks, and then it SHUTS UP: no module is named, because naming one
+// from a form would contradict the reason this door exists. A person reads it.
 (function () {
-  var pick = { size: null, pain: null };
-  // The module registry — name, where it lives, and a glyph. People routes to
-  // road10 via CASIA (prod subdomain vs local port); the others to their sites.
-  var MOD = {
-    people:  { name: "People & HR", href: CASIA.road10 + "/",
-      ic: '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/>' },
-    finance: { name: "Finance", href: "https://yakobooks.com",
-      ic: '<path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/>' },
-    stock:   { name: "Inventory", href: "https://ceazr.com",
-      ic: '<path d="M21 8 12 3 3 8l9 5 9-5Z"/><path d="M3 8v8l9 5 9-5V8"/>' },
-    buying:  { name: "Procurement", href: "https://paytton.com",
-      ic: '<path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M6 6 5 3H2"/>' }
+  var form = document.getElementById("adv-form");
+  if (!form) return;
+  var co = document.getElementById("adv-co");
+
+  /* The questions take the company's name the moment we know it. An advisor
+     writes your name down; a form asks how many people work "there". */
+  var Q = {
+    broken: { el: document.getElementById("q-broken"),
+              plain: "What's broken, or hurting right now?",
+              named: function (n) { return "What's broken at " + n + " right now?"; } },
+    tried:  { el: document.getElementById("q-tried"),
+              plain: "What have you tried?",
+              named: function (n) { return "What has " + n + " tried?"; } },
+    why:    { el: document.getElementById("q-why"),
+              plain: "Why now — what changed?",
+              named: function (n) { return "Why now — what changed at " + n + "?"; } }
   };
-  // Pain → where we'd start, and what naturally follows once it's earned.
-  var START = {
-    people: { mod: "people", next: ["finance", "stock"],
-      line: "People & HR is where the day starts and ends — hiring, leave and payday in one place, with payroll handing Finance a total instead of a spreadsheet." },
-    books:  { mod: "finance", next: ["stock", "buying"],
-      line: "Your books stay current on their own, because the rest of the business posts to them as work happens — your accountant ratifies rather than re-types." },
-    stock:  { mod: "stock", next: ["finance", "buying"],
-      line: "Know what you hold and what it cost, across every location — and every movement lands in the books by itself." },
-    spend:  { mod: "buying", next: ["finance", "stock"],
-      line: "Requests and approvals sit before the money moves, so spending is tidy long before it reaches the books." }
-  };
-  var SIZE = {
-    tiny:  "At your size the whole thing is one person's memory — start with one part, keep it honest, and add the rest as you hire.",
-    small: "This is the size where the spreadsheets stop working — start with one part and let it earn the next.",
-    mid:   "At this size the handoffs between teams are the cost — start here, then connect the next part, and that's where the time comes back.",
-    large: "At your size it's worth a conversation — where to begin depends on how you already run today."
-  };
-  var out = document.getElementById("fit-out");
-  var EMPTY = '<div class="fit-empty">Answer both, and we’ll name the one place to start — and what to add next.</div>';
-  function chip(k) {
-    var n = MOD[k];
-    return '<span class="fit-chip"><svg class="ic" viewBox="0 0 24 24">' + n.ic + '</svg>' + n.name + '</span>';
-  }
-  function render() {
-    if (!pick.size || !pick.pain) { out.innerHTML = EMPTY; return; }
-    var s = START[pick.pain], m = MOD[s.mod];
-    out.innerHTML =
-      '<div class="fit-result">' +
-        '<div class="fit-lead">' +
-          '<span class="fit-badge"><svg class="ic" viewBox="0 0 24 24">' + m.ic + '</svg></span>' +
-          '<div><span class="eyebrow">Where we’d start you</span><h4>' + m.name + '</h4></div>' +
-        '</div>' +
-        '<p class="fit-why">' + s.line + ' ' + SIZE[pick.size] + '</p>' +
-        '<div class="fit-next"><span class="fit-next-lbl">Then, as it earns its place</span>' +
-          '<div class="fit-next-chips">' + s.next.map(chip).join("") + '</div></div>' +
-        '<div class="fit-actions">' +
-          '<a class="btn btn-primary" href="' + m.href + '">See ' + m.name +
-            ' <svg class="ic" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>' +
-          '<a class="btn btn-ghost" href="#demo">Book a demo</a>' +
-        '</div>' +
-      '</div>';
-  }
-  render();   // seed the empty state so the card is never a blank void
-  document.querySelectorAll(".fit-opts").forEach(function (g) {
-    g.addEventListener("click", function (e) {
-      var b = e.target.closest(".fit-opt"); if (!b) return;
-      g.querySelectorAll(".fit-opt").forEach(function (x) { x.classList.toggle("on", x === b); });
-      pick[g.dataset.group] = b.dataset.v;
-      render();
+  function personalize() {
+    var n = co.value.trim().slice(0, 40);          // textContent, so no escaping needed
+    Object.keys(Q).forEach(function (k) {
+      Q[k].el.textContent = n ? Q[k].named(n) : Q[k].plain;
     });
+  }
+  co.addEventListener("input", personalize);
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var btn = document.getElementById("adv-go"), err = document.getElementById("adv-err");
+    btn.disabled = true; err.hidden = true;
+    var body = Object.fromEntries(new FormData(form).entries());
+    body.kind = "advisor"; body.source = "advisor";
+    fetch(CASIA.api + "/leads", { method: "POST",
+      headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) })
+      .then(function (res) {
+        if (!res.ok) return res.json().then(function (j) { throw new Error(j.error || "That didn't send."); });
+        /* Say only what's true: no email goes out, a human replies. */
+        form.outerHTML = '<div class="lead-done"><h3>Thank you — we’ve received your response.</h3>' +
+          '<p>A Casia advisor will be in touch.</p></div>';
+      })
+      .catch(function (ex) { err.textContent = ex.message; err.hidden = false; btn.disabled = false; });
   });
 })();
+
 </script>
 </body>
 </html>

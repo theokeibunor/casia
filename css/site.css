@@ -148,42 +148,17 @@
   .app-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: #D9DCEC; }
   .app-ic { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; color: #fff; margin-bottom: 16px; }
   .app-card { display: block; }
-  .fit-box { max-width: 820px; margin: 0 auto; background: #fff; border: 1px solid var(--line);
+  /* The advisor door. The pain/size picker that used to live here was removed
+     2026-07-17 along with its result card — it named a module from two clicks,
+     which is exactly the guess this section now refuses to make. */
+  .fit-box { max-width: 760px; margin: 0 auto; background: #fff; border: 1px solid var(--line);
              border-radius: var(--radius); padding: 32px; box-shadow: var(--shadow-sm); }
-  .fit-q + .fit-q { margin-top: 26px; }
-  .fit-q label { display: block; font-size: 14px; font-weight: 650; color: var(--ink); margin-bottom: 12px; }
-  .fit-opts { display: flex; gap: 10px; flex-wrap: wrap; }
-  .fit-opt { background: var(--wash); border: 1px solid var(--line); border-radius: 99px;
-             padding: 11px 20px; font: inherit; font-size: 14px; font-weight: 500; color: var(--muted);
-             cursor: pointer; transition: transform .16s ease, border-color .16s ease, background .16s ease, box-shadow .16s ease; }
-  .fit-opt:hover { border-color: var(--accent); color: var(--ink); transform: translateY(-1px); box-shadow: var(--shadow-sm); }
-  .fit-opt.on { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600;
-                box-shadow: 0 8px 18px -8px rgba(86,71,230,.6); }
-  .fit-opt.on::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 99px;
-                        background: #fff; margin-right: 8px; vertical-align: middle; }
-
-  /* The answer — a designed result card, not a blurb */
-  .fit-out { margin-top: 28px; }
-  .fit-empty { padding: 22px 0 2px; border-top: 1px dashed var(--line); color: var(--faint); font-size: 14px; }
-  .fit-result { border-top: 1px solid var(--line); padding-top: 26px; animation: fitin .32s ease both; }
-  @keyframes fitin { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
-  @media (prefers-reduced-motion: reduce){ .fit-result { animation: none; } }
-  .fit-lead { display: flex; align-items: center; gap: 15px; }
-  .fit-badge { width: 52px; height: 52px; border-radius: 14px; flex: none; display: grid; place-items: center;
-               background: linear-gradient(150deg, var(--accent-2), var(--accent-ink)); color: #fff;
-               box-shadow: 0 12px 24px -12px rgba(86,71,230,.75); }
-  .fit-badge .ic { width: 24px; height: 24px; stroke: #fff; }
-  .fit-lead h4 { font-family: "Sora", "Inter", sans-serif; font-size: 26px; font-weight: 700;
-                 letter-spacing: -.02em; color: var(--ink); margin: 3px 0 0; }
-  .fit-why { font-size: 15.5px; line-height: 1.66; color: var(--muted); margin: 18px 0 0; max-width: 64ch; }
-  .fit-next { margin-top: 20px; padding: 16px 18px; background: var(--surface-2);
-              border: 1px solid var(--line-2); border-radius: 14px; }
-  .fit-next-lbl { font-size: 12px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--faint); }
-  .fit-next-chips { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 11px; }
-  .fit-chip { display: inline-flex; align-items: center; gap: 7px; padding: 7px 13px; border-radius: 99px;
-              background: #fff; border: 1px solid var(--line); font-size: 13px; font-weight: 600; color: var(--fg); }
-  .fit-chip .ic { width: 15px; height: 15px; stroke: var(--accent); }
-  .fit-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 22px; }
+  .fit-box form { display: flex; flex-direction: column; gap: 15px; }
+  .fit-box .lead-l { font-size: 13px; }
+  .fit-box .lead-l input, .fit-box .lead-l textarea { border-color: var(--line); }
+  .fit-box .lead-l textarea { min-height: 62px; }
+  .fit-box .btn { align-self: flex-start; margin-top: 6px; }
+  .fit-box .lead-done { padding: 26px 0 6px; }
   .price-cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
   .app-more { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px;
               font-size: 13px; font-weight: 650; color: var(--accent); }
