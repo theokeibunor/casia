@@ -40,7 +40,8 @@
   </div>
   <div class="nav-cta">
     <a class="btn btn-ghost btn-sm" href="#signin">Sign in</a>
-    <a class="btn btn-primary btn-sm" href="#demo">Book a demo</a>
+    <a class="btn btn-ghost btn-sm" href="#demo">Book a demo</a>
+    <a class="btn btn-primary btn-sm" href="#getstarted">Get started</a>
   </div>
 </div></nav>
 
@@ -54,7 +55,8 @@
         <h1>Business,<br><span class="grad">without the busywork.</span></h1>
         <p class="lede">One home for everything your business does, where it all works together, so the busywork that used to eat your day simply disappears. You run the business. Casia makes it easy.</p>
         <div class="hero-cta">
-          <a class="btn btn-primary" href="#demo">Book a demo <svg class="ic" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-primary" href="#getstarted">Get started <svg class="ic" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-light" href="#demo">Book a demo</a>
           <a class="btn btn-light" href="#products">See what it runs</a>
         </div>
         <div class="hero-motto">Do it easy.</div>
@@ -432,6 +434,9 @@
   };
   /* Sign in is not a form, it's WorkOS. Send them to the shell's real door. */
   document.querySelectorAll('a[href="#signin"]').forEach((a) => { a.href = CASIA.shell + "/auth/login"; });
+  /* Get started = self-serve sign-up. Lands on AuthKit registration, then the
+     shell's "Create your organization" step, then activate workspaces. */
+  document.querySelectorAll('a[href="#getstarted"]').forEach((a) => { a.href = CASIA.shell + "/auth/signup"; });
   document.querySelectorAll('a[href^="http://127.0.0.1:4500"]').forEach((a) => { a.href = CASIA.road10 + "/"; });
 
   /* The two CTAs that used to point at nothing. Same fields either way, and what
