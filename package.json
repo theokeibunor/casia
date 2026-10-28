@@ -3,6 +3,9 @@
     "private": true,
     "version": "1.0.0",
     "description": "Casia Lab marketing site (static, GitHub Pages).",
+    "engines": {
+        "node": ">=22.23.4"
+    },
     "scripts": {
         "build": "tailwindcss -i ./css/input.css -o ./css/tailwind.css --minify",
         "watch": "tailwindcss -i ./css/input.css -o ./css/tailwind.css --watch"
