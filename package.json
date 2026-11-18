@@ -8,7 +8,8 @@
     },
     "scripts": {
         "build": "tailwindcss -i ./css/input.css -o ./css/tailwind.css --minify",
-        "watch": "tailwindcss -i ./css/input.css -o ./css/tailwind.css --watch"
+        "watch": "tailwindcss -i ./css/input.css -o ./css/tailwind.css --watch",
+        "build:home": "tailwindcss -c ./tailwind.home.config.js -i ./css/home.input.css -o ./css/home.css --minify"
     },
     "devDependencies": {
         "@tailwindcss/forms": "^0.5.10",
