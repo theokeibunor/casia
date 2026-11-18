@@ -1,8 +1,8 @@
-/** Homepage only (index.html → css/home.css). The theme is the November 2026
- *  design mock-up's, copied as-is so the page matches it exactly.
- *  Build: npm run build:home */
+/** The site (every page → css/casia.css). The theme is the November 2026
+ *  design mock-up's, copied as-is so every page matches it.
+ *  Build: npm run build:site */
 module.exports = {
-  content: ["./index.html"],
+  content: ["./*.html"],
   darkMode: "class",
   theme: {
     extend: {
