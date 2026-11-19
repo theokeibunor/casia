@@ -2,15 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Theme colours. Dark is the default; light follows the visitor's system
-   setting. Every colour utility reads these, so pages need no dark:/light:
-   classes. Values are space-separated RGB so opacity modifiers (/20) work. */
+/* Theme colours. Dark by default. Light when the visitor picks it with the
+   header switch (data-theme on <html>, remembered in localStorage), or, if
+   they haven't picked, when their system is set to light. Every colour
+   utility reads these, so pages need no dark:/light: classes. Values are
+   space-separated RGB so opacity modifiers (/20) work.
+   Light is the "oceanic" palette (CEO, 2026-11-19): navy primary, blue-tinted
+   surfaces, teal for good news, amber for warnings. One deliberate change:
+   text on primary-container is white (the source's #8ebdf9 is 4.3:1). */
 @layer base {
   :root {
     color-scheme: dark;
     --c-background: 15 19 28;
     --c-error: 255 180 171;
     --c-error-container: 147 0 10;
+    --c-glow: 128 131 255;
+    --c-glow-ok: 78 222 163;
     --c-inverse-on-surface: 44 48 58;
     --c-inverse-primary: 73 75 214;
     --c-inverse-surface: 223 226 239;
@@ -57,58 +64,128 @@
     --c-tertiary-fixed-dim: 255 185 95;
   }
   @media (prefers-color-scheme: light) {
-    :root {
+    :root:not([data-theme="dark"]) {
       color-scheme: light;
-      --c-background: 248 249 252;
+      --c-background: 248 249 255;
       --c-error: 186 26 26;
       --c-error-container: 255 218 214;
-      --c-inverse-on-surface: 239 240 250;
-      --c-inverse-primary: 192 193 255;
-      --c-inverse-surface: 44 48 58;
-      --c-on-background: 23 26 35;
+      --c-glow: 0 53 95;
+      --c-glow-ok: 0 137 123;
+      --c-inverse-on-surface: 233 241 255;
+      --c-inverse-primary: 160 201 255;
+      --c-inverse-surface: 30 50 70;
+      --c-on-background: 6 29 48;
       --c-on-error: 255 255 255;
       --c-on-error-container: 147 0 10;
       --c-on-primary: 255 255 255;
       --c-on-primary-container: 255 255 255;
-      --c-on-primary-fixed: 7 0 108;
-      --c-on-primary-fixed-variant: 47 46 190;
+      --c-on-primary-fixed: 0 28 55;
+      --c-on-primary-fixed-variant: 7 73 125;
       --c-on-secondary: 255 255 255;
       --c-on-secondary-container: 255 255 255;
-      --c-on-secondary-fixed: 0 33 19;
-      --c-on-secondary-fixed-variant: 0 82 54;
-      --c-on-surface: 23 26 35;
-      --c-on-surface-variant: 70 69 84;
+      --c-on-secondary-fixed: 0 32 29;
+      --c-on-secondary-fixed-variant: 0 80 73;
+      --c-on-surface: 6 29 48;
+      --c-on-surface-variant: 66 71 79;
       --c-on-tertiary: 255 255 255;
       --c-on-tertiary-container: 255 255 255;
       --c-on-tertiary-fixed: 42 23 0;
       --c-on-tertiary-fixed-variant: 101 62 0;
-      --c-outline: 118 117 134;
-      --c-outline-variant: 199 198 214;
-      --c-primary: 73 75 214;
-      --c-primary-container: 86 70 230;
-      --c-primary-fixed: 225 224 255;
-      --c-primary-fixed-dim: 192 193 255;
-      --c-secondary: 0 108 73;
-      --c-secondary-container: 0 122 82;
-      --c-secondary-fixed: 111 251 190;
-      --c-secondary-fixed-dim: 78 222 163;
-      --c-surface: 248 249 252;
-      --c-surface-bright: 255 255 255;
-      --c-surface-container: 236 238 245;
-      --c-surface-container-high: 230 232 240;
-      --c-surface-container-highest: 224 226 234;
-      --c-surface-container-low: 242 243 249;
+      --c-outline: 114 119 128;
+      --c-outline-variant: 194 199 209;
+      --c-primary: 0 53 95;
+      --c-primary-container: 15 76 129;
+      --c-primary-fixed: 210 228 255;
+      --c-primary-fixed-dim: 160 201 255;
+      --c-secondary: 0 105 92;
+      --c-secondary-container: 0 121 107;
+      --c-secondary-fixed: 137 245 231;
+      --c-secondary-fixed-dim: 107 216 203;
+      --c-surface: 248 249 255;
+      --c-surface-bright: 248 249 255;
+      --c-surface-container: 228 239 255;
+      --c-surface-container-high: 218 234 255;
+      --c-surface-container-highest: 208 228 255;
+      --c-surface-container-low: 238 244 255;
       --c-surface-container-lowest: 255 255 255;
-      --c-surface-dim: 220 221 230;
-      --c-surface-tint: 73 75 214;
-      --c-surface-variant: 227 225 239;
-      --c-tertiary: 138 81 0;
-      --c-tertiary-container: 154 93 0;
+      --c-surface-dim: 199 220 247;
+      --c-surface-tint: 45 97 151;
+      --c-surface-variant: 208 228 255;
+      --c-tertiary: 146 64 14;
+      --c-tertiary-container: 180 83 9;
       --c-tertiary-fixed: 255 221 184;
       --c-tertiary-fixed-dim: 255 185 95;
     }
   }
+  :root[data-theme="light"] {
+    color-scheme: light;
+    --c-background: 248 249 255;
+    --c-error: 186 26 26;
+    --c-error-container: 255 218 214;
+    --c-glow: 0 53 95;
+    --c-glow-ok: 0 137 123;
+    --c-inverse-on-surface: 233 241 255;
+    --c-inverse-primary: 160 201 255;
+    --c-inverse-surface: 30 50 70;
+    --c-on-background: 6 29 48;
+    --c-on-error: 255 255 255;
+    --c-on-error-container: 147 0 10;
+    --c-on-primary: 255 255 255;
+    --c-on-primary-container: 255 255 255;
+    --c-on-primary-fixed: 0 28 55;
+    --c-on-primary-fixed-variant: 7 73 125;
+    --c-on-secondary: 255 255 255;
+    --c-on-secondary-container: 255 255 255;
+    --c-on-secondary-fixed: 0 32 29;
+    --c-on-secondary-fixed-variant: 0 80 73;
+    --c-on-surface: 6 29 48;
+    --c-on-surface-variant: 66 71 79;
+    --c-on-tertiary: 255 255 255;
+    --c-on-tertiary-container: 255 255 255;
+    --c-on-tertiary-fixed: 42 23 0;
+    --c-on-tertiary-fixed-variant: 101 62 0;
+    --c-outline: 114 119 128;
+    --c-outline-variant: 194 199 209;
+    --c-primary: 0 53 95;
+    --c-primary-container: 15 76 129;
+    --c-primary-fixed: 210 228 255;
+    --c-primary-fixed-dim: 160 201 255;
+    --c-secondary: 0 105 92;
+    --c-secondary-container: 0 121 107;
+    --c-secondary-fixed: 137 245 231;
+    --c-secondary-fixed-dim: 107 216 203;
+    --c-surface: 248 249 255;
+    --c-surface-bright: 248 249 255;
+    --c-surface-container: 228 239 255;
+    --c-surface-container-high: 218 234 255;
+    --c-surface-container-highest: 208 228 255;
+    --c-surface-container-low: 238 244 255;
+    --c-surface-container-lowest: 255 255 255;
+    --c-surface-dim: 199 220 247;
+    --c-surface-tint: 45 97 151;
+    --c-surface-variant: 208 228 255;
+    --c-tertiary: 146 64 14;
+    --c-tertiary-container: 180 83 9;
+    --c-tertiary-fixed: 255 221 184;
+    --c-tertiary-fixed-dim: 255 185 95;
+  }
 }
+
+/* Light cards: white with a hairline edge, as in the oceanic design, instead
+   of tinted blocks. Outline (not border/shadow) so no layout or shadow
+   utility changes; skipped while focused so the focus ring still shows. */
+:root[data-theme="light"] .bg-surface-container:not(:focus-visible) {
+  background-color: rgb(var(--c-surface-container-lowest));
+  outline: 1px solid rgb(var(--c-surface-container-high));
+  outline-offset: -1px;
+}
+:root[data-theme="light"] .bg-surface-container { box-shadow: 0 1px 2px rgb(0 53 95 / 0.04), 0 8px 24px -16px rgb(0 53 95 / 0.12); }
+
+/* Show the right logo and switch icon for the theme in use. */
+:root[data-theme="light"] .theme-dark-only,
+:root[data-theme="dark"] .theme-light-only { display: none !important; }
+@media (prefers-color-scheme: light) { :root:not([data-theme]) .theme-dark-only { display: none !important; } }
+@media not (prefers-color-scheme: light) { :root:not([data-theme]) .theme-light-only { display: none !important; } }
 
 /* From the mock-up's own <style> block. */
 @layer base {
@@ -128,7 +205,7 @@
 .skip:focus { left: 8px; top: 8px; z-index: 100; }
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 dialog::backdrop { background: rgba(5, 7, 12, .72); }
-@media (prefers-color-scheme: light) { dialog::backdrop { background: rgba(23, 26, 35, .45); } }
+:root[data-theme="light"] dialog::backdrop { background: rgba(6, 29, 48, .45); }
 
 /* The hidden attribute always wins over a display utility (flex, grid). */
 [hidden] { display: none !important; }

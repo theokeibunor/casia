@@ -2,6 +2,7 @@
 <html class="dark" lang="en">
 <head>
 <meta charset="utf-8"/>
+<script>(function(){var t;try{t=localStorage.getItem("casia-theme")}catch(e){}if(t!=="light"&&t!=="dark")t=window.matchMedia&&matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";document.documentElement.setAttribute("data-theme",t)})();</script>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>About · Casia Lab</title>
 <meta name="description" content="Casia Lab builds the everyday tools owner-led businesses run on. Everything you run on lives in one place and works together, so the busywork disappears.">
@@ -19,7 +20,7 @@
 <link rel="canonical" href="https://casialab.com/about.html">
 <meta name="color-scheme" content="dark light">
 <meta name="theme-color" content="#0f131c" media="(prefers-color-scheme: dark)">
-<meta name="theme-color" content="#f8f9fc" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#f8f9ff" media="(prefers-color-scheme: light)">
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Geist:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
@@ -36,7 +37,7 @@
 <div class="h-20 max-w-[1240px] mx-auto px-margin-mobile md:px-margin flex items-center justify-between gap-space-md">
 <div class="flex items-center gap-space-xl">
 <a class="flex items-center gap-space-sm group" href="index.html" aria-label="Casia home">
-<picture><source srcset="images/brand/casia-wordmark.svg" media="(prefers-color-scheme: light)"><img src="images/brand/casia-wordmark-on-dark.svg" alt="Casia" width="82" height="28" class="h-7 w-auto transition-opacity group-hover:opacity-90"/></picture>
+<img src="images/brand/casia-wordmark.svg" alt="Casia" width="82" height="28" class="theme-light-only h-7 w-auto transition-opacity group-hover:opacity-90"/><img src="images/brand/casia-wordmark-on-dark.svg" alt="Casia" width="82" height="28" class="theme-dark-only h-7 w-auto transition-opacity group-hover:opacity-90"/>
 <span class="hidden sm:block lg:hidden xl:block whitespace-nowrap self-end mb-[3px] pl-space-sm border-l border-outline-variant font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest leading-none">Do it easy.</span>
 </a>
 <nav class="hidden lg:flex items-center gap-space-lg" aria-label="Main">
@@ -49,7 +50,8 @@
 </div>
 <div class="flex items-center gap-2 sm:gap-space-sm md:gap-space-md">
 <a class="hidden sm:inline-flex items-center px-space-md py-space-sm rounded-full font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" href="index.html#sales">Talk to sales</a>
-<a class="inline-flex items-center whitespace-nowrap px-space-md sm:px-space-lg py-space-sm min-h-[40px] rounded-full bg-primary-container text-on-primary-container font-headline-sm text-body-sm shadow-[0_0_20px_rgba(128,131,255,0.3)] hover:opacity-90 transition-opacity" href="https://app.casialab.com/auth/signup"><span class="sm:hidden">Create workspace</span><span class="hidden sm:inline">Create your workspace</span></a>
+<a class="inline-flex items-center whitespace-nowrap px-space-md sm:px-space-lg py-space-sm min-h-[40px] rounded-full bg-primary-container text-on-primary-container font-headline-sm text-body-sm shadow-[0_0_20px_rgb(var(--c-glow)/0.3)] hover:opacity-90 transition-opacity" href="https://app.casialab.com/auth/signup"><span class="sm:hidden">Create workspace</span><span class="hidden sm:inline">Create your workspace</span></a>
+<button type="button" data-theme-toggle class="w-9 h-9 rounded-full flex items-center justify-center shrink-0 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" aria-label="Switch to light mode" title="Switch to light mode"><span class="theme-dark-only material-symbols-outlined text-[20px]" aria-hidden="true">light_mode</span><span class="theme-light-only material-symbols-outlined text-[20px]" aria-hidden="true">dark_mode</span></button>
 <a class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 ml-space-xs hover:opacity-90" href="https://app.casialab.com/auth/login" aria-label="Sign in" title="Sign in"><span class="material-symbols-outlined text-on-primary text-[18px]" aria-hidden="true">person</span></a>
 </div>
 </div>
@@ -65,7 +67,7 @@
 <h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface tracking-tight mt-2 mb-space-md">The everyday tools<br class="hidden sm:inline"/> an owner-led business runs on.</h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-space-xl">Casia builds the boring, essential systems a growing business runs on. These are the tools you'd use to know what's on the shelf, what was bought, what's owed, who's on the team, and whether the month was actually profitable. One place, working together. You run the business; Casia makes it easy.</p>
 <div class="flex flex-wrap items-center justify-center gap-space-md w-full">
-<a class="inline-flex items-center gap-space-sm px-space-xl py-space-md rounded-full bg-primary-container text-on-primary-container font-headline-sm text-body-md shadow-[0_0_28px_rgba(128,131,255,0.4)] hover:brightness-110 transition-all" href="index.html#sales">
+<a class="inline-flex items-center gap-space-sm px-space-xl py-space-md rounded-full bg-primary-container text-on-primary-container font-headline-sm text-body-md shadow-[0_0_28px_rgb(var(--c-glow)/0.4)] hover:brightness-110 transition-all" href="index.html#sales">
 <span class="material-symbols-outlined text-[18px]" aria-hidden="true">support_agent</span>
 <span>Talk to sales</span>
 </a>
@@ -168,14 +170,14 @@
 <!-- 5. CTA -->
 <section class="relative max-w-[1240px] mx-auto px-margin-mobile md:px-margin pt-space-2xl pb-space-3xl" id="start">
 <div class="relative rounded-3xl bg-gradient-to-b from-surface-container-high to-surface-container p-space-lg sm:p-space-xl md:p-space-3xl text-center overflow-hidden shadow-2xl">
-<div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(128,131,255,0.15),transparent_70%)] pointer-events-none"></div>
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgb(var(--c-glow)/0.15),transparent_70%)] pointer-events-none"></div>
 <div class="relative max-w-2xl mx-auto flex flex-col items-center">
 <div class="w-12 h-12 rounded-2xl bg-surface-container-lowest flex items-center justify-center mb-space-md shadow-md"><span class="material-symbols-outlined text-primary text-[28px]" aria-hidden="true">handshake</span></div>
 <span class="font-label-caps text-label-caps uppercase tracking-widest text-primary mb-space-xs">Do it easy.</span>
 <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface tracking-tight">Serve small businesses? Let's talk.</h2>
 <p class="font-body-lg text-body-lg text-on-surface-variant mt-space-sm mb-space-xl">If you work with owner-led businesses as an institution, partner, accountant, reseller, or operator, we'd like to hear from you.</p>
 <div class="flex flex-wrap items-center justify-center gap-space-md">
-<a class="inline-flex items-center gap-space-sm px-space-xl py-space-md rounded-full bg-primary-container text-on-primary-container font-headline-sm text-body-md shadow-[0_0_28px_rgba(128,131,255,0.4)] hover:brightness-110 transition-all" href="partner.html"><span>Partner with us</span><span class="material-symbols-outlined text-[18px]" aria-hidden="true">arrow_forward</span></a>
+<a class="inline-flex items-center gap-space-sm px-space-xl py-space-md rounded-full bg-primary-container text-on-primary-container font-headline-sm text-body-md shadow-[0_0_28px_rgb(var(--c-glow)/0.4)] hover:brightness-110 transition-all" href="partner.html"><span>Partner with us</span><span class="material-symbols-outlined text-[18px]" aria-hidden="true">arrow_forward</span></a>
 <a class="inline-flex items-center gap-space-sm px-space-xl py-space-md rounded-full bg-surface-container-lowest text-on-surface font-body-md text-body-md hover:bg-surface-dim transition-all shadow-sm" href="index.html#tools"><span class="material-symbols-outlined text-[18px] text-primary" aria-hidden="true">apps</span><span>Explore the tools</span></a>
 </div>
 </div>
@@ -186,7 +188,7 @@
 <footer class="w-full bg-surface-container-lowest py-space-3xl mt-space-3xl"><div class="max-w-[1240px] mx-auto px-margin-mobile md:px-margin">
 <div class="grid grid-cols-2 md:grid-cols-5 gap-space-xl pb-space-2xl">
 <div class="col-span-2 flex flex-col gap-space-md">
-<div class="flex items-center gap-space-sm"><picture><source srcset="images/brand/casia-wordmark.svg" media="(prefers-color-scheme: light)"><img src="images/brand/casia-wordmark-on-dark.svg" alt="Casia" width="70" height="24" class="h-6 w-auto"/></picture></div>
+<div class="flex items-center gap-space-sm"><img src="images/brand/casia-wordmark.svg" alt="Casia" width="70" height="24" class="theme-light-only h-6 w-auto"/><img src="images/brand/casia-wordmark-on-dark.svg" alt="Casia" width="70" height="24" class="theme-dark-only h-6 w-auto"/></div>
 <p class="font-body-md text-body-md text-on-surface-variant max-w-sm">One workspace for your team and the agents that support them.</p>
 <div class="flex items-center gap-space-xs text-secondary"><span class="material-symbols-outlined text-[16px]" aria-hidden="true">verified</span><span class="font-label-code text-label-code uppercase tracking-wider">Do it easy.</span></div>
 </div>
@@ -219,5 +221,6 @@
 <span class="font-headline-sm text-headline-sm text-primary tracking-tight">Do it easy.</span>
 </div>
 </div></footer>
+<script src="js/theme.js" defer></script>
 </body>
 </html>

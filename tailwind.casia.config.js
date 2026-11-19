@@ -3,7 +3,7 @@
  *  Build: npm run build:site */
 module.exports = {
   content: ["./*.html"],
-  darkMode: "media",
+  darkMode: ["class", '[data-theme="dark"]'],
   theme: {
     extend: {
       colors: {

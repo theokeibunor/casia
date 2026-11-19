@@ -2,6 +2,7 @@
 <html class="dark" lang="en">
 <head>
 <meta charset="utf-8"/>
+<script>(function(){var t;try{t=localStorage.getItem("casia-theme")}catch(e){}if(t!=="light"&&t!=="dark")t=window.matchMedia&&matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";document.documentElement.setAttribute("data-theme",t)})();</script>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Terms of Service · Casia Lab</title>
 <meta name="description" content="Terms governing use of the Casia Lab website and forms, operated by Casia Growth Lab LLC under the laws of the United Arab Emirates.">
@@ -21,7 +22,7 @@
 <link rel="apple-touch-icon" href="images/brand/apple-touch-icon.png">
 <meta name="color-scheme" content="dark light">
 <meta name="theme-color" content="#0f131c" media="(prefers-color-scheme: dark)">
-<meta name="theme-color" content="#f8f9fc" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#f8f9ff" media="(prefers-color-scheme: light)">
 </head>
 <body class="bg-surface font-body-md text-on-surface antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
 <a class="skip px-4 py-2 rounded-lg bg-primary-container text-on-primary-container" href="#main">Skip to content</a>
@@ -30,7 +31,7 @@
 <div class="h-20 max-w-[1240px] mx-auto px-margin-mobile md:px-margin flex items-center justify-between gap-space-md">
 <div class="flex items-center gap-space-xl">
 <a class="flex items-center gap-space-sm group" href="index.html" aria-label="Casia home">
-<picture><source srcset="images/brand/casia-wordmark.svg" media="(prefers-color-scheme: light)"><img src="images/brand/casia-wordmark-on-dark.svg" alt="Casia" width="82" height="28" class="h-7 w-auto transition-opacity group-hover:opacity-90"/></picture>
+<img src="images/brand/casia-wordmark.svg" alt="Casia" width="82" height="28" class="theme-light-only h-7 w-auto transition-opacity group-hover:opacity-90"/><img src="images/brand/casia-wordmark-on-dark.svg" alt="Casia" width="82" height="28" class="theme-dark-only h-7 w-auto transition-opacity group-hover:opacity-90"/>
 <span class="hidden sm:block lg:hidden xl:block whitespace-nowrap self-end mb-[3px] pl-space-sm border-l border-outline-variant font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest leading-none">Do it easy.</span>
 </a>
 <nav class="hidden lg:flex items-center gap-space-lg" aria-label="Main">
@@ -43,7 +44,8 @@
 </div>
 <div class="flex items-center gap-2 sm:gap-space-sm md:gap-space-md">
 <a class="hidden sm:inline-flex items-center px-space-md py-space-sm rounded-full font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" href="index.html#sales">Talk to sales</a>
-<a class="inline-flex items-center whitespace-nowrap px-space-md sm:px-space-lg py-space-sm min-h-[40px] rounded-full bg-primary-container text-on-primary-container font-headline-sm text-body-sm shadow-[0_0_20px_rgba(128,131,255,0.3)] hover:opacity-90 transition-opacity" href="https://app.casialab.com/auth/signup"><span class="sm:hidden">Create workspace</span><span class="hidden sm:inline">Create your workspace</span></a>
+<a class="inline-flex items-center whitespace-nowrap px-space-md sm:px-space-lg py-space-sm min-h-[40px] rounded-full bg-primary-container text-on-primary-container font-headline-sm text-body-sm shadow-[0_0_20px_rgb(var(--c-glow)/0.3)] hover:opacity-90 transition-opacity" href="https://app.casialab.com/auth/signup"><span class="sm:hidden">Create workspace</span><span class="hidden sm:inline">Create your workspace</span></a>
+<button type="button" data-theme-toggle class="w-9 h-9 rounded-full flex items-center justify-center shrink-0 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" aria-label="Switch to light mode" title="Switch to light mode"><span class="theme-dark-only material-symbols-outlined text-[20px]" aria-hidden="true">light_mode</span><span class="theme-light-only material-symbols-outlined text-[20px]" aria-hidden="true">dark_mode</span></button>
 <a class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 ml-space-xs hover:opacity-90" href="https://app.casialab.com/auth/login" aria-label="Sign in" title="Sign in"><span class="material-symbols-outlined text-on-primary text-[18px]" aria-hidden="true">person</span></a>
 </div>
 </div>
@@ -145,7 +147,7 @@
 <footer class="w-full bg-surface-container-lowest py-space-3xl mt-space-3xl"><div class="max-w-[1240px] mx-auto px-margin-mobile md:px-margin">
 <div class="grid grid-cols-2 md:grid-cols-5 gap-space-xl pb-space-2xl">
 <div class="col-span-2 flex flex-col gap-space-md">
-<div class="flex items-center gap-space-sm"><picture><source srcset="images/brand/casia-wordmark.svg" media="(prefers-color-scheme: light)"><img src="images/brand/casia-wordmark-on-dark.svg" alt="Casia" width="70" height="24" class="h-6 w-auto"/></picture></div>
+<div class="flex items-center gap-space-sm"><img src="images/brand/casia-wordmark.svg" alt="Casia" width="70" height="24" class="theme-light-only h-6 w-auto"/><img src="images/brand/casia-wordmark-on-dark.svg" alt="Casia" width="70" height="24" class="theme-dark-only h-6 w-auto"/></div>
 <p class="font-body-md text-body-md text-on-surface-variant max-w-sm">One workspace for your team and the agents that support them.</p>
 <div class="flex items-center gap-space-xs text-secondary"><span class="material-symbols-outlined text-[16px]" aria-hidden="true">verified</span><span class="font-label-code text-label-code uppercase tracking-wider">Do it easy.</span></div>
 </div>
@@ -178,5 +180,6 @@
 <span class="font-headline-sm text-headline-sm text-primary tracking-tight">Do it easy.</span>
 </div>
 </div></footer>
+<script src="js/theme.js" defer></script>
 </body>
 </html>
