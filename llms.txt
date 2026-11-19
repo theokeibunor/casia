@@ -1,0 +1,49 @@
+# Casia Lab
+
+> Casia builds tools for the people doing the business. One workspace for your team and the agents that support them: switch on the tools you need for stock, money, buying, people and marketing, and hire an AI agent when the routine work piles up. A person approves every change. Do it easy.
+
+Casia Lab is part of Casia Growth Lab LLC. It builds software for growing, owner-led businesses.
+
+Most business software is built for the job function, so the experience breaks for the people who do the work. Casia's tools are built for those people: the storekeeper taking a delivery, the bookkeeper matching a bank line, the owner who does a bit of everything.
+
+How it works:
+
+- You create a workspace yourself and switch on one tool at a time. Every tool starts with a free trial, and no card is needed.
+- Your whole team uses one sign-in and is included in every tool. There are no per-user fees. When someone leaves, their access ends everywhere.
+- The tools pass work along. For example, goods received in Inventory reach Finance on their own, at cost, ready for someone to approve. Nothing posts to the books without a person.
+- Agents are AI workers you hire by the month for one job inside a tool. They propose; a person approves, changes or rejects each proposal, and everything an agent does is logged.
+- Most tools also have AI help built in, paid with prepaid credits.
+- Prices are in US dollars, before any tax.
+
+## Tools
+
+- [Inventory](https://www.ceazr.com): stock across every store and warehouse, what's running low or idle, batches and expiry dates, and who changed what.
+- [Finance](https://www.yakobooks.com): add a bank statement and see what you earned, what you owe and what tax is due. Every figure traces to its source.
+- [Procurement](https://procurement.casialab.com): requests, supplier quotes, approvals and purchase orders, with supplier bills matched to the order and to what arrived.
+- [People ops](https://road10.casialab.com): every role written down, with hiring, onboarding, appraisals, leave and staff records run from it. $5 a month for the first 6 people, then $1 a person.
+- [Marketing](https://www.admeistr.com): content calendars, creative handoff, and Meta, Google and TikTok results tracked against the plan. In beta, free while in beta.
+
+## Agents
+
+- [Bookkeeper](https://www.yakobooks.com/bookkeeper): in Finance. Codes each bank line to the right account and flags lines that need splitting or aren't business costs. Early access.
+- [Stock controller](https://www.ceazr.com/stock-controller): in Inventory. Brings in sheets and files, checks deliveries against the order, proposes reorders, works through expiry dates and plans stock counts.
+- [Procurement officer](https://procurement.casialab.com/pricing#procurement-officer): in Procurement. Turns emailed requests into draft requisitions, drafts orders, chases late confirmations and deliveries, and flags contract renewals.
+
+## Pricing
+
+- [Pricing calculator](https://casialab.com/#pricing): pick your tools and see a monthly or yearly estimate. Your workspace is free to create.
+- Each tool's price is also on its own site: [Inventory](https://www.ceazr.com/pricing), [Finance](https://www.yakobooks.com/pricing), [Procurement](https://procurement.casialab.com/pricing).
+
+## Company
+
+- [About](https://casialab.com/about.html): why Casia builds everyday tools for owner-led businesses.
+- [Contact](https://casialab.com/contact.html): product, partnership, reseller, support and media questions. A person replies. Email: products@casialab.com.
+- [Partners](https://casialab.com/partner.html): for associations, accountants, lenders and trade groups that serve owner-led businesses.
+- [Resellers](https://casialab.com/resellers.html): introduce Casia to businesses you serve and earn on each signup.
+- [Careers](https://casialab.com/work-with-us.html)
+
+## Optional
+
+- [Sign in](https://app.casialab.com): the Casia workspace for existing customers.
+- [Privacy policy](https://casialab.com/privacy.html)
+- [Terms of service](https://casialab.com/terms.html)
