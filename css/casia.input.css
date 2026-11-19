@@ -23,3 +23,7 @@ dialog::backdrop { background: rgba(5, 7, 12, .72); }
 
 /* The hidden attribute always wins over a display utility (flex, grid). */
 [hidden] { display: none !important; }
+
+/* Steppers carry their own - and + buttons. */
+input[type=number] { -moz-appearance: textfield; appearance: textfield; }
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
