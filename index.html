@@ -2,6 +2,7 @@
 <html class="dark" lang="en">
 <head>
 <meta charset="utf-8"/>
+<script>(function(){var t;try{t=localStorage.getItem("casia-theme")}catch(e){}if(t!=="light"&&t!=="dark")t=window.matchMedia&&matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";document.documentElement.setAttribute("data-theme",t)})();</script>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Casia Lab. One workspace for your team and the agents that support them.</title>
 <meta name="description" content="Stock, money, buying, people and marketing in one workspace. Switch on the tools you need, try each one free, and hire an AI agent for the routine work. A person approves every change. Do it easy.">
@@ -18,7 +19,7 @@
 <meta name="twitter:image" content="https://casialab.com/og-image.png?v=3">
 <meta name="color-scheme" content="dark light">
 <meta name="theme-color" content="#0f131c" media="(prefers-color-scheme: dark)">
-<meta name="theme-color" content="#f8f9fc" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#f8f9ff" media="(prefers-color-scheme: light)">
 <link rel="canonical" href="https://casialab.com/">
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -36,7 +37,7 @@
 <div class="h-20 max-w-[1240px] mx-auto px-margin-mobile md:px-margin flex items-center justify-between gap-space-md">
 <div class="flex items-center gap-space-xl">
 <a class="flex items-center gap-space-sm group" href="#top" aria-label="Casia home">
-<picture><source srcset="images/brand/casia-wordmark.svg" media="(prefers-color-scheme: light)"><img src="images/brand/casia-wordmark-on-dark.svg" alt="Casia" width="82" height="28" class="h-7 w-auto transition-opacity group-hover:opacity-90"/></picture>
+<img src="images/brand/casia-wordmark.svg" alt="Casia" width="82" height="28" class="theme-light-only h-7 w-auto transition-opacity group-hover:opacity-90"/><img src="images/brand/casia-wordmark-on-dark.svg" alt="Casia" width="82" height="28" class="theme-dark-only h-7 w-auto transition-opacity group-hover:opacity-90"/>
 <span class="hidden sm:block lg:hidden xl:block whitespace-nowrap self-end mb-[3px] pl-space-sm border-l border-outline-variant font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest leading-none">Do it easy.</span>
 </a>
 <nav class="hidden lg:flex items-center gap-space-lg" aria-label="Main">
@@ -49,7 +50,8 @@
 </div>
 <div class="flex items-center gap-2 sm:gap-space-sm md:gap-space-md">
 <a class="hidden sm:inline-flex items-center px-space-md py-space-sm rounded-full font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" href="#sales">Talk to sales</a>
-<a class="inline-flex items-center whitespace-nowrap px-space-md sm:px-space-lg py-space-sm min-h-[40px] rounded-full bg-primary-container text-on-primary-container font-headline-sm text-body-sm shadow-[0_0_20px_rgba(128,131,255,0.3)] hover:opacity-90 transition-opacity" href="#getstarted"><span class="sm:hidden">Create workspace</span><span class="hidden sm:inline">Create your workspace</span></a>
+<a class="inline-flex items-center whitespace-nowrap px-space-md sm:px-space-lg py-space-sm min-h-[40px] rounded-full bg-primary-container text-on-primary-container font-headline-sm text-body-sm shadow-[0_0_20px_rgb(var(--c-glow)/0.3)] hover:opacity-90 transition-opacity" href="#getstarted"><span class="sm:hidden">Create workspace</span><span class="hidden sm:inline">Create your workspace</span></a>
+<button type="button" data-theme-toggle class="w-9 h-9 rounded-full flex items-center justify-center shrink-0 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" aria-label="Switch to light mode" title="Switch to light mode"><span class="theme-dark-only material-symbols-outlined text-[20px]" aria-hidden="true">light_mode</span><span class="theme-light-only material-symbols-outlined text-[20px]" aria-hidden="true">dark_mode</span></button>
 <a class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 ml-space-xs hover:opacity-90" href="#signin" aria-label="Sign in" title="Sign in"><span class="material-symbols-outlined text-on-primary text-[18px]" aria-hidden="true">person</span></a>
 </div>
 </div>
@@ -65,7 +67,7 @@
 <section class="relative max-w-[1240px] mx-auto px-margin-mobile md:px-margin pt-space-xl pb-space-3xl" id="top">
 <div class="flex flex-col items-center text-center max-w-4xl mx-auto">
 <div class="inline-flex items-center gap-space-sm px-space-md py-1.5 rounded-full bg-surface-container-high shadow-sm mb-space-lg">
-<span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_rgba(78,222,163,0.8)] animate-pulse"></span>
+<span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_rgb(var(--c-glow-ok)/0.8)] animate-pulse"></span>
 <span class="hidden sm:inline font-label-caps text-label-caps text-primary uppercase tracking-widest">Inventory · Finance · Procurement · People ops · Marketing</span>
 <span class="hidden sm:inline text-outline-variant font-label-caps">•</span>
 <span class="font-label-caps text-label-caps text-on-surface-variant font-semibold">Do it easy.</span>
@@ -80,7 +82,7 @@
           One workspace for your team and the agents that support them. Create your workspace, switch on the tools you need for stock, money, buying, people and marketing, and hire an agent when the routine work piles up. Nothing changes until a person approves it.
         </p>
 <div class="flex flex-wrap items-center justify-center gap-space-md mb-space-lg w-full">
-<a class="inline-flex items-center gap-space-sm px-space-xl py-space-md rounded-full bg-primary-container text-on-primary-container font-headline-sm text-body-md shadow-[0_0_28px_rgba(128,131,255,0.4)] hover:brightness-110 transition-all" href="#getstarted">
+<a class="inline-flex items-center gap-space-sm px-space-xl py-space-md rounded-full bg-primary-container text-on-primary-container font-headline-sm text-body-md shadow-[0_0_28px_rgb(var(--c-glow)/0.4)] hover:brightness-110 transition-all" href="#getstarted">
 <span>Create your workspace</span>
 <span class="material-symbols-outlined text-[18px]" aria-hidden="true">arrow_forward</span>
 </a>
@@ -149,7 +151,7 @@
 </div>
 </div>
 <div class="flex items-center gap-2">
-<span class="px-3 py-1.5 rounded-lg bg-secondary text-on-secondary font-headline-sm text-body-sm shadow-[0_0_12px_rgba(78,222,163,0.3)]">Review</span>
+<span class="px-3 py-1.5 rounded-lg bg-secondary text-on-secondary font-headline-sm text-body-sm shadow-[0_0_12px_rgb(var(--c-glow-ok)/0.3)]">Review</span>
 </div>
 </div>
 </div>
@@ -477,7 +479,7 @@ People ops is $5 a month for your first 6 people, then $1 a person. Marketing is
 </div>
 <p class="mt-space-sm text-[12px] text-on-surface-variant">Every tool starts with a free trial, no card. No per-user fees.</p>
 <div class="mt-space-md flex flex-col gap-space-xs">
-<a class="w-full text-center py-2.5 rounded-full bg-primary-container text-on-primary-container font-headline-sm text-body-sm hover:brightness-110 shadow-[0_0_24px_rgba(128,131,255,0.3)] transition-all" href="#getstarted">Create your workspace</a>
+<a class="w-full text-center py-2.5 rounded-full bg-primary-container text-on-primary-container font-headline-sm text-body-sm hover:brightness-110 shadow-[0_0_24px_rgb(var(--c-glow)/0.3)] transition-all" href="#getstarted">Create your workspace</a>
 <a class="w-full text-center py-2.5 rounded-full bg-surface-container-lowest text-on-surface font-body-sm text-body-sm hover:bg-surface-dim transition-all" href="#sales" data-calc-sales>Talk to sales about this</a>
 </div>
 <p class="mt-space-sm text-[11px] text-on-surface-variant text-center" id="calc-checked">US dollars, before any tax.</p>
@@ -514,13 +516,13 @@ People ops is $5 a month for your first 6 people, then $1 a person. Marketing is
 <!-- 7. FINAL CTA -->
 <section class="max-w-[1240px] mx-auto px-margin-mobile md:px-margin pt-space-2xl pb-space-3xl">
 <div class="relative rounded-3xl bg-gradient-to-b from-surface-container-high to-surface-container p-space-lg sm:p-space-xl md:p-space-3xl text-center overflow-hidden shadow-2xl">
-<div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(128,131,255,0.15),transparent_70%)] pointer-events-none"></div>
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgb(var(--c-glow)/0.15),transparent_70%)] pointer-events-none"></div>
 <div class="relative max-w-2xl mx-auto flex flex-col items-center">
 <img src="images/brand/casia-icon.svg" alt="" width="48" height="48" class="w-12 h-12 mb-space-md rounded-2xl shadow-md"/>
 <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface tracking-tight">Do it easy. <br/>Give your team one place to work from.</h2>
 <p class="font-body-lg text-body-lg text-on-surface-variant mt-space-sm mb-space-xl">Create your workspace, switch on a tool and try it on your own business today.</p>
 <div class="flex flex-wrap items-center justify-center gap-space-md">
-<a class="inline-flex items-center gap-space-sm px-space-xl py-space-md rounded-full bg-primary-container text-on-primary-container font-headline-sm text-body-md shadow-[0_0_28px_rgba(128,131,255,0.4)] hover:brightness-110 transition-all" href="#getstarted"><span>Create your workspace</span><span class="material-symbols-outlined text-[18px]" aria-hidden="true">arrow_forward</span></a>
+<a class="inline-flex items-center gap-space-sm px-space-xl py-space-md rounded-full bg-primary-container text-on-primary-container font-headline-sm text-body-md shadow-[0_0_28px_rgb(var(--c-glow)/0.4)] hover:brightness-110 transition-all" href="#getstarted"><span>Create your workspace</span><span class="material-symbols-outlined text-[18px]" aria-hidden="true">arrow_forward</span></a>
 <a class="inline-flex items-center gap-space-sm px-space-xl py-space-md rounded-full bg-surface-container-lowest text-on-surface font-body-md text-body-md hover:bg-surface-dim transition-all shadow-sm" href="#sales"><span class="material-symbols-outlined text-[18px] text-primary" aria-hidden="true">support_agent</span><span>Talk to sales</span></a>
 </div>
 <div class="mt-space-lg flex flex-wrap items-center justify-center gap-x-space-md gap-y-1 text-on-surface-variant font-label-code text-label-code">
@@ -535,7 +537,7 @@ People ops is $5 a month for your first 6 people, then $1 a person. Marketing is
 <footer class="w-full bg-surface-container-lowest py-space-3xl mt-space-3xl"><div class="max-w-[1240px] mx-auto px-margin-mobile md:px-margin">
 <div class="grid grid-cols-2 md:grid-cols-5 gap-space-xl pb-space-2xl">
 <div class="col-span-2 flex flex-col gap-space-md">
-<div class="flex items-center gap-space-sm"><picture><source srcset="images/brand/casia-wordmark.svg" media="(prefers-color-scheme: light)"><img src="images/brand/casia-wordmark-on-dark.svg" alt="Casia" width="70" height="24" class="h-6 w-auto"/></picture></div>
+<div class="flex items-center gap-space-sm"><img src="images/brand/casia-wordmark.svg" alt="Casia" width="70" height="24" class="theme-light-only h-6 w-auto"/><img src="images/brand/casia-wordmark-on-dark.svg" alt="Casia" width="70" height="24" class="theme-dark-only h-6 w-auto"/></div>
 <p class="font-body-md text-body-md text-on-surface-variant max-w-sm">One workspace for your team and the agents that support them.</p>
 <div class="flex items-center gap-space-xs text-secondary"><span class="material-symbols-outlined text-[16px]" aria-hidden="true">verified</span><span class="font-label-code text-label-code uppercase tracking-wider">Do it easy.</span></div>
 </div>
@@ -816,5 +818,6 @@ People ops is $5 a month for your first 6 people, then $1 a person. Marketing is
   /* Not sure where to start */
   wire(document.getElementById("adv-form"), "adv-err", "adv-go", { kind: "advisor", source: "advisor" }, "We received your note.");
 </script>
+<script src="js/theme.js" defer></script>
 </body>
 </html>
