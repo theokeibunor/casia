@@ -8,7 +8,8 @@
     },
     "scripts": {
         "build": "tailwindcss -i ./css/input.css -o ./css/tailwind.css --minify",
-        "watch": "tailwindcss -i ./css/input.css -o ./css/tailwind.css --watch"
+        "watch": "tailwindcss -i ./css/input.css -o ./css/tailwind.css --watch",
+        "build:site": "tailwindcss -c ./tailwind.casia.config.js -i ./css/casia.input.css -o ./css/casia.css --minify"
     },
     "devDependencies": {
         "@tailwindcss/forms": "^0.5.10",
