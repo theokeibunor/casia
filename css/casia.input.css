@@ -20,3 +20,6 @@
 .skip:focus { left: 8px; top: 8px; z-index: 100; }
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 dialog::backdrop { background: rgba(5, 7, 12, .72); }
+
+/* The hidden attribute always wins over a display utility (flex, grid). */
+[hidden] { display: none !important; }

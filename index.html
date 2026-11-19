@@ -52,7 +52,7 @@
 </header>
 
 <main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]" id="main"><div class="flex flex-col w-full">
-<div class="relative w-full overflow-hidden">
+<div class="relative w-full overflow-clip">
 <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-gradient-to-b from-primary-container/15 via-primary/5 to-transparent blur-[120px] pointer-events-none rounded-full"></div>
 <div class="absolute top-[800px] -left-32 w-[500px] h-[500px] bg-secondary-container/5 blur-[100px] pointer-events-none rounded-full"></div>
 <div class="absolute top-[1800px] -right-32 w-[600px] h-[600px] bg-primary/5 blur-[120px] pointer-events-none rounded-full"></div>
@@ -436,38 +436,51 @@
 </div>
 </section>
 
-<!-- 6. PRICING + TALK TO US -->
+<!-- 6. PRICING: a cost calculator. Prices and the maths come from the Suite
+     (GET /pricing and /pricing/quote), the same list the Suite bills from,
+     so this page never holds a price of its own. -->
 <section class="max-w-[1240px] mx-auto px-margin-mobile md:px-margin py-space-3xl" id="pricing">
 <div class="text-center max-w-2xl mx-auto mb-space-2xl">
 <span class="font-label-caps text-label-caps text-primary uppercase tracking-widest">Pricing</span>
-<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mt-2 tracking-tight">Simple prices. <br/>Pay for the tools you use.</h2>
-<p class="font-body-md text-body-md text-on-surface-variant mt-2">Monthly, in US dollars. Each tool is priced on what it looks after, and you can start every one free. For a larger team or a custom rollout, talk to sales.</p>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mt-2 tracking-tight">See what it costs <br/>for your business.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Pick the tools you need and set what each one looks after: locations, companies, suppliers or people. Your whole team is included in every tool, and your workspace is free to create.</p>
 </div>
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-stretch">
-<div class="lg:col-span-5 p-space-lg md:p-space-xl rounded-2xl bg-surface-container flex flex-col justify-between shadow-xl">
-<div>
-<div class="flex items-center justify-between gap-2 mb-space-md">
-<span class="px-3 py-1 rounded-full bg-primary-container/20 text-primary font-label-code text-label-code uppercase tracking-wider">Per tool</span>
-<span class="text-secondary font-headline-sm text-body-sm">Monthly</span>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start" id="calc">
+<div class="lg:col-span-7 min-w-0">
+<fieldset class="space-y-space-sm" id="calc-tools"><legend class="sr-only">Tools</legend>
+<div class="p-space-lg rounded-2xl bg-surface-container-low text-body-sm text-on-surface-variant" id="calc-fallback">Loading prices… If they don't load, each tool's price is on its own site:
+<a class="text-on-surface underline underline-offset-2" href="https://www.ceazr.com/pricing" target="_blank" rel="noopener">Inventory</a>,
+<a class="text-on-surface underline underline-offset-2" href="https://www.yakobooks.com/pricing" target="_blank" rel="noopener">Finance</a>,
+<a class="text-on-surface underline underline-offset-2" href="https://procurement.casialab.com/pricing" target="_blank" rel="noopener">Procurement</a>.
+HR is $5 a month for your first 6 people, then $1 a person. Marketing is free while in beta.</div>
+</fieldset>
+<a class="lg:hidden sticky bottom-3 z-10 mt-space-md flex items-center justify-between gap-space-sm px-space-lg py-space-sm rounded-full bg-surface-container-high text-on-surface shadow-2xl" href="#calc-title" id="calc-bar" hidden><span class="text-body-sm text-on-surface-variant">Your estimate</span><span class="font-headline-sm text-body-md tabular-nums"><span id="calc-bar-total"></span> <span class="material-symbols-outlined text-[18px] align-middle" aria-hidden="true">arrow_downward</span></span></a>
 </div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-space-xs">Priced on what each tool looks after</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Your workspace is free to create. Each tool is priced on its own measure: locations, companies, suppliers or people. Your whole team is included in every tool.</p>
-<ul class="divide-y divide-surface-container-high mb-space-lg">
-<li class="flex items-start justify-between gap-space-md py-2.5"><div><span class="block text-body-md text-on-surface font-headline-sm">Inventory</span><span class="block font-body-sm text-[12px] text-on-surface-variant">Per store, branch or warehouse; $16 each from the 11th. 5,000 products per location, then $10 per 5,000 more.</span></div><span class="font-label-code text-body-sm text-on-surface whitespace-nowrap pt-0.5 text-right">$20 / location</span></li>
-<li class="flex items-start justify-between gap-space-md py-2.5"><div><span class="block text-body-md text-on-surface font-headline-sm">Finance</span><span class="block font-body-sm text-[12px] text-on-surface-variant">Per company, meaning each set of books you keep.</span></div><span class="font-label-code text-body-sm text-on-surface whitespace-nowrap pt-0.5 text-right">$19 / company</span></li>
-<li class="flex items-start justify-between gap-space-md py-2.5"><div><span class="block text-body-md text-on-surface font-headline-sm">Procurement</span><span class="block font-body-sm text-[12px] text-on-surface-variant">Up to 100 active suppliers, then $5 a month per 25 more.</span></div><span class="font-label-code text-body-sm text-on-surface whitespace-nowrap pt-0.5 text-right">$49 / month</span></li>
-<li class="flex items-start justify-between gap-space-md py-2.5"><div><span class="block text-body-md text-on-surface font-headline-sm">HR</span><span class="block font-body-sm text-[12px] text-on-surface-variant">Covers your first 6 people, then $1 a person.</span></div><span class="font-label-code text-body-sm text-on-surface whitespace-nowrap pt-0.5 text-right">$5 / month</span></li>
-<li class="flex items-start justify-between gap-space-md py-2.5"><div><span class="block text-body-md text-on-surface font-headline-sm">Marketing</span><span class="block font-body-sm text-[12px] text-on-surface-variant">Every feature and unlimited brands while in beta.</span></div><span class="font-label-code text-body-sm text-on-surface whitespace-nowrap pt-0.5 text-right">Free in beta</span></li>
+<aside class="lg:col-span-5 lg:sticky lg:top-24 p-space-lg md:p-space-xl rounded-2xl bg-surface-container shadow-xl min-w-0" aria-labelledby="calc-title">
+<div class="flex items-center justify-between gap-space-sm mb-space-md">
+<h3 class="font-headline-sm text-headline-sm text-on-surface" id="calc-title">Your estimate</h3>
+<div class="inline-flex p-1 rounded-full bg-surface-container-lowest" role="group" aria-label="Billing">
+<button class="px-3 py-1.5 rounded-full font-label-code text-label-code text-on-surface-variant aria-pressed:bg-surface-container-high aria-pressed:text-on-surface" type="button" data-bill="month" aria-pressed="true">Monthly</button>
+<button class="px-3 py-1.5 rounded-full font-label-code text-label-code text-on-surface-variant aria-pressed:bg-surface-container-high aria-pressed:text-on-surface" type="button" data-bill="year" aria-pressed="false">Yearly</button>
+</div>
+</div>
+<div aria-live="polite">
+<p class="flex items-baseline gap-2"><span class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface tracking-tight tabular-nums" id="calc-total">–</span><span class="text-body-sm text-on-surface-variant" id="calc-per">a month</span></p>
+<p class="text-body-sm text-on-surface-variant mt-1 min-h-[1.25rem]" id="calc-note"></p>
+<ul class="mt-space-md divide-y divide-surface-container-high" id="calc-lines"></ul>
+</div>
+<ul class="mt-space-md space-y-space-xs text-body-sm text-on-surface">
+<li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-secondary text-[18px]" aria-hidden="true">check</span><span>Every tool starts with a free trial, no card</span></li>
+<li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-secondary text-[18px]" aria-hidden="true">check</span><span>Your whole team on one sign-in, no per-user fees</span></li>
 </ul>
-<ul class="space-y-space-sm mb-space-xl">
-<li class="flex items-center gap-2.5 text-body-sm text-on-surface"><span class="material-symbols-outlined text-secondary text-[18px]" aria-hidden="true">check</span><span>Start free, no card: free plans to start small on Inventory, Finance and Procurement, and a free month on HR</span></li>
-<li class="flex items-center gap-2.5 text-body-sm text-on-surface"><span class="material-symbols-outlined text-secondary text-[18px]" aria-hidden="true">check</span><span>Your whole team on one sign-in</span></li>
-<li class="flex items-center gap-2.5 text-body-sm text-on-surface"><span class="material-symbols-outlined text-secondary text-[18px]" aria-hidden="true">check</span><span>Agents when you want them, $50 a month each</span></li>
-</ul>
-</div>
+<div class="mt-space-lg flex flex-col gap-space-sm">
 <a class="w-full text-center py-space-md rounded-full bg-primary-container text-on-primary-container font-headline-sm text-body-md hover:brightness-110 shadow-[0_0_24px_rgba(128,131,255,0.3)] transition-all" href="#getstarted">Create your workspace</a>
+<a class="w-full text-center py-space-md rounded-full bg-surface-container-lowest text-on-surface font-body-md text-body-md hover:bg-surface-dim transition-all" href="#sales" data-calc-sales>Talk to sales about this</a>
 </div>
-<div class="lg:col-span-7 p-space-lg md:p-space-xl rounded-2xl bg-surface-container-low flex flex-col justify-between scroll-mt-24" id="talk">
+<p class="mt-space-sm font-body-sm text-[12px] text-on-surface-variant text-center" id="calc-checked">US dollars, before any tax.</p>
+</aside>
+</div>
+<div class="mt-space-lg p-space-lg md:p-space-xl rounded-2xl bg-surface-container-low scroll-mt-24" id="talk">
 <div>
 <div class="flex items-center gap-space-sm mb-space-sm">
 <div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0"><span class="material-symbols-outlined text-[18px]" aria-hidden="true">support_agent</span></div>
@@ -491,7 +504,6 @@
 <div class="mt-space-lg pt-space-md border-t border-surface-container-high/40 flex flex-wrap items-center justify-between gap-space-sm text-body-sm text-on-surface-variant">
 <span>Email us: <a class="text-on-surface font-body-sm underline underline-offset-2" href="mailto:products@casialab.com">products@casialab.com</a></span>
 <a class="text-secondary font-label-code hover:underline" href="#sales">Buying for a larger team? Talk to sales</a>
-</div>
 </div>
 </div>
 </section>
@@ -625,6 +637,165 @@
     if (location.hash === "#sales" || location.hash === "#demo") open("direct");
     dlg.querySelector("[data-close]").addEventListener("click", function () { dlg.close(); });
     wire(form, "lead-err", "lead-go", null, "Thank you. Sales has it.");
+  })();
+
+  /* Cost calculator. The tools, their measures and every price come from the
+     Suite (GET /pricing); the maths too (GET /pricing/quote), so this page
+     holds no price of its own and can't drift from what's billed. */
+  (function () {
+    var box = document.getElementById("calc-tools");
+    if (!box || !window.fetch) return;
+    var WHAT = {
+      ceazr: "Stock across every store and warehouse",
+      yakobooks: "Your books, bills, payroll and tax",
+      paytton: "Requests, quotes, approvals and purchase orders",
+      road10: "Roles, hiring, onboarding, appraisals and leave",
+      admeistr: "Content calendars and campaign results for every brand"
+    };
+    /* A typical small business to start from, not the cheapest one. */
+    var START = { ceazr: { on: 1, locations: 3, products: 15000 }, yakobooks: { on: 1, companies: 1 },
+                  paytton: { suppliers: 100 }, road10: { on: 1, people: 20 }, admeistr: {} };
+    var tools = [], year = false, timer = null, seq = 0, last = null;
+    var usd = function (c) { return "$" + (c / 100).toLocaleString("en-US", { minimumFractionDigits: c % 100 ? 2 : 0, maximumFractionDigits: 2 }); };
+
+    function row(t) {
+      var st = START[t.module] || {};
+      var h = '<div class="rounded-2xl bg-surface-container-low p-space-md md:p-space-lg" data-tool="' + t.module + '">' +
+        '<label class="flex items-start gap-space-sm cursor-pointer">' +
+        '<input type="checkbox" class="mt-1 w-5 h-5 shrink-0 accent-primary-container cursor-pointer" data-on' + (st.on ? " checked" : "") + '>' +
+        '<span class="flex-1 min-w-0"><span class="block font-headline-sm text-body-md text-on-surface">' + esc(t.label) + '</span>' +
+        '<span class="block text-body-sm text-on-surface-variant">' + esc(WHAT[t.module] || "") + '</span></span>' +
+        '<span class="font-label-code text-body-sm text-on-surface whitespace-nowrap tabular-nums pt-0.5" data-sub></span></label>' +
+        '<div class="mt-space-md sm:pl-8 space-y-space-md" data-body' + (st.on ? "" : " hidden") + '>';
+      if (t.status === "free-beta") h += '<p class="text-body-sm text-on-surface-variant">Every feature, for every brand you run, free while in beta.</p>';
+      if (t.measures.length) {
+        h += '<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">';
+        t.measures.forEach(function (m) {
+          var id = "calc-" + t.module + "-" + m.key, v = st[m.key] != null ? st[m.key] : m.default, step = m.step || 1;
+          h += '<div class="min-w-0"><label class="block font-label-caps text-label-caps text-on-surface-variant uppercase mb-1" for="' + id + '">' + esc(m.label) + '</label>' +
+            '<div class="flex items-stretch rounded-xl bg-surface-container overflow-hidden">' +
+            '<button type="button" class="w-11 shrink-0 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" data-step="-' + step + '" aria-label="Fewer ' + esc(m.units) + '">−</button>' +
+            '<input class="w-full min-w-0 px-2 py-2.5 bg-transparent text-center text-on-surface font-label-code tabular-nums border-0 focus:outline-none focus:ring-1 focus:ring-primary" id="' + id + '" type="number" inputmode="numeric" min="' + m.min + '" step="' + step + '" value="' + v + '" data-measure="' + m.key + '">' +
+            '<button type="button" class="w-11 shrink-0 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" data-step="' + step + '" aria-label="More ' + esc(m.units) + '">+</button></div>' +
+            (m.hint ? '<p class="mt-1 text-[12px] text-on-surface-variant">' + esc(m.hint) + '</p>' : "") + '</div>';
+        });
+        h += '</div>';
+      }
+      t.agents.forEach(function (a) {
+        var per = a.per ? " per " + (t.measures.filter(function (m) { return m.key === a.per; })[0] || {}).unit : " a month";
+        h += '<label class="flex items-start gap-space-sm cursor-pointer text-body-sm text-on-surface">' +
+          '<input type="checkbox" class="mt-0.5 w-4 h-4 shrink-0 accent-primary-container cursor-pointer" data-agent="' + a.key + '">' +
+          '<span>Add the ' + esc(a.label) + ' agent, ' + usd(a.cents) + (a.per ? per + " a month" : " a month") + (a.note ? ' <span class="text-on-surface-variant">(' + esc(a.note) + ')</span>' : "") +
+          ' · <a class="text-secondary hover:underline" href="' + a.url + '" target="_blank" rel="noopener">what it does</a></span></label>';
+      });
+      if (t.trialDays) h += '<p class="text-[12px] text-on-surface-variant">' + (t.module === "road10" ? "First month free." : t.trialDays + "-day free trial, no card.") +
+        (t.pricingUrl ? ' <a class="underline underline-offset-2 hover:text-on-surface" href="' + t.pricingUrl + '" target="_blank" rel="noopener">Full ' + esc(t.label) + ' pricing</a>' : "") + '</p>';
+      return h + '</div></div>';
+    }
+
+    function state() {
+      var q = [], on = [];
+      box.querySelectorAll("[data-tool]").forEach(function (el) {
+        var m = el.getAttribute("data-tool");
+        if (!el.querySelector("[data-on]").checked) return;
+        on.push(m);
+        el.querySelectorAll("[data-measure]").forEach(function (i) { q.push(m + "." + i.getAttribute("data-measure") + "=" + encodeURIComponent(i.value)); });
+        var ag = [].map.call(el.querySelectorAll("[data-agent]:checked"), function (i) { return i.getAttribute("data-agent"); });
+        if (ag.length) q.push(m + ".agents=" + ag.join(","));
+      });
+      return { on: on, qs: "tools=" + on.join(",") + (q.length ? "&" + q.join("&") : "") };
+    }
+
+    function render(r) {
+      last = r;
+      var total = document.getElementById("calc-total"), per = document.getElementById("calc-per"),
+          note = document.getElementById("calc-note"), lines = document.getElementById("calc-lines");
+      box.querySelectorAll("[data-sub]").forEach(function (s) { s.textContent = ""; });
+      var html = "";
+      r.tools.forEach(function (t) {
+        var sub = box.querySelector('[data-tool="' + t.module + '"] [data-sub]');
+        var amount = t.status === "sales" ? "Talk to sales" : t.status === "free" ? "Free" :
+          year ? (t.annualCents != null ? usd(t.annualCents) : usd(t.monthlyCents * 12)) : usd(t.monthlyCents);
+        if (sub) sub.textContent = amount;
+        html += '<li class="py-2.5"><div class="flex items-start justify-between gap-space-md"><span class="text-body-md text-on-surface font-headline-sm">' + esc(t.label) + '</span>' +
+          '<span class="font-label-code text-body-sm text-on-surface whitespace-nowrap tabular-nums">' + amount + (year && t.status === "priced" && t.annualCents == null ? '<span class="text-on-surface-variant"> (12 × monthly)</span>' : "") + '</span></div>';
+        if (t.status === "sales") html += '<p class="text-[12px] text-on-surface-variant">' + esc(t.salesReason) + ': we price this with you.</p>';
+        else if (t.status === "free") html += '<p class="text-[12px] text-on-surface-variant">Free while in beta.</p>';
+        else html += '<ul class="mt-0.5 space-y-0.5">' + t.lines.map(function (l) {
+          return '<li class="flex justify-between gap-space-md text-[12px] text-on-surface-variant"><span>' + esc(l.label) + '</span><span class="tabular-nums whitespace-nowrap">' + usd(l.cents) + '</span></li>'; }).join("") + '</ul>';
+        if (t.freePlan) html += '<p class="mt-1 text-[12px] text-secondary">The free plan also fits: ' + esc(t.freePlan) + '.</p>';
+        html += '</li>';
+      });
+      lines.innerHTML = html || '<li class="py-2.5 text-body-sm text-on-surface-variant">Pick a tool to see its price.</li>';
+      var any = r.tools.some(function (t) { return t.status === "priced" || t.status === "free"; });
+      total.textContent = any || !r.tools.length ? usd(year ? r.total.yearCents : r.total.monthlyCents) : "Talk to sales";
+      per.textContent = any || !r.tools.length ? (year ? "a year" : "a month") : "";
+      var bar = document.getElementById("calc-bar");
+      bar.hidden = false;
+      document.getElementById("calc-bar-total").textContent = total.textContent + (per.textContent ? " " + per.textContent : "");
+      var n = [];
+      if (r.total.withSales.length) n.push(r.total.withSales.join(" and ") + " priced with sales, not included.");
+      if (year && any) n.push(r.total.monthlyOnly.length ? "Two months free where yearly billing is offered. " + r.total.monthlyOnly.join(" and ") + " bill" + (r.total.monthlyOnly.length > 1 ? "" : "s") + " monthly." : "Two months free, billed yearly.");
+      note.textContent = n.join(" ");
+      document.getElementById("calc-checked").textContent = "US dollars, before any tax. Prices checked against each tool's pricing page on " +
+        new Date(r.checked + "T00:00:00Z").toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }) + ".";
+    }
+
+    function update() {
+      clearTimeout(timer);
+      timer = setTimeout(function () {
+        var my = ++seq;
+        fetch(CASIA.shell + "/pricing/quote?" + state().qs).then(function (res) { return res.json(); })
+          .then(function (r) { if (my === seq) render(r); }).catch(function () {});
+      }, 120);
+    }
+
+    fetch(CASIA.shell + "/pricing").then(function (res) { if (!res.ok) throw 0; return res.json(); }).then(function (list) {
+      tools = list.tools.filter(function (t) { return t.status !== "coming-soon"; });
+      box.innerHTML = '<legend class="sr-only">Tools</legend>' + tools.map(row).join("");
+      box.addEventListener("change", function (e) {
+        var el = e.target;
+        if (el.hasAttribute("data-on")) el.closest("[data-tool]").querySelector("[data-body]").hidden = !el.checked;
+        if (el.hasAttribute("data-measure")) { var min = +el.min || 0; if (!(+el.value >= min)) el.value = min; }
+        update();
+      });
+      box.addEventListener("input", function (e) { if (e.target.hasAttribute("data-measure")) update(); });
+      box.addEventListener("click", function (e) {
+        var b = e.target.closest("[data-step]");
+        if (!b) return;
+        var i = b.parentNode.querySelector("input"), step = +b.getAttribute("data-step");
+        i.value = Math.max(+i.min || 0, (+i.value || 0) + step);
+        update();
+      });
+      update();
+    }).catch(function () {
+      document.getElementById("calc-fallback").firstChild.textContent = "Prices didn't load just now. Each tool's price is on its own site: ";
+      document.getElementById("calc-total").textContent = "";
+    });
+
+    document.querySelectorAll("[data-bill]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        year = b.getAttribute("data-bill") === "year";
+        document.querySelectorAll("[data-bill]").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+        if (last) render(last);
+      });
+    });
+
+    /* "Talk to sales about this" carries the estimate into the sales form. */
+    document.querySelectorAll("[data-calc-sales]").forEach(function (a) {
+      a.addEventListener("click", function () {
+        if (!last) return;
+        var msg = document.getElementById("ld-msg"), area = document.getElementById("ld-area");
+        var parts = last.tools.map(function (t) {
+          var def = tools.filter(function (x) { return x.module === t.module; })[0] || { measures: [] };
+          var m = def.measures.map(function (d) { var n = t.measures[d.key]; return n.toLocaleString("en-US") + " " + (n === 1 ? d.unit : d.units); });
+          (t.lines || []).forEach(function (l) { if (/ agent/.test(l.label)) m.push("the " + l.label.split(" agent")[0] + " agent"); });
+          return t.label + (m.length ? ": " + m.join(", ") : "");
+        });
+        if (!msg.value) msg.value = "From the price calculator: " + parts.join("; ") + ".";
+        area.value = last.tools.length === 1 ? last.tools[0].label : last.tools.length ? "Several of them" : "";
+      });
+    });
   })();
 
   /* Not sure where to start */
