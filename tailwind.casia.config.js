@@ -3,23 +3,13 @@
  *  Build: npm run build:site */
 module.exports = {
   content: ["./*.html"],
-  darkMode: "class",
+  darkMode: "media",
   theme: {
     extend: {
       colors: {
-        "surface-variant": "#31353f", "surface-dim": "#0f131c", "on-secondary-fixed-variant": "#005236",
-        "tertiary-fixed": "#ffddb8", "on-primary-fixed": "#07006c", "primary": "#c0c1ff", "on-background": "#dfe2ef",
-        "secondary-container": "#00a572", "error-container": "#93000a", "on-primary-container": "#0d0096",
-        "primary-container": "#8083ff", "outline-variant": "#464554", "error": "#ffb4ab", "on-primary-fixed-variant": "#2f2ebe",
-        "surface-container-low": "#181b25", "inverse-primary": "#494bd6", "surface-tint": "#c0c1ff", "secondary-fixed-dim": "#4edea3",
-        "on-surface": "#dfe2ef", "on-error-container": "#ffdad6", "background": "#0f131c", "on-tertiary-fixed": "#2a1700",
-        "on-surface-variant": "#c7c4d7", "outline": "#908fa0", "surface-container-high": "#262a34", "primary-fixed": "#e1e0ff",
-        "on-primary": "#1000a9", "surface": "#0f131c", "tertiary-container": "#ca8100", "surface-container": "#1c1f29",
-        "on-secondary-container": "#00311f", "inverse-surface": "#dfe2ef", "surface-bright": "#353943",
-        "surface-container-lowest": "#0a0e17", "on-tertiary": "#472a00", "on-error": "#690005", "secondary": "#4edea3",
-        "tertiary": "#ffb95f", "on-tertiary-container": "#3e2400", "on-secondary-fixed": "#002113", "secondary-fixed": "#6ffbbe",
-        "on-tertiary-fixed-variant": "#653e00", "on-secondary": "#003824", "primary-fixed-dim": "#c0c1ff",
-        "surface-container-highest": "#31353f", "inverse-on-surface": "#2c303a", "tertiary-fixed-dim": "#ffb95f"
+        /* Values live in css/casia.input.css: dark by default, light when the
+           visitor's system asks for it. */
+        "background": "rgb(var(--c-background) / <alpha-value>)", "error": "rgb(var(--c-error) / <alpha-value>)", "error-container": "rgb(var(--c-error-container) / <alpha-value>)", "inverse-on-surface": "rgb(var(--c-inverse-on-surface) / <alpha-value>)", "inverse-primary": "rgb(var(--c-inverse-primary) / <alpha-value>)", "inverse-surface": "rgb(var(--c-inverse-surface) / <alpha-value>)", "on-background": "rgb(var(--c-on-background) / <alpha-value>)", "on-error": "rgb(var(--c-on-error) / <alpha-value>)", "on-error-container": "rgb(var(--c-on-error-container) / <alpha-value>)", "on-primary": "rgb(var(--c-on-primary) / <alpha-value>)", "on-primary-container": "rgb(var(--c-on-primary-container) / <alpha-value>)", "on-primary-fixed": "rgb(var(--c-on-primary-fixed) / <alpha-value>)", "on-primary-fixed-variant": "rgb(var(--c-on-primary-fixed-variant) / <alpha-value>)", "on-secondary": "rgb(var(--c-on-secondary) / <alpha-value>)", "on-secondary-container": "rgb(var(--c-on-secondary-container) / <alpha-value>)", "on-secondary-fixed": "rgb(var(--c-on-secondary-fixed) / <alpha-value>)", "on-secondary-fixed-variant": "rgb(var(--c-on-secondary-fixed-variant) / <alpha-value>)", "on-surface": "rgb(var(--c-on-surface) / <alpha-value>)", "on-surface-variant": "rgb(var(--c-on-surface-variant) / <alpha-value>)", "on-tertiary": "rgb(var(--c-on-tertiary) / <alpha-value>)", "on-tertiary-container": "rgb(var(--c-on-tertiary-container) / <alpha-value>)", "on-tertiary-fixed": "rgb(var(--c-on-tertiary-fixed) / <alpha-value>)", "on-tertiary-fixed-variant": "rgb(var(--c-on-tertiary-fixed-variant) / <alpha-value>)", "outline": "rgb(var(--c-outline) / <alpha-value>)", "outline-variant": "rgb(var(--c-outline-variant) / <alpha-value>)", "primary": "rgb(var(--c-primary) / <alpha-value>)", "primary-container": "rgb(var(--c-primary-container) / <alpha-value>)", "primary-fixed": "rgb(var(--c-primary-fixed) / <alpha-value>)", "primary-fixed-dim": "rgb(var(--c-primary-fixed-dim) / <alpha-value>)", "secondary": "rgb(var(--c-secondary) / <alpha-value>)", "secondary-container": "rgb(var(--c-secondary-container) / <alpha-value>)", "secondary-fixed": "rgb(var(--c-secondary-fixed) / <alpha-value>)", "secondary-fixed-dim": "rgb(var(--c-secondary-fixed-dim) / <alpha-value>)", "surface": "rgb(var(--c-surface) / <alpha-value>)", "surface-bright": "rgb(var(--c-surface-bright) / <alpha-value>)", "surface-container": "rgb(var(--c-surface-container) / <alpha-value>)", "surface-container-high": "rgb(var(--c-surface-container-high) / <alpha-value>)", "surface-container-highest": "rgb(var(--c-surface-container-highest) / <alpha-value>)", "surface-container-low": "rgb(var(--c-surface-container-low) / <alpha-value>)", "surface-container-lowest": "rgb(var(--c-surface-container-lowest) / <alpha-value>)", "surface-dim": "rgb(var(--c-surface-dim) / <alpha-value>)", "surface-tint": "rgb(var(--c-surface-tint) / <alpha-value>)", "surface-variant": "rgb(var(--c-surface-variant) / <alpha-value>)", "tertiary": "rgb(var(--c-tertiary) / <alpha-value>)", "tertiary-container": "rgb(var(--c-tertiary-container) / <alpha-value>)", "tertiary-fixed": "rgb(var(--c-tertiary-fixed) / <alpha-value>)", "tertiary-fixed-dim": "rgb(var(--c-tertiary-fixed-dim) / <alpha-value>)"
       },
       borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
       spacing: {
