@@ -11,8 +11,8 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://casialab.com/">
 <meta property="og:image" content="https://casialab.com/og-image.png?v=3">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Casia Lab. One workspace for your team and the agents that support them.">
 <meta name="twitter:description" content="Switch on the tools you need, try each one free, and hire an AI agent for the routine work. Do it easy.">
@@ -36,7 +36,7 @@
 <header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
 <div class="h-20 max-w-[1240px] mx-auto px-margin-mobile md:px-margin flex items-center justify-between gap-space-md">
 <div class="flex items-center gap-space-xl">
-<a class="flex items-center gap-space-sm group" href="#top" aria-label="Casia home">
+<a class="flex items-center gap-space-sm group" href="/" aria-label="Casia home">
 <img src="images/brand/casia-wordmark.svg" alt="Casia" width="82" height="28" class="theme-light-only h-7 w-auto transition-opacity group-hover:opacity-90"/><img src="images/brand/casia-wordmark-on-dark.svg" alt="Casia" width="82" height="28" class="theme-dark-only h-7 w-auto transition-opacity group-hover:opacity-90"/>
 <span class="hidden sm:block lg:hidden xl:block whitespace-nowrap self-end mb-[3px] pl-space-sm border-l border-outline-variant font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest leading-none">Do it easy.</span>
 </a>
@@ -51,9 +51,22 @@
 <div class="flex items-center gap-2 sm:gap-space-sm md:gap-space-md">
 <a class="hidden sm:inline-flex items-center px-space-md py-space-sm rounded-full font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" href="#sales">Talk to sales</a>
 <a class="inline-flex items-center whitespace-nowrap px-space-md sm:px-space-lg py-space-sm min-h-[40px] rounded-full bg-primary-container text-on-primary-container font-headline-sm text-body-sm shadow-[0_0_20px_rgb(var(--c-glow)/0.3)] hover:opacity-90 transition-opacity" href="#getstarted"><span class="sm:hidden">Create workspace</span><span class="hidden sm:inline">Create your workspace</span></a>
-<button type="button" data-theme-toggle class="w-9 h-9 rounded-full flex items-center justify-center shrink-0 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" aria-label="Switch to light mode" title="Switch to light mode"><span class="theme-dark-only material-symbols-outlined text-[20px]" aria-hidden="true">light_mode</span><span class="theme-light-only material-symbols-outlined text-[20px]" aria-hidden="true">dark_mode</span></button>
-<a class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 ml-space-xs hover:opacity-90" href="#signin" aria-label="Sign in" title="Sign in"><span class="material-symbols-outlined text-on-primary text-[18px]" aria-hidden="true">person</span></a>
+<button type="button" data-theme-toggle class="hidden sm:flex w-9 h-9 rounded-full items-center justify-center shrink-0 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" aria-label="Switch to light mode" title="Switch to light mode"><span class="theme-dark-only material-symbols-outlined text-[20px]" aria-hidden="true">light_mode</span><span class="theme-light-only material-symbols-outlined text-[20px]" aria-hidden="true">dark_mode</span></button>
+<a class="w-8 h-8 rounded-full bg-primary hidden sm:flex items-center justify-center shrink-0 ml-space-xs hover:opacity-90" href="#signin" aria-label="Sign in" title="Sign in"><span class="material-symbols-outlined text-on-primary text-[18px]" aria-hidden="true">person</span></a>
+<button type="button" data-menu-toggle class="lg:hidden w-10 h-10 rounded-full flex items-center justify-center shrink-0 text-on-surface hover:bg-surface-container-high transition-colors" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu"><span class="material-symbols-outlined text-[22px]" aria-hidden="true" data-menu-icon>menu</span></button>
 </div>
+</div>
+<div id="mobile-menu" class="lg:hidden border-t border-outline-variant/40 bg-surface/95 backdrop-blur-xl" hidden>
+<nav class="max-w-[1240px] mx-auto px-margin-mobile md:px-margin py-space-sm flex flex-col" aria-label="Menu">
+<a class="flex items-center min-h-[48px] px-space-sm rounded-lg font-body-md text-body-md text-on-surface hover:bg-surface-container-high transition-colors" href="#tools">Tools</a>
+<a class="flex items-center min-h-[48px] px-space-sm rounded-lg font-body-md text-body-md text-on-surface hover:bg-surface-container-high transition-colors" href="#how">How it works</a>
+<a class="flex items-center min-h-[48px] px-space-sm rounded-lg font-body-md text-body-md text-on-surface hover:bg-surface-container-high transition-colors" href="#agents">Agents</a>
+<a class="flex items-center min-h-[48px] px-space-sm rounded-lg font-body-md text-body-md text-on-surface hover:bg-surface-container-high transition-colors" href="#pricing">Pricing</a>
+<a class="flex items-center min-h-[48px] px-space-sm rounded-lg font-body-md text-body-md text-on-surface hover:bg-surface-container-high transition-colors" href="#talk">Where to start</a>
+<a class="flex items-center min-h-[48px] px-space-sm rounded-lg font-body-md text-body-md text-on-surface hover:bg-surface-container-high transition-colors" href="#sales">Talk to sales</a>
+<a class="flex items-center min-h-[48px] px-space-sm rounded-lg font-body-md text-body-md text-on-surface hover:bg-surface-container-high transition-colors" href="#signin">Sign in</a>
+<button type="button" data-theme-toggle class="sm:hidden flex items-center min-h-[48px] px-space-sm rounded-lg font-body-md text-body-md text-on-surface hover:bg-surface-container-high transition-colors gap-space-sm text-left" aria-label="Switch to light mode"><span class="theme-dark-only material-symbols-outlined text-[20px] text-on-surface-variant" aria-hidden="true">light_mode</span><span class="theme-light-only material-symbols-outlined text-[20px] text-on-surface-variant" aria-hidden="true">dark_mode</span><span class="theme-dark-only">Light mode</span><span class="theme-light-only">Dark mode</span></button>
+</nav>
 </div>
 </header>
 
@@ -819,5 +832,6 @@ People ops is $5 a month for your first 6 people, then $1 a person. Marketing is
   wire(document.getElementById("adv-form"), "adv-err", "adv-go", { kind: "advisor", source: "advisor" }, "We received your note.");
 </script>
 <script src="js/theme.js" defer></script>
+<script src="js/nav.js" defer></script>
 </body>
 </html>
