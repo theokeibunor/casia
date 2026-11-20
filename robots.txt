@@ -1,0 +1,6 @@
+# casialab.com: every public page may be crawled, by search engines and
+# AI answer engines alike. The thank-you page carries its own noindex tag.
+User-agent: *
+Allow: /
+
+Sitemap: https://casialab.com/sitemap.xml
