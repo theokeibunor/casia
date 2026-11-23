@@ -36,14 +36,14 @@ How it works:
 
 ## Company
 
-- [About](https://casialab.com/about.html): why Casia builds everyday tools for owner-led businesses.
-- [Contact](https://casialab.com/contact.html): product, partnership, reseller, support and media questions. A person replies. Email: products@casialab.com.
-- [Partners](https://casialab.com/partner.html): for associations, accountants, lenders and trade groups that serve owner-led businesses.
-- [Resellers](https://casialab.com/resellers.html): introduce Casia to businesses you serve and earn on each signup.
-- [Careers](https://casialab.com/work-with-us.html)
+- [About](https://casialab.com/about): why Casia builds everyday tools for owner-led businesses.
+- [Contact](https://casialab.com/contact): product, partnership, reseller, support and media questions. A person replies. Email: products@casialab.com.
+- [Partners](https://casialab.com/partner): for associations, accountants, lenders and trade groups that serve owner-led businesses.
+- [Resellers](https://casialab.com/resellers): introduce Casia to businesses you serve and earn on each signup.
+- [Careers](https://casialab.com/work-with-us)
 
 ## Optional
 
 - [Sign in](https://app.casialab.com): the Casia workspace for existing customers.
-- [Privacy policy](https://casialab.com/privacy.html)
-- [Terms of service](https://casialab.com/terms.html)
+- [Privacy policy](https://casialab.com/privacy)
+- [Terms of service](https://casialab.com/terms)

@@ -83,7 +83,7 @@ document.documentElement.classList.add('js-ready');
         });
 
         // Anti-spam guard. Forms submit natively (standard POST) so FormSubmit's
-        // own server-side CAPTCHA runs and the user is redirected to thanks.html.
+        // own server-side CAPTCHA runs and the user is redirected to /thanks.
         // Here we only block the obvious bots before the request leaves the page:
         //   1) Honeypot — a hidden field a human never fills.
         //   2) Time-trap — submissions faster than a human could plausibly fill.

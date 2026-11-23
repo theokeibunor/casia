@@ -2,15 +2,15 @@
 <html class="dark" lang="en">
 <head>
 <meta charset="utf-8"/>
-<script>(function(){var t;try{t=localStorage.getItem("casia-theme")}catch(e){}if(t!=="light"&&t!=="dark")t=window.matchMedia&&matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";document.documentElement.setAttribute("data-theme",t)})();</script>
+<script>(function(){var t;try{t=localStorage.getItem("casia-theme")}catch(e){}if(t!=="light"&&t!=="dark")t=window.matchMedia&&matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";document.documentElement.setAttribute("data-theme",t);var p=location.pathname,c=p.replace(/\/index\.html$/,"/").replace(/\.html$/,"");if(c!==p&&history.replaceState)history.replaceState(null,"",c+location.search+location.hash)})();</script>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Partners · Casia Lab</title>
 <meta name="description" content="Partner with Casia. We work with associations, accountants, lenders and trade groups that already serve owner-led businesses, so the businesses you work with can run better.">
-<link rel="canonical" href="https://casialab.com/partner.html">
+<link rel="canonical" href="https://casialab.com/partner">
 <meta property="og:title" content="Partners · Casia Lab">
 <meta property="og:description" content="Partner with Casia. We work with associations, accountants, lenders and trade groups that already serve owner-led businesses, so the businesses you work with can run better.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://casialab.com/partner.html">
+<meta property="og:url" content="https://casialab.com/partner">
 <meta property="og:image" content="https://casialab.com/og-image.png?v=3">
 <meta property="og:image:width" content="2400">
 <meta property="og:image:height" content="1260">
@@ -35,8 +35,8 @@
  "@graph": [
   {
    "@type": "WebPage",
-   "@id": "https://casialab.com/partner.html#webpage",
-   "url": "https://casialab.com/partner.html",
+   "@id": "https://casialab.com/partner#webpage",
+   "url": "https://casialab.com/partner",
    "name": "Partners · Casia Lab",
    "description": "Partner with Casia. We work with associations, accountants, lenders and trade groups that already serve owner-led businesses, so the businesses you work with can run better.",
    "isPartOf": {
@@ -47,12 +47,12 @@
    },
    "inLanguage": "en",
    "breadcrumb": {
-    "@id": "https://casialab.com/partner.html#breadcrumb"
+    "@id": "https://casialab.com/partner#breadcrumb"
    }
   },
   {
    "@type": "BreadcrumbList",
-   "@id": "https://casialab.com/partner.html#breadcrumb",
+   "@id": "https://casialab.com/partner#breadcrumb",
    "itemListElement": [
     {
      "@type": "ListItem",
@@ -64,7 +64,7 @@
      "@type": "ListItem",
      "position": 2,
      "name": "Partners",
-     "item": "https://casialab.com/partner.html"
+     "item": "https://casialab.com/partner"
     }
    ]
   },
@@ -232,7 +232,7 @@
 <!-- FORM-DELIVERY: change the email below to route submissions elsewhere. -->
 <form class="space-y-space-md" action="https://formsubmit.co/corporate@casialab.com" method="POST">
 <input type="hidden" name="_subject" value="Casia: New partnership inquiry">
-<input type="hidden" name="_next" value="https://casialab.com/thanks.html">
+<input type="hidden" name="_next" value="https://casialab.com/thanks">
 <input type="hidden" name="_template" value="table">
 <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;height:0;width:0;opacity:0" aria-hidden="true">
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
@@ -301,18 +301,18 @@
 </div>
 <div class="flex flex-col gap-space-sm">
 <span class="font-label-caps text-label-caps uppercase text-on-surface tracking-wider mb-space-xs">Company</span>
-<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="about.html">About</a>
-<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="work-with-us.html">Careers</a>
-<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="partner.html">Partners</a>
-<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="resellers.html">Resellers</a>
-<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="contact.html">Contact</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="/about">About</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="/work-with-us">Careers</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="/partner">Partners</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="/resellers">Resellers</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="/contact">Contact</a>
 </div>
 <div class="flex flex-col gap-space-sm">
 <span class="font-label-caps text-label-caps uppercase text-on-surface tracking-wider mb-space-xs">Account &amp; legal</span>
 <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="https://app.casialab.com/auth/login">Sign in</a>
 <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="https://app.casialab.com/auth/signup">Create your workspace</a>
-<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="privacy.html">Privacy Policy</a>
-<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="terms.html">Terms of Service</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="/privacy">Privacy Policy</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="/terms">Terms of Service</a>
 </div>
 </div>
 <div class="pt-space-xl flex flex-col sm:flex-row items-center justify-between gap-space-md bg-surface-container-lowest">

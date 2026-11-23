@@ -2,7 +2,7 @@
 <html class="dark" lang="en">
 <head>
 <meta charset="utf-8"/>
-<script>(function(){var t;try{t=localStorage.getItem("casia-theme")}catch(e){}if(t!=="light"&&t!=="dark")t=window.matchMedia&&matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";document.documentElement.setAttribute("data-theme",t)})();</script>
+<script>(function(){var t;try{t=localStorage.getItem("casia-theme")}catch(e){}if(t!=="light"&&t!=="dark")t=window.matchMedia&&matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";document.documentElement.setAttribute("data-theme",t);var p=location.pathname,c=p.replace(/\/index\.html$/,"/").replace(/\.html$/,"");if(c!==p&&history.replaceState)history.replaceState(null,"",c+location.search+location.hash)})();</script>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Casia Lab. One workspace for your team and the agents that support them.</title>
 <meta name="description" content="Stock, money, buying, people and marketing in one workspace. Switch on the tools you need, try each one free, and hire an AI agent for the routine work. A person approves every change. Do it easy.">
@@ -66,7 +66,7 @@
      "@type": "ContactPoint",
      "contactType": "customer support",
      "email": "corporate@casialab.com",
-     "url": "https://casialab.com/contact.html"
+     "url": "https://casialab.com/contact"
     }
    ]
   },
@@ -717,18 +717,18 @@ People ops is $5 a month for your first 6 people, then $1 a person. Marketing is
 </div>
 <div class="flex flex-col gap-space-sm">
 <span class="font-label-caps text-label-caps uppercase text-on-surface tracking-wider mb-space-xs">Company</span>
-<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="about.html">About</a>
-<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="work-with-us.html">Careers</a>
-<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="partner.html">Partners</a>
-<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="resellers.html">Resellers</a>
-<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="contact.html">Contact</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="/about">About</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="/work-with-us">Careers</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="/partner">Partners</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="/resellers">Resellers</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="/contact">Contact</a>
 </div>
 <div class="flex flex-col gap-space-sm">
 <span class="font-label-caps text-label-caps uppercase text-on-surface tracking-wider mb-space-xs">Account &amp; legal</span>
 <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#signin">Sign in</a>
 <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#getstarted">Create your workspace</a>
-<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="privacy.html">Privacy Policy</a>
-<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="terms.html">Terms of Service</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="/privacy">Privacy Policy</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="/terms">Terms of Service</a>
 </div>
 </div>
 <div class="pt-space-xl flex flex-col sm:flex-row items-center justify-between gap-space-md bg-surface-container-lowest">

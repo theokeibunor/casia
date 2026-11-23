@@ -2,15 +2,15 @@
 <html class="dark" lang="en">
 <head>
 <meta charset="utf-8"/>
-<script>(function(){var t;try{t=localStorage.getItem("casia-theme")}catch(e){}if(t!=="light"&&t!=="dark")t=window.matchMedia&&matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";document.documentElement.setAttribute("data-theme",t)})();</script>
+<script>(function(){var t;try{t=localStorage.getItem("casia-theme")}catch(e){}if(t!=="light"&&t!=="dark")t=window.matchMedia&&matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";document.documentElement.setAttribute("data-theme",t);var p=location.pathname,c=p.replace(/\/index\.html$/,"/").replace(/\.html$/,"");if(c!==p&&history.replaceState)history.replaceState(null,"",c+location.search+location.hash)})();</script>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Careers · Casia Lab</title>
 <meta name="description" content="We don't always have open roles, but we're always interested in strong people who want to build the everyday tools owner-led businesses run on. Send us your profile.">
-<link rel="canonical" href="https://casialab.com/work-with-us.html">
+<link rel="canonical" href="https://casialab.com/work-with-us">
 <meta property="og:title" content="Careers · Casia Lab">
 <meta property="og:description" content="We don't always have open roles, but we're always interested in strong people who want to build the everyday tools owner-led businesses run on. Send us your profile.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://casialab.com/work-with-us.html">
+<meta property="og:url" content="https://casialab.com/work-with-us">
 <meta property="og:image" content="https://casialab.com/og-image.png?v=3">
 <meta property="og:image:width" content="2400">
 <meta property="og:image:height" content="1260">
@@ -35,8 +35,8 @@
  "@graph": [
   {
    "@type": "WebPage",
-   "@id": "https://casialab.com/work-with-us.html#webpage",
-   "url": "https://casialab.com/work-with-us.html",
+   "@id": "https://casialab.com/work-with-us#webpage",
+   "url": "https://casialab.com/work-with-us",
    "name": "Careers · Casia Lab",
    "description": "We don't always have open roles, but we're always interested in strong people who want to build the everyday tools owner-led businesses run on. Send us your profile.",
    "isPartOf": {
@@ -47,12 +47,12 @@
    },
    "inLanguage": "en",
    "breadcrumb": {
-    "@id": "https://casialab.com/work-with-us.html#breadcrumb"
+    "@id": "https://casialab.com/work-with-us#breadcrumb"
    }
   },
   {
    "@type": "BreadcrumbList",
-   "@id": "https://casialab.com/work-with-us.html#breadcrumb",
+   "@id": "https://casialab.com/work-with-us#breadcrumb",
    "itemListElement": [
     {
      "@type": "ListItem",
@@ -64,7 +64,7 @@
      "@type": "ListItem",
      "position": 2,
      "name": "Careers",
-     "item": "https://casialab.com/work-with-us.html"
+     "item": "https://casialab.com/work-with-us"
     }
    ]
   },
@@ -130,7 +130,7 @@
 <p class="font-body-lg text-body-lg text-on-surface-variant mb-space-xl">We're a small team building the practical, daily tools that owner-led businesses run on, whether that's shops, pharmacies, hotels, restaurants, or growing operators, wherever they work. If that work matters to you, we'd like to hear from you, even if there's no role open today.</p>
 <div class="flex flex-wrap items-center gap-space-md">
 <a class="inline-flex items-center gap-space-sm px-space-xl py-space-md rounded-full bg-primary-container text-on-primary-container font-headline-sm text-body-md shadow-[0_0_28px_rgb(var(--c-glow)/0.4)] hover:brightness-110 transition-all" href="#careers-form"><span>Send your profile</span><span class="material-symbols-outlined text-[18px]" aria-hidden="true">arrow_forward</span></a>
-<a class="inline-flex items-center gap-space-sm px-space-xl py-space-md rounded-full bg-surface-container-high text-on-surface font-body-md text-body-md hover:bg-surface-bright transition-all shadow-sm" href="about.html"><span class="material-symbols-outlined text-[18px] text-primary" aria-hidden="true">groups</span><span>About Casia</span></a>
+<a class="inline-flex items-center gap-space-sm px-space-xl py-space-md rounded-full bg-surface-container-high text-on-surface font-body-md text-body-md hover:bg-surface-bright transition-all shadow-sm" href="/about"><span class="material-symbols-outlined text-[18px] text-primary" aria-hidden="true">groups</span><span>About Casia</span></a>
 </div>
 </div>
 </section>
@@ -209,7 +209,7 @@
 <!-- FORM-DELIVERY: change the email below to route submissions elsewhere. -->
 <form class="space-y-space-md" action="https://formsubmit.co/corporate@casialab.com" method="POST">
 <input type="hidden" name="_subject" value="Casia Lab. New careers profile">
-<input type="hidden" name="_next" value="https://casialab.com/thanks.html">
+<input type="hidden" name="_next" value="https://casialab.com/thanks">
 <input type="hidden" name="_template" value="table">
 <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;height:0;width:0;opacity:0" aria-hidden="true">
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
@@ -250,7 +250,7 @@
 <p class="font-body-lg text-body-lg text-on-surface-variant mt-space-sm mb-space-xl">See the tools Casia builds, or meet the people building them. When you're ready, your profile is a click away.</p>
 <div class="flex flex-wrap items-center justify-center gap-space-md">
 <a class="inline-flex items-center gap-space-sm px-space-xl py-space-md rounded-full bg-primary-container text-on-primary-container font-headline-sm text-body-md shadow-[0_0_28px_rgb(var(--c-glow)/0.4)] hover:brightness-110 transition-all" href="/#tools"><span>Explore the tools</span><span class="material-symbols-outlined text-[18px]" aria-hidden="true">arrow_forward</span></a>
-<a class="inline-flex items-center gap-space-sm px-space-xl py-space-md rounded-full bg-surface-container-lowest text-on-surface font-body-md text-body-md hover:bg-surface-dim transition-all shadow-sm" href="about.html"><span class="material-symbols-outlined text-[18px] text-primary" aria-hidden="true">groups</span><span>About Casia</span></a>
+<a class="inline-flex items-center gap-space-sm px-space-xl py-space-md rounded-full bg-surface-container-lowest text-on-surface font-body-md text-body-md hover:bg-surface-dim transition-all shadow-sm" href="/about"><span class="material-symbols-outlined text-[18px] text-primary" aria-hidden="true">groups</span><span>About Casia</span></a>
 </div>
 </div>
 </div>
@@ -274,18 +274,18 @@
 </div>
 <div class="flex flex-col gap-space-sm">
 <span class="font-label-caps text-label-caps uppercase text-on-surface tracking-wider mb-space-xs">Company</span>
-<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="about.html">About</a>
-<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="work-with-us.html">Careers</a>
-<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="partner.html">Partners</a>
-<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="resellers.html">Resellers</a>
-<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="contact.html">Contact</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="/about">About</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="/work-with-us">Careers</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="/partner">Partners</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="/resellers">Resellers</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="/contact">Contact</a>
 </div>
 <div class="flex flex-col gap-space-sm">
 <span class="font-label-caps text-label-caps uppercase text-on-surface tracking-wider mb-space-xs">Account &amp; legal</span>
 <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="https://app.casialab.com/auth/login">Sign in</a>
 <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="https://app.casialab.com/auth/signup">Create your workspace</a>
-<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="privacy.html">Privacy Policy</a>
-<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="terms.html">Terms of Service</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="/privacy">Privacy Policy</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="/terms">Terms of Service</a>
 </div>
 </div>
 <div class="pt-space-xl flex flex-col sm:flex-row items-center justify-between gap-space-md bg-surface-container-lowest">
